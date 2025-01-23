@@ -1,0 +1,55 @@
+header {
+  display: flex;
+  background-color: #372715;
+}
+header button {
+  background-color: white;
+  color: black;
+  font-family: averia-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header #pedir_cita {
+  font-family: Milk And Honey;
+}
+
+#presentacion {
+  background-image: url("fuente/imagenes/hero_img_3792x2524.avif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+#presentacion p {
+  background-color: white;
+  color: black;
+  font-family: LT Museum;
+}
+
+#modalidades {
+  background-color: #9D774C;
+}
+#modalidades #presencial {
+  background-color: white;
+}
+#modalidades #online {
+  background-color: white;
+}
+
+#especialidades p {
+  background-color: white;
+}
+
+footer {
+  background-color: #372715;
+}
+footer #redes_sociales {
+  background-color: white;
+}
+footer #contacto {
+  background-color: white;
+}/*# sourceMappingURL=index.css.map */
