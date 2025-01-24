@@ -38,13 +38,27 @@ header img {
   background-size: cover;
   background-position: center;
   height: 80%;
+  padding-top: 2%;
+  padding-right: 8%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
   color: white;
 }
 #presentacion article:first-of-type {
-  background-color: aquamarine;
+  text-align: center;
+  color: black;
+  width: 50%;
+  background-color: white;
+}
+
+.valores {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  background-color: green;
+  margin-top: 0.5%;
+  margin-top-article-text-align: center;
 }
 
 #modalidades {
