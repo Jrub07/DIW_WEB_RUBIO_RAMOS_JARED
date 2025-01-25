@@ -176,11 +176,28 @@ header img {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
   background-color: #372715;
 }
-footer #redes_sociales {
+
+#redes_sociales {
+  margin-top: 2%;
+  order: 0;
   background-color: white;
 }
-footer #contacto {
+
+#contacto {
+  margin-top: 2%;
+  order: 1;
   background-color: white;
+}
+
+.mapa {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+  margin: 0;
+  order: 2;
 }/*# sourceMappingURL=index.css.map */
