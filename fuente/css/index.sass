@@ -4,8 +4,7 @@ html, body
   padding: 0
   
 
-header
-  border: 2px solid red
+header  
   display: flex
   align-items: center
   justify-content: space-around
@@ -32,13 +31,12 @@ header
 
 
 
-#presentacion
-  border: 2px solid red
+#presentacion  
   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../imagenes/hero_img_3792x2524.avif")
   background-size: cover
   background-position: center
   height: 80%
-  padding-top: 2%
+  padding-top: 5%
   padding-right: 8%
   display: flex
   align-items: flex-end
@@ -49,33 +47,68 @@ header
     text-align: center
     color: black 
     width: 50% 
-    background-color: white 
+    background-color: #684825 
+    color: white
 
 
-.valores
+.valores 
+  padding-top: 5%
+  margin-right: 5%  
   display: flex     
-  height: 100%
-  width: 50%
-  background-color: green
+  flex-wrap: wrap
+  justify-content: center
+  height: 70%
+  width: 40%  
   margin-top: 0.5%
-
-
-   article:
-    text-align: center
-
-    
-
   
- 
 
-#modalidades
+  article
+    box-sizing: border-box        
+    height: 30%
+    width: 40%
+    color: black
+    background-color: white
+    flex: 48% 
+    text-align: center    
+    margin-right: 2%
+    overflow: hidden
+    background-color: #684825
+    color: white
+
+  p    
+    margin: 0
+    padding-top: 5%
+
+
+
+#modalidades 
+  
+  justify-content: space-around
+  align-items: center
+  display: flex
+  overflow: hidden
+  height: 60%
+  border: 2px solid red
   background-color: #9D774C
 
-  #presencial
-    background-color: white
 
-  #online
-    background-color: white
+#presencial
+   width: 30%
+   height: 50%
+   border: 1px solid yellow
+   object-fit: cover
+   boder: 2px solid yellow
+   background-color: white 
+    
+
+
+#online
+  width: 30%
+  height: 50%
+  border: 1px solid yellow
+  object: cover  
+  background-color: white
+  
 
 #especialidades
   p
