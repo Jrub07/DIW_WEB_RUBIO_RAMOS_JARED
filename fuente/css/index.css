@@ -160,7 +160,6 @@ footer #redes_sociales, footer #como_llegar {
   align-items: flex-start;
   width: 20%;
   justify-content: flex-start;
-  flex-wrap: wrap;
   flex-direction: column;
   margin-left: 20px;
   height: 100%;
@@ -168,6 +167,7 @@ footer #redes_sociales, footer #como_llegar {
 footer #redes_sociales p, footer #como_llegar p {
   display: flex;
   align-items: center;
+  text-align: left;
   width: 30%;
   color: white;
 }
@@ -175,7 +175,7 @@ footer #redes_sociales h3, footer #como_llegar h3 {
   background-color: white;
 }
 footer #redes_sociales img, footer #como_llegar img {
-  margin-right: 5%;
+  margin-right: 10%;
   max-width: 40%;
   height: auto;
 }
