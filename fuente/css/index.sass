@@ -1,208 +1,187 @@
-html, body
-  height: 100%
-  margin: 0
-  padding: 0
-  
+@media (min-width: 1200px) 
 
-header  
-  display: flex
-  align-items: center
-  justify-content: space-around
-  background-color: #372715
-  height: 20%
-
-  button
-    border-radius: 10%
-    height: 50px
-    background-color: white
-    color: black
-    font-family: averia-serif
-    text-transform: uppercase
-    font-weight: bold
-    margin: 0 10px
-
-  #pedir_cita
-    font-family: Milk And Honey
-
-  img    
-    max-width: 100%            
-    max-height: 100%           
-    object-fit: cover
-
-
-
-#presentacion  
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../imagenes/hero_img_3792x2524.avif")
-  background-size: cover
-  background-position: center
-  height: 80%
-  padding-top: 5%
-  padding-right: 8%
-  display: flex
-  align-items: flex-end
-  flex-direction: column  
-  color: white
-   
-  article:first-of-type    
-    text-align: center
-    color: black 
-    width: 50% 
-    background-color: #684825 
-    color: white
-
-
-.valores 
-  padding-top: 5%
-  margin-right: 5%  
-  display: flex     
-  flex-wrap: wrap
-  justify-content: center
-  height: 70%
-  width: 40%  
-  margin-top: 0.5%
-  
-
-  article
-    box-sizing: border-box        
-    height: 30%
-    width: 40%
-    color: black
-    background-color: white
-    flex: 48% 
-    text-align: center    
-    margin-right: 2%
-    overflow: hidden
-    background-color: #684825
-    color: white
-
-  p    
+  html, body
+    box-sizing: border-box
+    height: 100%
     margin: 0
-    padding-top: 5%
+    padding: 0
 
+  header
+    display: flex
+    align-items: center
+    justify-content: space-around
+    background-color: #372715
+    height: 20%
 
+    button
+      border-radius: 10%
+      height: 50px
+      background-color: white
+      color: black
+      font-family: averia-serif
+      text-transform: uppercase
+      font-weight: bold
+      margin: 0 10px
 
-#modalidades 
-  padding-top: 1%
-  text-align: center
-  justify-content: space-around
-  align-items: flex-start
-  display: flex
-  overflow: hidden
-  height: 60% 
-  background-color: #9D774C
+    #pedir_cita
+      font-family: Milk And Honey
 
+    img
+      max-width: 100%
+      max-height: 100%
+      object-fit: cover
 
-#presencial
-  width: 40%
-  height: 80%  
-  object-fit: cover   
-  display: flex
-  justify-content: center
-  flex-direction: column
-  align-items: center   
-
-  p  
-    height: 10%  
-    width: 50%
-    background-color: white
-    text-align: center
-    
-
-  img
-    max-width: 80% 
-    max-height: 80% 
-    object-fit: cover
-  
-  
-    
-
-
-#online
-  width: 40%
-  height: 80%  
-  object-fit: cover   
-  display: flex
-  justify-content: center
-  flex-direction: column
-  align-items: center   
-
-  p      
-    height: 10%  
-    width: 50%
-    background-color: white
-    text-align: center
-    
-
-  img
-    max-width: 80% 
-    max-height: 80% 
-    object-fit: cover
-  
-
-
-#especialidades
-  box-sizing: border-box  
-  display: flex
-  align-items: center
-  flex-wrap: wrap
-  height: 70%
-  background-color: #7B5C39
-  justify-content: center
-  flex-direction: column
-  overflow: hidden
-
-  h3
-    background-color: white    
-    align-self: center
-    margin-bottom: auto
-    margin-top: 2%
-     
-
-  article 
+  #presentacion
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../imagenes/hero_img_3792x2524.avif")
+    background-size: cover
+    background-position: center
     height: 80%
-    width: 50%
-    margin-bottom: 2%
-    overflow: hidden
+    padding-top: 5%
+    padding-right: 8%
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    color: white
+
+    article:first-of-type
+      text-align: center
+      color: black
+      width: 50%
+      background-color: #684825
+      color: white
+
+  .valores
+    padding-top: 5%
+    margin-right: 5%
     display: flex
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: center
+    height: 70%
+    width: 40%
+    margin-top: 0.5%
+
+    article
+      box-sizing: border-box
+      height: 30%
+      width: 40%
+      color: black
+      background-color: white
+      flex: 48%
+      text-align: center
+      margin-right: 2%
+      overflow: hidden
+      background-color: #684825
+      color: white
 
     p
-      text-align: center
-      text-transform: uppercase
-      background-color: white
-      height: 12%  
-      width: 20%  
-      margin: 2.5% 
-      padding: 0
-      display: flex
-      align-items: center
-      justify-content: center
+      margin: 0
+      padding-top: 5%
 
+  #modalidades
+    padding-top: 1%
+    text-align: center
+    justify-content: space-around
+    align-items: flex-start
+    display: flex
+    overflow: hidden
+    height: 60%
+    background-color: #9D774C
+
+  #presencial, #online
+    width: 40%
+    height: 80%
+    object-fit: cover
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+    p
+      height: 10%
+      width: 50%
+      background-color: white
+      text-align: center
+
+    img
+      max-width: 80%
+      max-height: 80%
+      object-fit: cover
+
+  #especialidades
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    height: 70%
+    background-color: #7B5C39
+    justify-content: center
+    flex-direction: column
+    overflow: hidden
+
+    h3
+      background-color: white
+      align-self: center
+      margin-bottom: auto
+      margin-top: 2%
+
+    article
+      height: 80%
+      width: 50%
+      margin-bottom: 2%
+      overflow: hidden
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+
+      p
+        text-align: center
+        text-transform: uppercase
+        background-color: white
+        height: 12%
+        width: 20%
+        margin: 2.5%
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
 
 footer  
-  display: flex  
-  justify-content: space-between
-  height: 40%
-  background-color: #372715
+    box-sizing: border-box  
+    display: flex
+    justify-content: space-around      
+    height: 40%
+    background-color: #372715
 
-#redes_sociales  
-  margin-top: 2%
-  order: 0
-  background-color: white
+    #redes_sociales, #como_llegar        
+        display: flex 
+        align-items: flex-start
+        width: 20%
+        justify-content: flex-start
+        flex-wrap: wrap
+        flex-direction: column      
+        margin-left: 20px       
+        height: 100%                  
 
-#contacto
-  margin-top: 2%
-  order: 1
-  background-color: white
+        p
+          display: flex
+          align-items: center          
+          width: 30%
+          color: white          
+          
 
-.mapa
-  display: flex
-  margin-left: auto
-  padding: 0
-  margin: 0
-  order: 2    
-  
+        h3
+          background-color: white
 
-  
-    
+        img
+          margin-right: 5%
+          max-width: 40%
+          height: auto
+       
+
+    .mapa    
+        display: flex        
+        height: 100%                
+        margin-left: 5%
+       
+       
+        
