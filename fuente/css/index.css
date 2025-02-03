@@ -338,21 +338,35 @@
     flex-direction: column;
     height: 50%;
     background-color: #372715;
+    margin: 0;
   }
-  footer .mapa {
-    height: 50%;
-    display: flex;
+  footer iframe {
+    margin-top: 1%;
+    height: 90%;
+    width: 100%;
     order: 1;
   }
-  footer #redes_sociales, footer #como_llegar {
-    background-color: green;
+  footer div {
+    justify-content: space-between;
     display: flex;
-    width: 50%;
-    flex-direction: column;
-    margin-left: 0;
     order: 2;
+    width: 100%;
+    overflow: hidden;
   }
-  footer #redes_sociales p, footer #como_llegar p {
+  footer div #redes_sociales, footer div #como_llegar {
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+  }
+  footer div #redes_sociales h3, footer div #como_llegar h3 {
+    background-color: white;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
     align-items: center;
     color: white;
@@ -360,9 +374,9 @@
     white-space: nowrap;
     margin-bottom: 10px;
   }
-  footer #redes_sociales p img, footer #como_llegar p img {
-    margin-right: 10px;
-    max-width: 40px;
+  footer div #redes_sociales p img, footer div #como_llegar p img {
+    margin-right: 3%;
+    max-width: 15%;
     height: auto;
   }
 }/*# sourceMappingURL=index.css.map */
