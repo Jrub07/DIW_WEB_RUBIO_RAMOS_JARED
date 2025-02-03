@@ -335,17 +335,22 @@
   footer {
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-    height: 35%;
+    flex-direction: column;
+    height: 50%;
     background-color: #372715;
   }
-  footer #redes_sociales, footer #como_llegar {
+  footer .mapa {
+    height: 50%;
     display: flex;
-    align-items: flex-start;
-    width: 20%;
-    justify-content: flex-start;
+    order: 1;
+  }
+  footer #redes_sociales, footer #como_llegar {
+    background-color: green;
+    display: flex;
+    width: 50%;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 0;
+    order: 2;
   }
   footer #redes_sociales p, footer #como_llegar p {
     display: flex;
@@ -359,8 +364,5 @@
     margin-right: 10px;
     max-width: 40px;
     height: auto;
-  }
-  footer .mapa {
-    display: flex;
   }
 }/*# sourceMappingURL=index.css.map */

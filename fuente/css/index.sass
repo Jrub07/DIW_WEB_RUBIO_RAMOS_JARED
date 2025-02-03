@@ -333,19 +333,24 @@
   footer  
     box-sizing: border-box  
     display: flex
-    justify-content: space-between      
-    height: 35%
+    flex-direction: column 
+    height: 50%
     background-color: #372715
 
-    #redes_sociales, #como_llegar           
-      display: flex 
-      align-items: flex-start
-      width: 20%
-      justify-content: flex-start
-      flex-direction: column      
-      margin-left: 20px       
+    .mapa
+      height: 50%
+      display: flex
+      order: 1 
 
-      p
+    #redes_sociales, #como_llegar       
+      background-color: green
+      display: flex
+      width: 50% 
+      flex-direction: column
+      margin-left: 0 
+      order: 2 
+
+      p        
         display: flex
         align-items: center
         color: white
@@ -357,6 +362,3 @@
           margin-right: 10px
           max-width: 40px
           height: auto
-
-    .mapa
-      display: flex
