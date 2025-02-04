@@ -1,0 +1,49 @@
+//Mapa para background-color
+$colores: (
+    "principal"  : #372715,
+    "secundario_uno" : #684825,
+    "secundario_dos" : #9D774C,
+);
+
+
+//Mixin para flexbox para no tener que repetir siempre el mismo codigo
+@mixin flexible( $dis , $direction , $corte , $just , $align ){ 
+    display         : $dis;
+    flex-flow       : $direction $corte;
+    justify-content : $just;
+    align-items     : $align;
+}
+
+//Mixins para diferentes puntos de ruptura
+
+@mixin movil(){
+    @media screen and (max-width: 480px) {
+        @content;    
+    }
+}
+
+@mixin tableta(){
+    @media screen and (max-width: 768px) {
+        @content;    
+    }
+}
+
+@mixin pantalla_pequeña(){
+    @media screen and (max-width: 1200px) {
+        @content;    
+    }
+}
+
+@mixin pantlla_estandar(){
+    @media screen and (max-width: 1920px) {
+        @content;    
+    }
+}
+
+@mixin pantlla_grande(){
+    @media screen and (max-width: 2560px) {
+        @content;    
+    }
+}
+
+@mixin
