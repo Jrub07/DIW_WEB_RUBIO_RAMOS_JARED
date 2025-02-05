@@ -1,0 +1,219 @@
+@use 'mixins_funciones_mapa' as *;
+
+footer {
+    box-sizing: border-box;
+    background-color: #372715;
+    margin: 0;
+
+    @include movil() {
+        @include flexible(flex, column, nowrap, space-between, center);
+        height: 32%;
+
+        iframe {
+            margin-top: 1%;
+            height: 90%;
+            width: 100%;
+            order: 1;
+        }
+
+        div {
+            @include flexible(flex, row, nowrap, space-between, center);
+            order: 2;
+            width: 100%;
+            overflow: hidden;
+
+            #redes_sociales, #como_llegar {
+                padding-left: 1%;
+                padding-right: 1%;
+                @include flexible(flex, column, nowrap, flex-start, center);
+                width: 40%;
+
+                h3 {
+                    background-color: white;
+                    width: 100%;
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 3%;
+                        max-width: 15%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @include tableta() {
+        @include flexible(flex, column, nowrap, center, center);
+        height: 45%;
+
+        iframe {
+            display: flex;
+            align-items: center;
+            margin-top: 10%;
+            height: 100%;
+            width: 100%;
+            order: 1;
+        }
+
+        div {
+            margin-top: 8%;
+            @include flexible(flex, row, nowrap, space-between, center);
+            order: 2;
+            width: 90%;
+            overflow: hidden;
+
+            #redes_sociales, #como_llegar {
+                padding-left: 1%;
+                padding-right: 1%;
+                @include flexible(flex, column, nowrap, flex-start, center);
+                width: 40%;
+
+                h3 {
+                    background-color: white;
+                    width: 100%;
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 3%;
+                        max-width: 15%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @include pantalla_pequeña() {
+        @include flexible(flex, row, nowrap, space-between, center);
+        height: 22%;
+
+        div {
+            @include flexible(flex, row, nowrap, space-around, center);
+            width: 100%;
+            overflow: hidden;
+
+            #redes_sociales, #como_llegar {
+                @include flexible(flex, column, nowrap, flex-start, center);
+                width: 25%;
+                margin-left: 20px;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 10px;
+                        max-width: 40px;
+                        height: auto;
+                    }
+                }
+            }
+
+            .mapa {
+                display: flex;
+                width: 30%;
+            }
+        }
+    }
+
+    @include pantalla_estandar() {
+        @include flexible(flex, row, nowrap, space-between, center);
+        height: 22%;
+
+        div {
+            @include flexible(flex, row, nowrap, space-around, center);
+            width: 100%;
+            overflow: hidden;
+
+            #redes_sociales, #como_llegar {
+                @include flexible(flex, column, nowrap, flex-start, center);
+                width: 25%;
+                margin-left: 20px;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 10px;
+                        max-width: 40px;
+                        height: auto;
+                    }
+                }
+            }
+
+            iframe {
+                display: flex;
+                width: 100%;
+            }
+        }
+    }
+
+    @include pantalla_grande() {
+        @include flexible(flex, row, nowrap, space-between, center);
+        height: 22%;
+        overflow: hidden;
+
+        div {
+            @include flexible(flex, row, nowrap, space-around, center);
+            width: 100%;
+            overflow: hidden;
+
+            #redes_sociales, #como_llegar {
+                @include flexible(flex, column, nowrap, flex-start, center);
+                width: 25%;
+                margin-left: 20px;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin-bottom: 10px;
+
+                    img {
+                        margin-right: 10px;
+                        max-width: 40px;
+                        height: auto;
+                    }
+                }
+            }
+
+            iframe {
+                display: flex;
+                width: 500px;
+                height: 100%;
+            }
+        }
+    }
+}

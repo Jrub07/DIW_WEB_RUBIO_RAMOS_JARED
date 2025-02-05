@@ -1,0 +1,115 @@
+@use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
+
+#especialidades {
+    box-sizing: border-box;
+    @include flexible(flex, column, nowrap, center, center);
+    height: 100%;
+    background-color: map.get($colores, "secundario_uno");
+    overflow: hidden;
+
+    h3 {
+        padding-top: 0;
+        background-color: white;
+        align-self: center;
+        margin-top: 10%;
+    }
+
+    article {
+        margin-left: 0.8%;
+        @include flexible(flex, column, wrap, center, center);
+        height: 100%;
+        width: 100%;
+        padding: 0;
+
+        p {
+            text-align: center;
+            text-transform: uppercase;
+            background-color: white;
+            height: 10%;
+            width: 45%;
+            margin: 2%;
+            padding: 0;
+            @include flexible(flex, row, nowrap, center, center);
+        }
+    }
+
+    @include movil() {        
+    }
+
+    @include tableta() {        
+    }
+
+    @include pantalla_pequeña() {        
+        flex-wrap: wrap;
+        height: 70%;
+
+        h3 {
+            margin-bottom: auto;
+            margin-top: 2%;
+        }
+
+        article {
+            height: 80%;
+            width: 50%;
+            margin-bottom: 2%;
+            overflow: hidden;
+            @include flexible(flex, row, wrap, space-around, center);
+
+            p {
+                height: 12%;
+                width: 20%;
+                margin: 2.5%;
+            }
+        }
+    }
+
+    @include pantalla_estandar() {       
+        flex-wrap: wrap;
+        height: 70%;
+
+        h3 {
+            margin-bottom: auto;
+            margin-top: 2%;
+        }
+
+        article {
+            height: 80%;
+            width: 50%;
+            margin-bottom: 2%;
+            overflow: hidden;
+            @include flexible(flex, row, wrap, space-around, center);
+
+            p {
+                height: 12%;
+                width: 20%;
+                margin: 2.5%;
+            }
+        }
+    }
+
+    @include pantalla_grande() {
+        // Estilos adicionales para pantallas grandes
+        flex-wrap: wrap;
+        height: 70%;
+
+        h3 {
+            margin-bottom: auto;
+            margin-top: 2%;
+        }
+
+        article {
+            height: 80%;
+            width: 50%;
+            margin-bottom: 2%;
+            overflow: hidden;
+            @include flexible(flex, row, wrap, space-around, center);
+
+            p {
+                height: 12%;
+                width: 20%;
+                margin: 2.5%;
+            }
+        }
+    }
+}

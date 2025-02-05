@@ -34,16 +34,32 @@ $colores: (
     }
 }
 
-@mixin pantlla_estandar(){
+@mixin pantalla_estandar(){
     @media screen and (max-width: 1920px) {
         @content;    
     }
 }
 
-@mixin pantlla_grande(){
+@mixin pantalla_grande(){
     @media screen and (max-width: 2560px) {
         @content;    
     }
 }
 
-@mixin
+@mixin responsivo_todos(){
+    @include movil{
+        @content;
+    }
+    @include tableta{
+        @content;
+    }
+    @include pantalla_pequeña{
+        @content;
+    }
+    @include pantalla_estandar{
+        @content;
+    }
+    @include pantalla_grande{
+        @content;
+    }
+}

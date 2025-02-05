@@ -31,8 +31,7 @@
   header img {
     max-width: 70%;
     max-height: 70%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #presentacion {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
@@ -105,8 +104,7 @@
   #presencial img, #online img {
     width: 100%;
     height: 100%;
-    -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
   }
   #presencial img, #online img {
     max-width: 100%;
@@ -232,8 +230,7 @@
   header img {
     max-width: 70%;
     max-height: 70%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #presentacion {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
@@ -291,8 +288,7 @@
   #presencial, #online {
     width: 40%;
     height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -307,8 +303,7 @@
   #presencial img, #online img {
     max-width: 80%;
     max-height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #especialidades {
     box-sizing: border-box;
@@ -431,8 +426,7 @@
   header img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #presentacion {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
@@ -493,8 +487,7 @@
   #presencial, #online {
     width: 40%;
     height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -509,8 +502,7 @@
   #presencial img, #online img {
     max-width: 80%;
     max-height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #especialidades {
     box-sizing: border-box;
@@ -619,8 +611,7 @@
   header img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #presentacion {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
@@ -681,8 +672,7 @@
   #presencial, #online {
     width: 40%;
     height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -697,8 +687,7 @@
   #presencial img, #online img {
     max-width: 80%;
     max-height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #especialidades {
     box-sizing: border-box;
@@ -807,8 +796,7 @@
   header img {
     max-width: 100%;
     max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #presentacion {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
@@ -869,8 +857,7 @@
   #presencial, #online {
     width: 40%;
     height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -885,8 +872,7 @@
   #presencial img, #online img {
     max-width: 80%;
     max-height: 80%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #especialidades {
     box-sizing: border-box;
@@ -966,4 +952,6 @@
     width: 500px;
     height: 100%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

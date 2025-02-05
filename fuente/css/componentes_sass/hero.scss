@@ -1,0 +1,196 @@
+@use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
+
+#presentacion {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../imagenes/hero_img_3792x2524.avif");
+    background-size: cover;
+    background-position: center;
+    padding-top: 5%;
+
+    @include movil() {
+        @include flexible(flex, column, nowrap, flex-start, center);
+        height: 80%;
+    }
+
+    @include tableta() {
+        @include flexible(flex, column, nowrap, flex-start, center);
+        height: 50%;
+    }
+
+    @include pantalla_pequeña() {
+        @include flexible(flex, column, nowrap, flex-end, center);
+        height: 80%;
+        padding-right: 8%;
+        color: white;
+
+        h3 {
+            text-align: center;
+            color: black;
+            width: 50%;
+            background-color: map.get($colores, 'secundario_uno');
+            color: white;
+        }
+    }
+
+    @include pantalla_estandar() {
+        @include flexible(flex, column, nowrap, flex-end, center);
+        height: 80%;
+        padding-right: 8%;
+        color: white;
+
+        h3 {
+            text-align: center;
+            color: black;
+            width: 50%;
+            background-color: map.get($colores, 'secundario_uno');
+            color: white;
+        }
+    }
+
+    @include pantalla_grande() {
+        @include flexible(flex, column, nowrap, flex-end, center);
+        height: 80%;
+        padding-right: 8%;
+        color: white;
+
+        h3 {
+            text-align: center;
+            color: black;
+            width: 50%;
+            background-color: map.get($colores, 'secundario_uno');
+            color: white;
+        }
+    }
+}
+
+.valores {
+    @include movil() {
+        @include flexible(flex, column, wrap, center, stretch);
+        padding-top: 5%;
+        margin-right: 5%;
+        height: 70%;
+        width: 40%;
+        margin-top: 0.5%;
+
+        article {
+            margin-top: 2%;
+            padding-top: 2%;
+            box-sizing: border-box;
+            height: 40%;
+            width: 100%;
+            color: black;
+            background-color: white;
+            text-align: center;
+            overflow: hidden;
+            background-color: map.get($colores, "secundario_uno");
+            color: white;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    @include tableta() {
+        @include flexible(flex, row, wrap, center, center);
+        height: 90%;
+        width: 90%;
+
+        article {
+            margin-right: 2%;
+            margin-top: 2%;
+            padding-top: 2%;
+            box-sizing: border-box;
+            height: 30%;
+            width: 45%;
+            color: black;
+            background-color: white;
+            text-align: center;
+            overflow: hidden;
+            background-color: map.get($colores, "secundario_uno");
+            color: white;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    @include pantalla_pequeña() {
+        @include flexible(flex, row, wrap, center, center);
+        height: 70%;
+        width: 40%;
+        margin-top: 0.5%;
+
+        article {
+            box-sizing: border-box;
+            height: 30%;
+            width: 40%;
+            color: black;
+            background-color: white;
+            flex: 48%;
+            text-align: center;
+            margin-right: 2%;
+            overflow: hidden;
+            background-color: map.get($colores, "secundario_uno");
+            color: white;
+
+            p {
+                margin: 0;
+                padding-top: 5%;
+            }
+        }
+    }
+
+    @include pantalla_estandar() {
+        @include flexible(flex, row, wrap, center, center);
+        height: 70%;
+        width: 40%;
+        margin-top: 0.5%;
+
+        article {
+            box-sizing: border-box;
+            height: 30%;
+            width: 40%;
+            color: black;
+            background-color: white;
+            flex: 48%;
+            text-align: center;
+            margin-right: 2%;
+            overflow: hidden;
+            background-color: map.get($colores, "secundario_uno");
+            color: white;
+
+            p {
+                margin: 0;
+                padding-top: 5%;
+            }
+        }
+    }
+
+    @include pantalla_grande() {
+        @include flexible(flex, row, wrap, center, center);
+        height: 70%;
+        width: 40%;
+        margin-top: 0.5%;
+
+        article {
+            box-sizing: border-box;
+            height: 30%;
+            width: 40%;
+            color: black;
+            background-color: white;
+            flex: 48%;
+            text-align: center;
+            margin-right: 2%;
+            overflow: hidden;
+            background-color: map.get($colores, "secundario_uno");
+            color: white;
+
+            p {
+                margin: 0;
+                padding-top: 5%;
+            }
+        }
+    }
+}
