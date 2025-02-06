@@ -1,3 +1,39 @@
+@font-face {
+    font-family: 'MilkAndHoney';
+    src: url('/fuente/fuente_letra/MilkAndHoney.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Classica-Bold';
+    src: url('/fuente/fuente_letra/Classica-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Classica-Book';
+    src: url('/fuente/fuente_letra/Classica-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Fashion';
+    src: url('/fuente/fuente_letra/Fashion.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LTMuseum-Bold';
+    src: url('/fuente/fuente_letra/LTMuseum-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LTMuseum-light';
+    src: url('/fuente/fuente_letra/LTMuseum-Light.woff') format('woff');
+}
+
+
+//Funcion para cambiar el tamaño solo
+@function cambiar-tamano($nuevo-tamano) {
+    @return #{$nuevo-tamano}px;
+  }
+
 //Mapa para background-color
 $colores: (
     "principal"  : #372715,
@@ -23,25 +59,25 @@ $colores: (
 }
 
 @mixin tableta(){
-    @media screen and (max-width: 768px) {
+    @media (min-width: 481px) and (max-width: 768px) {
         @content;    
     }
 }
 
 @mixin pantalla_pequeña(){
-    @media screen and (max-width: 1200px) {
+    @media (min-width: 769px) and (max-width: 1200px) {
         @content;    
     }
 }
 
 @mixin pantalla_estandar(){
-    @media screen and (max-width: 1920px) {
+    @media (min-width: 1201px) and (max-width: 1920px) {
         @content;    
     }
 }
 
 @mixin pantalla_grande(){
-    @media screen and (max-width: 2560px) {
+    @media (min-width: 1921px) and (max-width: 2560px) {
         @content;    
     }
 }

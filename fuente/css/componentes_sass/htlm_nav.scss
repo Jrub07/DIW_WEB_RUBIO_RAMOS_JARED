@@ -19,23 +19,98 @@ header{
     @include responsivo_todos();    
 }
 
-header button{    
+header button{   
+    @include movil(){
     border-radius: 10%;
-    height: 50px;
+    width: 40%;
+    height: 25%;
     background-color: white;
     color: black;
     font-family: averia-serif;
     text-transform: uppercase;
     font-weight: bold;
     margin: 0 10px;
-    @include responsivo_todos();   
+    } 
+
+    @include tableta(){
+      border-radius: 10%;
+      height: 50px;
+      background-color: white;
+      color: black;
+      font-family: averia-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 10px;
+
+    }
+
+    @include pantalla_pequeña(){
+      border-radius: 10%;
+      height: 50px;
+      background-color: white;
+      color: black;
+      font-family: averia-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    @include pantalla_estandar(){
+        border-radius: 10%;
+      height: 50px;
+      background-color: white;
+      color: black;
+      font-family: averia-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    @include pantalla_grande(){
+        border-radius: 10%;
+      height: 50px;
+      background-color: white;
+      color: black;
+      font-family: averia-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    
+    
+      
 }
 
-header img{
-    max-width: 70%;
-    max-height: 70%;
-    object-fit: cover;
-    @include responsivo_todos();
+#pedir_cita{font-family: 'MilkAndHoney';}
+
+header img{    
+    @include movil(){
+    max-width: 20% ;     
+    object-fit: cover;        
+    }
+
+    @include tableta(){
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: cover;        
+    }
+    @include pantalla_pequeña(){
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;        
+    }
+
+    @include pantalla_estandar(){
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;        
+    }
+
+    @include pantalla_grande(){
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;        
+    }
 }
 
 #pedir_cita{
