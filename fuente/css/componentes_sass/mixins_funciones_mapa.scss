@@ -1,3 +1,4 @@
+@use 'sass:map';
 @font-face {
     font-family: 'MilkAndHoney';
     src: url('/fuente/fuente_letra/MilkAndHoney.woff') format('woff');
@@ -41,6 +42,24 @@ $colores: (
     "secundario_dos" : #9D774C,
 );
 
+$alturas: (
+  "1440" : 1440,
+  "1080" : 1080,
+  "864"  : 864,
+  "800"  : 800,
+  "1366" : 1366,
+  "1024" : 1024,
+  "896"  : 896,
+  "760"  : 760
+);
+
+@mixin altura($altura) {
+    @media (min-height: #{map.get($alturas, $altura)}px) {
+        @content;
+    }
+}
+
+
 
 //Mixin para flexbox para no tener que repetir siempre el mismo codigo
 @mixin flexible( $dis , $direction , $corte , $just , $align ){ 
@@ -53,7 +72,7 @@ $colores: (
 //Mixins para diferentes puntos de ruptura
 
 @mixin movil(){
-    @media screen and (max-width: 480px) {
+    @media (min-width: 360px) and (max-width: 480px)  {
         @content;    
     }
 }

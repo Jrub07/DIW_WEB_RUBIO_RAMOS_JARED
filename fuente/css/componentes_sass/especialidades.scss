@@ -34,81 +34,217 @@
         }
     }
 
-    @include movil() {        
-    }
-
-    @include tableta() {        
-    }
-
-    @include pantalla_pequeña() {        
-        flex-wrap: wrap;
-        height: 70%;
+    @include movil() {
+        box-sizing: border-box;
+        @include flexible(flex, column, nowrap, center, center);
+        height: 100%;
+        background-color: map.get($colores, "secundario_uno");
+        overflow: hidden;
 
         h3 {
-            margin-bottom: auto;
-            margin-top: 2%;
+            padding-top: 0;
+            background-color: white;
+            align-self: center;
+            margin-top: 10%;
+            text-align: center;
+            font-family: 'Classica-Bold';
         }
 
         article {
-            height: 80%;
-            width: 50%;
-            margin-bottom: 2%;
-            overflow: hidden;
-            @include flexible(flex, row, wrap, space-around, center);
+            margin-left: 0.8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            padding: 0;
 
             p {
-                height: 12%;
-                width: 20%;
-                margin: 2.5%;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: white;
+                height: 10%;
+                width: 45%;
+                margin: 2%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Classica-Light';
             }
         }
     }
 
-    @include pantalla_estandar() {       
-        flex-wrap: wrap;
-        height: 70%;
+    @include tableta() {
+        box-sizing: border-box;
+        @include flexible(flex, column, nowrap, center, center);
+        height: 100%;
+        background-color: map.get($colores, "secundario_uno");
+        overflow: hidden;
 
         h3 {
-            margin-bottom: auto;
-            margin-top: 2%;
+            padding-top: 0;
+            background-color: white;
+            align-self: center;
+            margin-top: 10%;
+            text-align: center;
+            font-family: 'Classica-Bold';
         }
 
         article {
-            height: 80%;
-            width: 50%;
-            margin-bottom: 2%;
-            overflow: hidden;
-            @include flexible(flex, row, wrap, space-around, center);
+            margin-left: 0.8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            padding: 0;
 
             p {
-                height: 12%;
-                width: 20%;
-                margin: 2.5%;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: white;
+                height: 10%;
+                width: 45%;
+                margin: 2%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Classica-Light';
+            }
+        }
+    }
+
+    @include pantalla_pequeña() {
+        box-sizing: border-box;
+        @include flexible(flex, column, nowrap, center, center);
+        height: 100%;
+        background-color: map.get($colores, "secundario_uno");
+        overflow: hidden;
+
+        h3 {
+            padding-top: 0;
+            background-color: white;
+            align-self: center;
+            margin-top: 10%;
+            text-align: center;
+            font-family: 'Classica-Bold';
+        }
+
+        article {
+            margin-left: 0.8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+
+            p {
+                text-align: center;
+                text-transform: uppercase;
+                background-color: white;
+                height: 10%;
+                width: 45%;
+                margin: 2%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Classica-Light';
+            }
+        }
+    }
+
+    @include pantalla_estandar() {
+        box-sizing: border-box;
+        @include flexible(flex, column, nowrap, center, center);
+        height: 100%;
+        background-color: map.get($colores, "secundario_uno");
+        overflow: hidden;
+
+        h3 {
+            padding-top: 0;
+            background-color: white;
+            align-self: center;
+            margin-top: 10%;
+            text-align: center;
+            font-family: 'Classica-Bold';
+        }
+
+        article {
+            margin-left: 0.8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+
+            p {
+                text-align: center;
+                text-transform: uppercase;
+                background-color: white;
+                height: 10%;
+                width: 45%;
+                margin: 2%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Classica-Light';
             }
         }
     }
 
     @include pantalla_grande() {
-        // Estilos adicionales para pantallas grandes
-        flex-wrap: wrap;
-        height: 70%;
+        box-sizing: border-box;
+        @include flexible(flex, column, nowrap, center, center);
+        height: 100%;
+        background-color: map.get($colores, "secundario_uno");
+        overflow: hidden;
 
         h3 {
-            margin-bottom: auto;
-            margin-top: 2%;
+            padding-top: 0;
+            background-color: white;
+            align-self: center;
+            margin-top: 10%;
+            text-align: center;
+            font-family: 'Classica-Bold';
         }
 
         article {
-            height: 80%;
-            width: 50%;
-            margin-bottom: 2%;
-            overflow: hidden;
-            @include flexible(flex, row, wrap, space-around, center);
+            margin-left: 0.8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            padding: 0;
 
             p {
-                height: 12%;
-                width: 20%;
-                margin: 2.5%;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: white;
+                height: 10%;
+                width: 45%;
+                margin: 2%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Classica-Light';
             }
         }
     }
