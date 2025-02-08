@@ -614,12 +614,10 @@ header {
 @media (min-width: 769px) and (max-width: 1200px) {
   #modalidades {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
     overflow: hidden;
-    height: 60%;
+    height: 30%;
     background-color: #9D774C;
+    flex-direction: row;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -631,8 +629,13 @@ header {
     padding-top: 1%;
     text-align: center;
     overflow: hidden;
-    height: 25%;
+    height: 40%;
     background-color: #9D774C;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
+  #modalidades {
+    height: 50%;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
@@ -644,7 +647,7 @@ header {
     padding-top: 1%;
     text-align: center;
     overflow: hidden;
-    height: 25%;
+    height: 40%;
     background-color: #9D774C;
   }
 }
@@ -677,12 +680,12 @@ header {
   #presencial, #online {
     margin-top: 2%;
     margin-bottom: 2%;
-    width: 90%;
-    height: 80%;
+    width: 60%;
+    height: 90%;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -712,7 +715,8 @@ header {
 @media (min-width: 1921px) and (max-width: 2560px) {
   #presencial p, #online p {
     height: 10%;
-    width: 50%;
+    width: 65%;
+    font-size: 35px;
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
@@ -720,8 +724,8 @@ header {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presencial p, #online p {
-    height: 10%;
-    width: 50%;
+    height: 15%;
+    width: 80%;
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
@@ -740,19 +744,26 @@ header {
 @media (min-width: 769px) and (max-width: 1200px) {
   #presencial p, #online p {
     height: 10%;
-    width: 50%;
+    width: 60%;
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
+    font-size: 25px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #presencial p, #online p {
     height: 10%;
-    width: 50%;
+    width: 60%;
+    font-size: 20px;
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
+  #presencial p, #online p {
+    font-size: 25px;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
