@@ -1,58 +1,64 @@
 @use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
 
-footer {  
-
-  @include movil() {
-    @include flexible(flex, column, nowrap, flex-start, flex-start);
-    box-sizing: border-box;   
-    height: 40%;
+footer {
+  //Para moviles
+  @include movil {
+    box-sizing: border-box;  
+    display: flex;
+    flex-direction: column; 
+    height: 40%; 
     background-color: #372715;
     margin: 0;
-    height: 40%;
+    @include altura("896") {
+      height: 35%;
+    }
 
     iframe {
-      margin-top: 1%;
-      height: 90%;
-      width: 100%;
-      order: 1;
+      margin-top: 1%;      
+      height: 90%; 
+      width: 100%; 
+      order: 1;      
     }
 
     div {
-      @include flexible(flex, row, nowrap, space-between, flex-start);
-      order: 2;
+      justify-content: space-between;     
+      display: flex;      
+      order: 2;      
       width: 100%;
       overflow: hidden;
 
       #redes_sociales, #como_llegar {
-        padding-left: 1% ;
-        padding-right: 1% ;    
+        padding-left: 1%; 
+        padding-right: 1%;     
         display: flex;
-        width: 40% ;
+        width: 40%; 
         flex-direction: column;
 
         h3 {
-          @include flexible(flex, row, nowrap, center, center);
-          height: 30%;
+          height: 30%;          
           background-color: white;
-          width: 100%;
+          width: 100%; 
           margin-top: 0;
           padding-top: 0;
           text-align: center;
-          font-family: averia-serif;
+          font-family: averia-serif; 
           text-transform: uppercase;
           font-size: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+          color: white;
+          margin: 0;
+          white-space: nowrap;
+          margin-bottom: 10px;
+          font-family: 'LTMuseum-Light';
           
-        }
-
-        p {
-          display: flex;
-          align-items: center;
-          color: white;
-          margin: 0;
-          white-space: nowrap;
-          margin-bottom: 10px;
-          font-family: 'LTMuseum-Light';
-
           img {
             margin-right: 3%;
             max-width: 15%;
@@ -63,48 +69,49 @@ footer {
     }
   }
 
-  @include tableta() {
-    @include flexible(flex, column, nowrap, flex-end, center);
-    height: 45%;
-    box-sizing: border-box ;  
-    height: 45% ;
-    background-color: blue ;
+  //Para tabletas
+  @include tableta {
+    box-sizing: border-box;  
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 40%; 
+    background-color: #372715; 
     margin: 0;
 
     iframe {
-      margin-top: 1%;
-      height: 90%;
-      width: 100%;
-      order: 1;
+      display: flex;
+      align-items: center;            
+      margin-top: 2%;      
+      height: 200px;
+      width: 400px; 
+      order: 1;      
     }
 
     div {
-      justify-content: space-between;
-      display: flex;
-      order: 2;
-      width: 100%;
+      margin-top: 1%;                   
+      justify-content: space-between;     
+      display: flex;      
+      order: 2;      
+      width: 90%;
       overflow: hidden;
 
       #redes_sociales, #como_llegar {
-        padding-left: 1%;
-        padding-right: 1%;
+        padding-left: 1%; 
+        padding-right: 1%;     
         display: flex;
-        width: 40%;
+        width: 37%; 
         flex-direction: column;
 
         h3 {
-          height: 30%;
           background-color: white;
-          width: 100%;
-          margin-top: 0;
-          padding-top: 0;
+          width: 100%; 
+          height: 18%;
+          margin-top: 0;         
+          padding-top: 0; 
+          font-family: averia-serif; 
           text-align: center;
-          font-family: averia-serif;
-          text-transform: uppercase;
-          font-size: 80%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          font-size: 18px;
         }
 
         p {
@@ -126,109 +133,110 @@ footer {
     }
   }
 
-  @include pantalla_pequeña() {
-    @include flexible(flex, row, nowrap, space-between, flex-start);
-    height: 45%;
-    box-sizing: border-box;      
-    height: 22%;
+  //Para pantallas pequeñas
+  @include pantalla_pequeña {
+    box-sizing: border-box;  
+    display: flex;
+    justify-content: space-between;      
+    height: 20%;
     background-color: #372715;
-
-    iframe {
-      margin-top: 1%;
-      height: 90%;
-      width: 100%;
-      order: 1;
-    }
+    overflow: hidden;
 
     div {
-      justify-content: space-between;
-      display: flex;
-      order: 2;
+      justify-content: space-evenly;     
+      display: flex;         
       width: 100%;
       overflow: hidden;
-
+      
       #redes_sociales, #como_llegar {
-        padding-left: 1%;
-        padding-right: 1%;
-        display: flex;
-        width: 40%;
-        flex-direction: column;
+        display: flex; 
+        align-items: flex-start;
+        width: 45%;
+        justify-content: flex-start;
+        flex-direction: column;      
+               
 
         h3 {
-          height: 30%;
           background-color: white;
-          width: 100%;
-          margin-top: 0;
+          width: 95%;
+          height: 21%;
+          margin-top: 10%;
           padding-top: 0;
-          text-align: center;
           font-family: averia-serif;
-          text-transform: uppercase;
-          font-size: 80%;
+          text-align: center;
+          font-size: 28px;
           display: flex;
-          align-items: center;
+          align-content: center;
           justify-content: center;
+          align-items: center;
         }
 
         p {
           display: flex;
           align-items: center;
           color: white;
+          font-size: 25px;
           margin: 0;
+          margin-bottom: 30px;
           white-space: nowrap;
           margin-bottom: 10px;
           font-family: 'LTMuseum-Light';
 
           img {
-            margin-right: 3%;
-            max-width: 15%;
+            margin-right: 10px;
+            max-width: 40px;
             height: auto;
           }
         }
       }
     }
+
+    iframe {
+      display: flex;
+      width: 350px;
+      height: 100%;
+    }
   }
 
-  @include pantalla_estandar() {
-    @include flexible(flex, column, nowrap, flex-start, flex-start);
-    box-sizing: border-box ;
-    height: 40% ;
+  //Para pantallas estándar
+  @include pantalla_estandar {
+    box-sizing: border-box;  
+    display: flex;
+    justify-content: space-between;      
+    height: 25%;
     background-color: #372715;
-    margin: 0;
-
-    iframe {
-      margin-top: 1%;
-      height: 90%;
-      width: 100%;
-      order: 1;
-    }
+    overflow: hidden;
 
     div {
-      justify-content: space-between;
-      display: flex;
-      order: 2;
+      justify-content: space-around;     
+      display: flex;         
       width: 100%;
       overflow: hidden;
-
+      
       #redes_sociales, #como_llegar {
-        padding-left: 1%;
-        padding-right: 1%;
-        display: flex;
-        width: 40%;
-        flex-direction: column;
+        display: flex; 
+        align-items: flex-start;
+        width: 28%;
+        justify-content: flex-start;
+        flex-direction: column;      
+        margin-left: 20px;       
 
         h3 {
-          height: 30%;
           background-color: white;
-          width: 100%;
-          margin-top: 0;
-          padding-top: 0;
+          width: 100%; 
+          height: 18%;
+          margin-top: 0;         
+          padding-top: 0; 
+          font-family: averia-serif; 
           text-align: center;
-          font-family: averia-serif;
-          text-transform: uppercase;
-          font-size: 80%;
+          font-size: 26px;
           display: flex;
-          align-items: center;
+          align-content: center;
           justify-content: center;
+          align-items: center;
+          @include altura("1080") {
+            font-size: 35px;
+          }
         }
 
         p {
@@ -236,62 +244,68 @@ footer {
           align-items: center;
           color: white;
           margin: 0;
+          font-size: 26px;
           white-space: nowrap;
           margin-bottom: 10px;
           font-family: 'LTMuseum-Light';
+          @include altura("1080") {
+            font-size: 35px;
+            margin-bottom: 25px;
+          }
 
           img {
-            margin-right: 3%;
-            max-width: 15%;
+            margin-right: 10px;
+            max-width: 40px;
             height: auto;
           }
         }
       }
+    }
+
+    iframe {
+      display: flex; 
+      width: 350px;
+      height: 100%;
     }
   }
 
-  @include pantalla_grande() {
-    @include flexible(flex, column, nowrap, flex-start, center);
-    height: 45%;
-    box-sizing: border-box  ;
-    height: 45% ;
-    background-color: blue ;
-    margin: 0;
-
-    iframe {
-      margin-top: 1%;
-      height: 90%;
-      width: 100%;
-      order: 1;
-    }
+  //Para pantallas grandes
+  @include pantalla_grande {
+    box-sizing: border-box;  
+    display: flex;
+    justify-content: space-between;      
+    height: 25%;
+    background-color: #372715;
+    overflow: hidden;
 
     div {
-      justify-content: space-between;
-      display: flex;
-      order: 2;
+      justify-content: space-around;     
+      display: flex;         
       width: 100%;
       overflow: hidden;
-
+      
       #redes_sociales, #como_llegar {
-        padding-left: 1%;
-        padding-right: 1%;
-        display: flex;
-        width: 40%;
-        flex-direction: column;
+        display: flex; 
+        align-items: flex-start;
+        width: 25%;
+        justify-content: flex-start;
+        flex-direction: column;      
+               
 
         h3 {
-          height: 30%;
           background-color: white;
-          width: 100%;
-          margin-top: 0;
-          padding-top: 0;
+          width: 100%; 
+          height: 18%;
+          margin-top: 0;         
+          padding-top: 0; 
+          font-family: averia-serif; 
           text-align: center;
-          font-family: averia-serif;
-          text-transform: uppercase;
-          font-size: 80%;
+          font-size: 47px;
           display: flex;
-          align-items: center;
+          align-content: center;
           justify-content: center;
+          align-items: center;
+         
         }
 
         p {
@@ -299,17 +313,25 @@ footer {
           align-items: center;
           color: white;
           margin: 0;
+          font-size: 47px;
           white-space: nowrap;
-          margin-bottom: 10px;
+          margin-bottom: 25px;
           font-family: 'LTMuseum-Light';
+         
 
           img {
-            margin-right: 3%;
-            max-width: 15%;
+            margin-right: 10px;
+            max-width: 10%;
             height: auto;
           }
         }
       }
+    }
+
+    iframe {
+      display: flex; 
+      width: 650px;
+      height: 100%;
     }
   }
 }

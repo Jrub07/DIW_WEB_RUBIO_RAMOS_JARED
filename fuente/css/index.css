@@ -900,7 +900,9 @@ header {
     padding-top: 0;
     background-color: white;
     align-self: center;
-    margin-top: 10%;
+    font-size: 20px;
+    width: 90%;
+    margin-top: 2%;
     text-align: center;
     font-family: "Classica-Bold";
   }
@@ -920,8 +922,9 @@ header {
     text-transform: uppercase;
     background-color: white;
     height: 10%;
+    font-size: 20px;
     width: 45%;
-    margin: 2%;
+    margin: 1%;
     padding: 0;
     display: flex;
     align-items: center;
@@ -944,7 +947,9 @@ header {
     padding-top: 0;
     background-color: white;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 2%;
+    width: 90%;
+    font-size: 30px;
     text-align: center;
     font-family: "Classica-Bold";
   }
@@ -965,7 +970,8 @@ header {
     background-color: white;
     height: 10%;
     width: 45%;
-    margin: 2%;
+    margin: 1%;
+    font-size: 30px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -988,31 +994,33 @@ header {
     padding-top: 0;
     background-color: white;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 1%;
+    width: 70%;
     text-align: center;
     font-family: "Classica-Bold";
   }
   #especialidades article {
-    margin-left: 0.8%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 90%;
     padding: 0;
+    align-content: center;
   }
   #especialidades article p {
     text-align: center;
     text-transform: uppercase;
     background-color: white;
     height: 10%;
-    width: 45%;
-    margin: 2%;
-    padding: 0;
+    width: 20%;
+    margin: 3.5%;
+    padding: 0%;
     display: flex;
     align-items: center;
+    font-size: 25px;
     justify-content: center;
     font-family: "Classica-Light";
   }
@@ -1032,7 +1040,9 @@ header {
     padding-top: 0;
     background-color: white;
     align-self: center;
-    margin-top: 10%;
+    width: 70%;
+    font-size: 40px;
+    margin-top: 1%;
     text-align: center;
     font-family: "Classica-Bold";
   }
@@ -1043,37 +1053,43 @@ header {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     padding: 0;
+    align-content: center;
   }
   #especialidades article p {
     text-align: center;
     text-transform: uppercase;
     background-color: white;
     height: 10%;
-    width: 45%;
-    margin: 2%;
+    width: 25%;
+    margin: 3%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Classica-Light";
+    font-size: 35px;
   }
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
   footer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 40%;
     background-color: #372715;
     margin: 0;
-    height: 40%;
   }
+}
+@media (min-width: 360px) and (max-width: 480px) and (min-height: 896px) {
+  footer {
+    height: 35%;
+  }
+}
+@media (min-width: 360px) and (max-width: 480px) {
   footer iframe {
     margin-top: 1%;
     height: 90%;
@@ -1081,10 +1097,8 @@ header {
     order: 1;
   }
   footer div {
-    display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start;
+    display: flex;
     order: 2;
     width: 100%;
     overflow: hidden;
@@ -1097,10 +1111,6 @@ header {
     flex-direction: column;
   }
   footer div #redes_sociales h3, footer div #como_llegar h3 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     height: 30%;
     background-color: white;
     width: 100%;
@@ -1110,6 +1120,9 @@ header {
     font-family: averia-serif;
     text-transform: uppercase;
     font-size: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
@@ -1128,49 +1141,46 @@ header {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   footer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    height: 45%;
     box-sizing: border-box;
-    height: 45%;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    background-color: #372715;
     margin: 0;
   }
   footer iframe {
-    margin-top: 1%;
-    height: 90%;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    height: 200px;
+    width: 400px;
     order: 1;
   }
   footer div {
+    margin-top: 1%;
     justify-content: space-between;
     display: flex;
     order: 2;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
   }
   footer div #redes_sociales, footer div #como_llegar {
     padding-left: 1%;
     padding-right: 1%;
     display: flex;
-    width: 40%;
+    width: 37%;
     flex-direction: column;
   }
   footer div #redes_sociales h3, footer div #como_llegar h3 {
-    height: 30%;
     background-color: white;
     width: 100%;
+    height: 18%;
     margin-top: 0;
     padding-top: 0;
-    text-align: center;
     font-family: averia-serif;
-    text-transform: uppercase;
-    font-size: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    font-size: 18px;
   }
   footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
@@ -1189,183 +1199,190 @@ header {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 45%;
     box-sizing: border-box;
-    height: 22%;
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
     background-color: #372715;
-  }
-  footer iframe {
-    margin-top: 1%;
-    height: 90%;
-    width: 100%;
-    order: 1;
+    overflow: hidden;
   }
   footer div {
-    justify-content: space-between;
+    justify-content: space-evenly;
     display: flex;
-    order: 2;
     width: 100%;
     overflow: hidden;
   }
   footer div #redes_sociales, footer div #como_llegar {
-    padding-left: 1%;
-    padding-right: 1%;
     display: flex;
-    width: 40%;
+    align-items: flex-start;
+    width: 45%;
+    justify-content: flex-start;
     flex-direction: column;
   }
   footer div #redes_sociales h3, footer div #como_llegar h3 {
-    height: 30%;
     background-color: white;
-    width: 100%;
-    margin-top: 0;
+    width: 95%;
+    height: 21%;
+    margin-top: 10%;
     padding-top: 0;
-    text-align: center;
     font-family: averia-serif;
-    text-transform: uppercase;
-    font-size: 80%;
+    text-align: center;
+    font-size: 28px;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
   }
   footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
     align-items: center;
     color: white;
+    font-size: 25px;
     margin: 0;
+    margin-bottom: 30px;
     white-space: nowrap;
     margin-bottom: 10px;
     font-family: "LTMuseum-Light";
   }
   footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 3%;
-    max-width: 15%;
+    margin-right: 10px;
+    max-width: 40px;
     height: auto;
+  }
+  footer iframe {
+    display: flex;
+    width: 350px;
+    height: 100%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   footer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
     box-sizing: border-box;
-    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    height: 25%;
     background-color: #372715;
-    margin: 0;
-  }
-  footer iframe {
-    margin-top: 1%;
-    height: 90%;
-    width: 100%;
-    order: 1;
+    overflow: hidden;
   }
   footer div {
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
-    order: 2;
     width: 100%;
     overflow: hidden;
   }
   footer div #redes_sociales, footer div #como_llegar {
-    padding-left: 1%;
-    padding-right: 1%;
     display: flex;
-    width: 40%;
+    align-items: flex-start;
+    width: 28%;
+    justify-content: flex-start;
     flex-direction: column;
+    margin-left: 20px;
   }
   footer div #redes_sociales h3, footer div #como_llegar h3 {
-    height: 30%;
     background-color: white;
     width: 100%;
+    height: 18%;
     margin-top: 0;
     padding-top: 0;
-    text-align: center;
     font-family: averia-serif;
-    text-transform: uppercase;
-    font-size: 80%;
+    text-align: center;
+    font-size: 26px;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
   }
+}
+@media (min-width: 1201px) and (max-width: 1920px) and (min-height: 1080px) {
+  footer div #redes_sociales h3, footer div #como_llegar h3 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
   footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
     align-items: center;
     color: white;
     margin: 0;
+    font-size: 26px;
     white-space: nowrap;
     margin-bottom: 10px;
     font-family: "LTMuseum-Light";
   }
+}
+@media (min-width: 1201px) and (max-width: 1920px) and (min-height: 1080px) {
+  footer div #redes_sociales p, footer div #como_llegar p {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
   footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 3%;
-    max-width: 15%;
+    margin-right: 10px;
+    max-width: 40px;
     height: auto;
+  }
+  footer iframe {
+    display: flex;
+    width: 350px;
+    height: 100%;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   footer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    height: 45%;
     box-sizing: border-box;
-    height: 45%;
-    background-color: blue;
-    margin: 0;
-  }
-  footer iframe {
-    margin-top: 1%;
-    height: 90%;
-    width: 100%;
-    order: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 25%;
+    background-color: #372715;
+    overflow: hidden;
   }
   footer div {
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
-    order: 2;
     width: 100%;
     overflow: hidden;
   }
   footer div #redes_sociales, footer div #como_llegar {
-    padding-left: 1%;
-    padding-right: 1%;
     display: flex;
-    width: 40%;
+    align-items: flex-start;
+    width: 25%;
+    justify-content: flex-start;
     flex-direction: column;
   }
   footer div #redes_sociales h3, footer div #como_llegar h3 {
-    height: 30%;
     background-color: white;
     width: 100%;
+    height: 18%;
     margin-top: 0;
     padding-top: 0;
-    text-align: center;
     font-family: averia-serif;
-    text-transform: uppercase;
-    font-size: 80%;
+    text-align: center;
+    font-size: 47px;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
   }
   footer div #redes_sociales p, footer div #como_llegar p {
     display: flex;
     align-items: center;
     color: white;
     margin: 0;
+    font-size: 47px;
     white-space: nowrap;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-family: "LTMuseum-Light";
   }
   footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 3%;
-    max-width: 15%;
+    margin-right: 10px;
+    max-width: 10%;
     height: auto;
+  }
+  footer iframe {
+    display: flex;
+    width: 650px;
+    height: 100%;
   }
 }
 
