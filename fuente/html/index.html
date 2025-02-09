@@ -11,7 +11,7 @@
     <header>
       <img
         src="../imagenes/logo_balance_psico_990x994.jpg"
-        alt="logo Balance Psicología"
+        alt="logo_Balance_Psicología"
       />
       <button>Sobre nosotros</button>
       <button>Ofertas</button>
@@ -58,18 +58,56 @@
     <section id="modalidades">
       <article id="presencial">
         <p>Modalidad Presencial</p>
-        <img
-          src="../imagenes/modalidad_presencial_3616x2412.avif"
-          alt="modalidad_presencial"
-        />
+        <picture>
+          <source srcset="../imagenes/modalidad_presencial_400x267.avif" type="image/avif" media="(max-width: 480px)">
+          <source srcset="../imagenes/modalidad_presencial_400x267.webp" type="image/webp" media="(max-width: 480px)">
+          <source srcset="../imagenes/modalidad_presencial_400x267.jpeg" type="image/jpeg" media="(max-width: 480px)">
+          
+          <source srcset="../imagenes/modalidad_presencial_800x534.avif" type="image/avif" media="(max-width: 768px)">
+          <source srcset="../imagenes/modalidad_presencial_800x534.webp" type="image/webp" media="(max-width: 768px)">
+          <source srcset="../imagenes/modalidad_presencial_800x534.jpeg" type="image/jpeg" media="(max-width: 768px)">
+          
+          <source srcset="../imagenes/modalidad_presencial_1500x1001.avif" type="image/avif" media="(max-width: 1200px)">
+          <source srcset="../imagenes/modalidad_presencial_1500x1001.webp" type="image/webp" media="(max-width: 1200px)">
+          <source srcset="../imagenes/modalidad_presencial_1500x1001.jpeg" type="image/jpeg" media="(max-width: 1200px)">
+          
+          <source srcset="../imagenes/modalidad_presencial_2000x1334.avif" type="image/avif" media="(max-width: 1920px)">
+          <source srcset="../imagenes/modalidad_presencial_2000x1334.webp" type="image/webp" media="(max-width: 1920px)">
+          <source srcset="../imagenes/modalidad_presencial_2000x1334.jpeg" type="image/jpeg" media="(max-width: 1920px)">
+          
+          <source srcset="../imagenes/modalidad_presencial_2600x1734.avif" type="image/avif" media="(max-width: 2560px)">
+          <source srcset="../imagenes/modalidad_presencial_2600x1734.webp" type="image/webp" media="(max-width: 2560px)">
+          <source srcset="../imagenes/modalidad_presencial_2600x1734.jpeg" type="image/jpeg" media="(max-width: 2560px)">
+          
+          <img src="../imagenes/modalidad_presencial_3616x2412.avif" alt="modalidad_presencial" class="imagen-responsiva">
+        </picture>
       </article>
-
+      
       <article id="online">
-        <p>Modalidad Presencial</p>
-        <img
-          src="../imagenes/modalidad_online_3612x2408.avif"
-          alt="modalidad_online"
-        />
+        <p>Modalidad Online</p>
+        <picture>
+          <source srcset="../imagenes/modalidad_online_400x267.avif" type="image/avif" media="(max-width: 480px)">
+          <source srcset="../imagenes/modalidad_online_400x267.webp" type="image/webp" media="(max-width: 480px)">
+          <source srcset="../imagenes/modalidad_online_400x267.jpeg" type="image/jpeg" media="(max-width: 480px)">
+          
+          <source srcset="../imagenes/modalidad_online_800x533.avif" type="image/avif" media="(max-width: 768px)">
+          <source srcset="../imagenes/modalidad_online_800x533.webp" type="image/webp" media="(max-width: 768px)">
+          <source srcset="../imagenes/modalidad_online_800x533.jpeg" type="image/jpeg" media="(max-width: 768px)">
+          
+          <source srcset="../imagenes/modalidad_online_1500x1000.avif" type="image/avif" media="(max-width: 1200px)">
+          <source srcset="../imagenes/modalidad_online_1500x1000.webp" type="image/webp" media="(max-width: 1200px)">
+          <source srcset="../imagenes/modalidad_online_1500x1000.jpeg" type="image/jpeg" media="(max-width: 1200px)">
+          
+          <source srcset="../imagenes/modalidad_online_2000x1333.avif" type="image/avif" media="(max-width: 1920px)">
+          <source srcset="../imagenes/modalidad_online_2000x1333.webp" type="image/webp" media="(max-width: 1920px)">
+          <source srcset="../imagenes/modalidad_online_2000x1333.jpeg" type="image/jpeg" media="(max-width: 1920px)">
+          
+          <source srcset="../imagenes/modalidad_online_2600x1733.avif" type="image/avif" media="(max-width: 2560px)">
+          <source srcset="../imagenes/modalidad_online_2600x1733.webp" type="image/webp" media="(max-width: 2560px)">
+          <source srcset="../imagenes/modalidad_online_2600x1733.jpeg" type="image/jpeg" media="(max-width: 2560px)">
+          
+          <img src="../imagenes/modalidad_online_3612x2408.avif" alt="modalidad_online" class="imagen-responsiva">
+        </picture>
       </article>
     </section>
 
@@ -96,7 +134,7 @@
     </section>
 
     <footer>
-      <div>
+      <section id="contacto">
         <article id="redes_sociales">
           <h3>Nuestras redes sociales</h3>
           <p>
@@ -122,15 +160,15 @@
         <article id="como_llegar">
           <h3>Dónde encontrarnos</h3>
           <p>
-            <img src="../imagenes/ubicacion_100x100.png" alt="ubicacion" />Calle
+            <img src="../imagenes/bus_400x400.png" alt="ubicacion" />Calle
             psico nº2
           </p>
-          <p><img src="../imagenes/metro_100x100.png" alt="metro" />Linea 4</p>
+          <p><img src="../imagenes/metro_400x400.png" alt="metro" />Linea 4</p>
           <p>
-            <img src="../imagenes/bus_100x100.png" alt="bus" />Números 8 y 9
+            <img src="../imagenes/bus_400x400.png" alt="bus" />Números 8 y 9
           </p>
         </article>
-      </div>
+      </section>
 
       <article class="mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.591586430228!2d-3.559550052964558!3d37.133069988539376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb3a191ddcf7%3A0x8e872a7a9aeca2fb!2sBalance%20Psicologia!5e0!3m2!1ses!2ses!4v1737832746593!5m2!1ses!2ses"></iframe>

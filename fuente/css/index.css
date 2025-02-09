@@ -51,16 +51,18 @@ header {
   }
 }
 
+header button {
+  border-radius: 10%;
+  background-color: white;
+  color: black;
+  font-family: averia-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 10px;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   header button {
-    border-radius: 10%;
     width: 40%;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 10px;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) and (min-height: 896px) {
@@ -76,14 +78,7 @@ header {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   header button {
-    border-radius: 10%;
     height: 50%;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 10px;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) and (min-height: 1024px) {
@@ -94,31 +89,13 @@ header {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   header button {
-    border-radius: 10%;
     height: 50px;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 10px;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) and (min-height: 1366px) {
   header button {
-    height: 60%;
+    height: 40%;
     font-size: 22px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1920px) {
-  header button {
-    border-radius: 10%;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 10px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 800px) {
@@ -131,17 +108,6 @@ header {
   header button {
     height: 50%;
     font-size: 22px;
-  }
-}
-@media (min-width: 1921px) and (max-width: 2560px) {
-  header button {
-    border-radius: 10%;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 10px;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) and (min-height: 1080px) {
@@ -161,37 +127,37 @@ header {
   font-family: "MilkAndHoney";
 }
 
+header img {
+  max-width: 10%;
+  object-fit: cover;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   header img {
     max-width: 20%;
-    object-fit: cover;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   header img {
     max-height: 90%;
-    object-fit: cover;
+    max-width: 20%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   header img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   header img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   header img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 
@@ -563,8 +529,8 @@ header {
 @media (min-width: 1201px) and (max-width: 1920px) {
   .valores article p {
     margin: 0;
-    padding-top: 5%;
-    font-size: 20px;
+    padding-top: 2%;
+    font-size: 16px;
     font-family: "LTMuseum-light";
   }
 }
@@ -618,6 +584,8 @@ header {
     height: 30%;
     background-color: #9D774C;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -686,6 +654,7 @@ header {
     overflow: hidden;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -720,6 +689,9 @@ header {
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -729,6 +701,9 @@ header {
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
@@ -739,6 +714,9 @@ header {
     text-align: center;
     font-family: "Classica-Bold";
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -749,6 +727,9 @@ header {
     text-align: center;
     font-family: "Classica-Bold";
     font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -759,6 +740,9 @@ header {
     background-color: white;
     text-align: center;
     font-family: "Classica-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -771,13 +755,17 @@ header {
     max-width: 80%;
     max-height: 80%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presencial img, #online img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
@@ -785,13 +773,17 @@ header {
     width: 100%;
     height: 100%;
     object-fit: fill;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #presencial img, #online img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -799,6 +791,8 @@ header {
     max-width: 80%;
     max-height: 80%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -994,6 +988,7 @@ header {
     padding-top: 0;
     background-color: white;
     align-self: center;
+    font-size: 28px;
     margin-top: 1%;
     width: 70%;
     text-align: center;
@@ -1070,23 +1065,63 @@ header {
     align-items: center;
     justify-content: center;
     font-family: "Classica-Light";
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
+footer {
+  box-sizing: border-box;
+  display: flex;
+  background-color: #372715;
+  overflow: hidden;
+}
+footer #contacto {
+  display: flex;
+  overflow: hidden;
+}
+footer #contacto #redes_sociales, footer #contacto #como_llegar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
+  background-color: white;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  font-family: averia-serif;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+  font-family: "LTMuseum-Light";
+}
+footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
+  margin-right: 10px;
+  height: auto;
+}
+footer iframe {
+  display: flex;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   footer {
-    box-sizing: border-box;
-    display: flex;
     flex-direction: column;
-    height: 40%;
-    background-color: #372715;
+    height: 37%;
     margin: 0;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) and (min-height: 896px) {
   footer {
-    height: 35%;
+    height: 32%;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
@@ -1096,291 +1131,160 @@ header {
     width: 100%;
     order: 1;
   }
-  footer div {
+  footer #contacto {
     justify-content: space-between;
-    display: flex;
     order: 2;
     width: 100%;
-    overflow: hidden;
   }
-  footer div #redes_sociales, footer div #como_llegar {
+  footer #contacto #redes_sociales, footer #contacto #como_llegar {
     padding-left: 1%;
     padding-right: 1%;
-    display: flex;
     width: 40%;
-    flex-direction: column;
   }
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     height: 30%;
-    background-color: white;
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
-    text-align: center;
-    font-family: averia-serif;
-    text-transform: uppercase;
     font-size: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  footer div #redes_sociales p, footer div #como_llegar p {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin: 0;
-    white-space: nowrap;
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     margin-bottom: 10px;
-    font-family: "LTMuseum-Light";
   }
-  footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 3%;
+  footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
     max-width: 15%;
-    height: auto;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   footer {
-    box-sizing: border-box;
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: 40%;
-    background-color: #372715;
     margin: 0;
   }
   footer iframe {
-    display: flex;
     align-items: center;
     margin-top: 2%;
     height: 200px;
     width: 400px;
     order: 1;
   }
-  footer div {
+  footer #contacto {
     margin-top: 1%;
     justify-content: space-between;
-    display: flex;
     order: 2;
     width: 90%;
-    overflow: hidden;
   }
-  footer div #redes_sociales, footer div #como_llegar {
+  footer #contacto #redes_sociales, footer #contacto #como_llegar {
     padding-left: 1%;
     padding-right: 1%;
-    display: flex;
     width: 37%;
-    flex-direction: column;
   }
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
-    background-color: white;
-    width: 100%;
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     height: 18%;
-    margin-top: 0;
-    padding-top: 0;
-    font-family: averia-serif;
-    text-align: center;
     font-size: 18px;
   }
-  footer div #redes_sociales p, footer div #como_llegar p {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin: 0;
-    white-space: nowrap;
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     margin-bottom: 10px;
-    font-family: "LTMuseum-Light";
   }
-  footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 3%;
+  footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
     max-width: 15%;
-    height: auto;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer {
-    box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     height: 20%;
-    background-color: #372715;
-    overflow: hidden;
   }
-  footer div {
+  footer #contacto {
     justify-content: space-evenly;
-    display: flex;
     width: 100%;
-    overflow: hidden;
   }
-  footer div #redes_sociales, footer div #como_llegar {
-    display: flex;
-    align-items: flex-start;
+  footer #contacto #redes_sociales, footer #contacto #como_llegar {
     width: 45%;
-    justify-content: flex-start;
-    flex-direction: column;
   }
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
-    background-color: white;
-    width: 95%;
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     height: 21%;
     margin-top: 10%;
-    padding-top: 0;
-    font-family: averia-serif;
-    text-align: center;
     font-size: 28px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
   }
-  footer div #redes_sociales p, footer div #como_llegar p {
-    display: flex;
-    align-items: center;
-    color: white;
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     font-size: 25px;
-    margin: 0;
     margin-bottom: 30px;
-    white-space: nowrap;
-    margin-bottom: 10px;
-    font-family: "LTMuseum-Light";
   }
-  footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 10px;
+  footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
     max-width: 40px;
-    height: auto;
   }
   footer iframe {
-    display: flex;
     width: 350px;
     height: 100%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   footer {
-    box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     height: 25%;
-    background-color: #372715;
-    overflow: hidden;
   }
-  footer div {
+  footer #contacto {
     justify-content: space-around;
-    display: flex;
     width: 100%;
-    overflow: hidden;
   }
-  footer div #redes_sociales, footer div #como_llegar {
-    display: flex;
-    align-items: flex-start;
+  footer #contacto #redes_sociales, footer #contacto #como_llegar {
     width: 28%;
-    justify-content: flex-start;
-    flex-direction: column;
     margin-left: 20px;
   }
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
-    background-color: white;
-    width: 100%;
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     height: 18%;
-    margin-top: 0;
-    padding-top: 0;
-    font-family: averia-serif;
-    text-align: center;
     font-size: 26px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 1080px) {
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     font-size: 35px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
-  footer div #redes_sociales p, footer div #como_llegar p {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin: 0;
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     font-size: 26px;
-    white-space: nowrap;
     margin-bottom: 10px;
-    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 1080px) {
-  footer div #redes_sociales p, footer div #como_llegar p {
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     font-size: 35px;
     margin-bottom: 25px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
-  footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 10px;
+  footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
     max-width: 40px;
-    height: auto;
   }
   footer iframe {
-    display: flex;
     width: 350px;
     height: 100%;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   footer {
-    box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     height: 25%;
-    background-color: #372715;
-    overflow: hidden;
   }
-  footer div {
+  footer #contacto {
     justify-content: space-around;
-    display: flex;
     width: 100%;
-    overflow: hidden;
   }
-  footer div #redes_sociales, footer div #como_llegar {
-    display: flex;
-    align-items: flex-start;
+  footer #contacto #redes_sociales, footer #contacto #como_llegar {
     width: 25%;
-    justify-content: flex-start;
-    flex-direction: column;
   }
-  footer div #redes_sociales h3, footer div #como_llegar h3 {
-    background-color: white;
-    width: 100%;
+  footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
     height: 18%;
-    margin-top: 0;
-    padding-top: 0;
-    font-family: averia-serif;
-    text-align: center;
     font-size: 47px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
   }
-  footer div #redes_sociales p, footer div #como_llegar p {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin: 0;
+  footer #contacto #redes_sociales p, footer #contacto #como_llegar p {
     font-size: 47px;
-    white-space: nowrap;
     margin-bottom: 25px;
-    font-family: "LTMuseum-Light";
   }
-  footer div #redes_sociales p img, footer div #como_llegar p img {
-    margin-right: 10px;
+  footer #contacto #redes_sociales p img, footer #contacto #como_llegar p img {
     max-width: 10%;
-    height: auto;
   }
   footer iframe {
-    display: flex;
     width: 650px;
     height: 100%;
   }

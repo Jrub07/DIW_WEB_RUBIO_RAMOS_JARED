@@ -1,0 +1,250 @@
+@use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
+
+footer {
+  box-sizing: border-box;
+  display: flex;
+  background-color: map.get($colores, "principal");
+  overflow: hidden;
+
+  #contacto {
+    display: flex;
+    overflow: hidden;
+
+    #redes_sociales, #como_llegar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      h3 {
+        background-color: white;
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        font-family: averia-serif;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin: 0;
+        white-space: nowrap;
+        font-family: 'LTMuseum-Light';
+
+        img {
+          margin-right: 10px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  iframe {
+    display: flex;
+  }
+
+  //Para moviles
+  @include movil {
+    flex-direction: column;
+    height: 37%;
+    margin: 0;
+
+    @include altura("896") {
+      height: 32%;
+    }
+
+    iframe {
+      margin-top: 1%;
+      height: 90%;
+      width: 100%;
+      order: 1;
+    }
+
+    #contacto {
+      justify-content: space-between;
+      order: 2;
+      width: 100%;
+
+      #redes_sociales, #como_llegar {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 40%;
+
+        h3 {
+          height: 30%;
+          font-size: 80%;
+        }
+
+        p {
+          margin-bottom: 10px;
+
+          img {
+            max-width: 15%;
+          }
+        }
+      }
+    }
+  }
+
+  //Para tabletas
+  @include tableta {
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    margin: 0;
+
+    iframe {
+      align-items: center;
+      margin-top: 2%;
+      height: 200px;
+      width: 400px;
+      order: 1;
+    }
+
+    #contacto {
+      margin-top: 1%;
+      justify-content: space-between;
+      order: 2;
+      width: 90%;
+
+      #redes_sociales, #como_llegar {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 37%;
+
+        h3 {
+          height: 18%;
+          font-size: 18px;
+        }
+
+        p {
+          margin-bottom: 10px;
+
+          img {
+            max-width: 15%;
+          }
+        }
+      }
+    }
+  }
+
+  //Para pantallas pequeñas
+  @include pantalla_pequeña {
+    justify-content: space-between;
+    height: 20%;
+
+    #contacto {
+      justify-content: space-evenly;
+      width: 100%;
+
+      #redes_sociales, #como_llegar {
+        width: 45%;
+
+        h3 {
+          height: 21%;
+          margin-top: 10%;
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 25px;
+          margin-bottom: 30px;
+
+          img {
+            max-width: 40px;
+          }
+        }
+      }
+    }
+
+    iframe {
+      width: 350px;
+      height: 100%;
+    }
+  }
+
+  //Para pantallas estándar
+  @include pantalla_estandar {
+    justify-content: space-between;
+    height: 25%;
+
+    #contacto {
+      justify-content: space-around;
+      width: 100%;
+
+      #redes_sociales, #como_llegar {
+        width: 28%;
+        margin-left: 20px;
+
+        h3 {
+          height: 18%;
+          font-size: 26px;
+
+          @include altura("1080") {
+            font-size: 35px;
+          }
+        }
+
+        p {
+          font-size: 26px;
+          margin-bottom: 10px;
+
+          @include altura("1080") {
+            font-size: 35px;
+            margin-bottom: 25px;
+          }
+
+          img {
+            max-width: 40px;
+          }
+        }
+      }
+    }
+
+    iframe {
+      width: 350px;
+      height: 100%;
+    }
+  }
+
+  //Para pantallas grandes
+  @include pantalla_grande {
+    justify-content: space-between;
+    height: 25%;
+
+    #contacto {
+      justify-content: space-around;
+      width: 100%;
+
+      #redes_sociales, #como_llegar {
+        width: 25%;
+
+        h3 {
+          height: 18%;
+          font-size: 47px;
+        }
+
+        p {
+          font-size: 47px;
+          margin-bottom: 25px;
+
+          img {
+            max-width: 10%;
+          }
+        }
+      }
+    }
+
+    iframe {
+      width: 650px;
+      height: 100%;
+    }
+  }
+}

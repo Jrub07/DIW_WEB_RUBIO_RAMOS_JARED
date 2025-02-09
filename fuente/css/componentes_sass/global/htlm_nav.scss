@@ -1,0 +1,120 @@
+@use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
+
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;    
+}
+
+//Creacion del header
+header{
+    width: 100%;
+    overflow: hidden;
+    background-color: map.get($colores, "principal"); 
+    @include flexible(flex, row, nowrap, space-around, center);
+    @include responsivo_todos();
+    
+    @include altura("896"){
+        height: 10%;
+    }
+    @include altura("760"){
+      height: 17%;
+    }    
+}
+
+header button {   
+    border-radius: 10%;
+    background-color: white;
+    color: black;
+    font-family: averia-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 10px;
+
+    @include movil() {
+        width: 40%;
+        @include altura("896") {
+            height: 50%;
+            font-size: 16px;
+        }
+        @include altura("760") {
+            height: 40%;
+        }
+    }
+
+    @include tableta() {
+        height: 50%;
+        @include altura("1024") {
+            height: 40%;
+            font-size: 18px;
+        }
+    }
+
+    @include pantalla_pequeña() {
+        height: 50px;
+        @include altura("1366") {
+            height: 40%;
+            font-size: 22px;
+        }
+    }
+
+    @include pantalla_estandar() {
+        @include altura("800") {
+            height: 50%;
+            font-size: 20px;
+        }
+        @include altura("864") {
+            height: 50%;
+            font-size: 22px;
+        }
+    }
+
+    @include pantalla_grande() {
+        @include altura("1080") {
+            height: 50%;
+            font-size: 25px;
+        }
+        @include altura("1440") {
+            height: 50%;
+            font-size: 35px;
+        }
+    }
+}
+
+#pedir_cita{font-family: 'MilkAndHoney';}
+
+header img {
+    max-width: 10%;
+    object-fit: cover;
+
+    @include movil() {
+        max-width: 20%;
+    }
+
+    @include tableta() {
+        max-height: 90%;
+        max-width: 20%;
+    }
+
+    @include pantalla_pequeña() {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    @include pantalla_estandar() {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    @include pantalla_grande() {
+      max-width: 90%;
+      max-height: 90%;
+    }
+}
+
+
+
