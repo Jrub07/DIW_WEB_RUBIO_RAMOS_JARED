@@ -507,7 +507,7 @@ header img {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
-    font-family: "LTMuseum-light";
+    font-family: "LTMuseum-Light";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -516,14 +516,14 @@ header img {
 @media (min-width: 481px) and (max-width: 768px) {
   .valores article p {
     margin: 0;
-    font-family: "LTMuseum-light";
+    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .valores article p {
     margin: 0;
     font-size: 25px;
-    font-family: "LTMuseum-light";
+    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -531,7 +531,7 @@ header img {
     margin: 0;
     padding-top: 2%;
     font-size: 16px;
-    font-family: "LTMuseum-light";
+    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -549,7 +549,7 @@ header img {
     margin: 0;
     padding-top: 5%;
     font-size: 33px;
-    font-family: "LTMuseum-light";
+    font-family: "LTMuseum-Light";
   }
 }
 
@@ -811,6 +811,7 @@ header img {
   background-color: white;
   align-self: center;
   margin-top: 10%;
+  font-family: "Classica-Bold";
 }
 #especialidades article {
   margin-left: 0.8%;
@@ -876,7 +877,6 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Classica-Light";
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -923,7 +923,6 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Classica-Light";
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -970,7 +969,6 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Classica-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -1017,7 +1015,6 @@ header img {
     align-items: center;
     font-size: 25px;
     justify-content: center;
-    font-family: "Classica-Light";
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
@@ -1064,7 +1061,6 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Classica-Light";
     font-size: 40px;
   }
 }

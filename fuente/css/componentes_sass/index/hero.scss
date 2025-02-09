@@ -64,7 +64,7 @@
     width: 90%;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: 'Fashion';
+    @include aplicar_fuente('h3', 'Fashion');
     @include flexible(flex, row, nowrap, center, center);
   }
 
@@ -73,7 +73,7 @@
     width: 90%;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: 'Fashion';
+    @include aplicar_fuente('h3', 'Fashion');
   }
 
   @include pantalla_pequeña() {
@@ -84,43 +84,40 @@
     font-size: 25px;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: "Fashion";    
+    @include aplicar_fuente('h3', 'Fashion');    
     justify-content: center;
     align-items: center;
   }
 
   @include pantalla_estandar() {
-
-        text-align: center;
-        width: 50%;
-        height: 10%;
-        display: flex;
-        font-size: 25px;
-        background-color: map.get($colores, "secundario_uno");
-        color: white;
-        font-family: "Fashion";
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-
-       
+    text-align: center;
+    width: 50%;
+    height: 10%;
+    display: flex;
+    font-size: 25px;
+    background-color: map.get($colores, "secundario_uno");
+    color: white;
+    @include aplicar_fuente('h3', 'Fashion');
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
 
   @include pantalla_grande() {
-        text-align: center;        
-        width: 50%;
-        height: 12%;
-        display: flex;
-        font-size: 35px;
-        background-color: map.get($colores, "secundario_uno");
-        color: white;
-        font-family: "Fashion";
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        @include altura("1440") {
-          font-size: 50px;
-        }
+    text-align: center;        
+    width: 50%;
+    height: 12%;
+    display: flex;
+    font-size: 35px;
+    background-color: map.get($colores, "secundario_uno");
+    color: white;
+    @include aplicar_fuente('h3', 'Fashion');
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    @include altura("1440") {
+      font-size: 50px;
+    }
   }
 }
 
@@ -187,7 +184,7 @@
     margin-bottom: 10px;
     h4 {
       margin: 0;
-      font-family: 'Classica-Bold';
+      @include aplicar_fuente('h4', 'Classica-Bold');
       margin: 2% auto;
       font-size: 19px;
     }
@@ -205,9 +202,9 @@
     overflow: hidden;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: 'Classica-Bold';
+    @include aplicar_fuente('article', 'Classica-Bold');
     h4 {
-      font-family: 'Classica-Bold';
+      @include aplicar_fuente('h4', 'Classica-Bold');
       margin: 2% auto;
       font-size: 19px;
     }
@@ -222,9 +219,9 @@
     overflow: hidden;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: "Classica-Bold";
+    @include aplicar_fuente('article', 'Classica-Bold');
     h4 {
-      font-family: "Classica-Bold";
+      @include aplicar_fuente('h4', 'Classica-Bold');
       margin: 2% auto;
       font-size: 30px;
     }
@@ -239,13 +236,13 @@
     overflow: hidden;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: 'Classica-Bold';
+    @include aplicar_fuente('article', 'Classica-Bold');
     @include altura("864") {
       height: 35%;
       width: 47%;   
     }
     h4 {
-      font-family: 'Classica-Bold';
+      @include aplicar_fuente('h4', 'Classica-Bold');
       margin: 2% auto;
       font-size: 19px;
       @include altura("864") {       
@@ -267,13 +264,13 @@
     overflow: hidden;
     background-color: map.get($colores, "secundario_uno");
     color: white;
-    font-family: 'Classica-Bold';
+    @include aplicar_fuente('article', 'Classica-Bold');
     @include altura("1440") {
       height: 35%;
       width: 47%;   
     }
     h4 {
-      font-family: 'Classica-Bold';
+      @include aplicar_fuente('h4', 'Classica-Bold');
       margin: 2% auto;
       font-size: 19px;
       
@@ -288,7 +285,7 @@
   @include movil() {
     @include flexible(flex, row, nowrap, center, center);
     margin-top: 1%;
-    font-family: 'LTMuseum-light';
+    @include aplicar_fuente('p', 'LTMuseum-Light');
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,20 +293,20 @@
 
   @include tableta() {
     margin: 0;
-    font-family: 'LTMuseum-light';
+    @include aplicar_fuente('p', 'LTMuseum-Light');
   }
 
   @include pantalla_pequeña() {
     margin: 0;
     font-size: 25px;    
-    font-family: "LTMuseum-light";
+    @include aplicar_fuente('p', 'LTMuseum-Light');
   }
 
   @include pantalla_estandar() {
     margin: 0;
     padding-top: 2%;
     font-size: 16px;
-    font-family: 'LTMuseum-light';
+    @include aplicar_fuente('p', 'LTMuseum-Light');
     @include altura("864") {
       font-size: 22px;
     }
@@ -322,8 +319,6 @@
     margin: 0;
     padding-top: 5%;
     font-size: 33px;
-    font-family: 'LTMuseum-light';
-
-    
+    @include aplicar_fuente('p', 'LTMuseum-Light');
   }
 }
