@@ -1,4 +1,8 @@
+/*Archivo sass para crear funcionalidad mediante mixins, fuentes de letra importada, mapas y una funcion*/
+
 @use 'sass:map';
+
+//Al haber descargado las fuentes de letra de Dafont el servicio no te deja usarlas modo html, por lo que se deben importar de manera local
 @font-face {
     font-family: 'MilkAndHoney';
     src: url('/fuente/fuente_letra/MilkAndHoney.woff') format('woff');
@@ -32,13 +36,13 @@
 
 
 
-//Mapa para background-color
+//Creacion de un mapa para los colores principal y secundarios
 $colores: (
     "principal"  : #372715,
     "secundario_uno" : #684825,
     "secundario_dos" : #9D774C,
 );
-
+//Creacion de un mapa para importar con facilidad las letras
 $fuentes: (
     "MilkAndHoney" : "MilkAndHoney",
     "Classica-Bold" : "Classica-Bold",
@@ -48,6 +52,7 @@ $fuentes: (
     "LTMuseum-Light" : "LTMuseum-Light")
 ;
 
+//mapa con las diferentes alturas de los dispositivos a evaluar para usar en mixin posterior
 $alturas: (
   "1440" : 1440,
   "1080" : 1080,
@@ -60,25 +65,20 @@ $alturas: (
 );
 
 
-
+/*Este mixin recoge la altura del dispositivo con una interpolacion para ser aplicado en un futuro
+mixin de punto de ruputra*/
 @mixin altura($altura) {
     @media (min-height: #{map.get($alturas, $altura)}px) {
         @content;
     }
 }
 
-@function comprobar_fuente($fuente, $fuente_alternativa) {
-    @if map.has-key($fuentes, $fuente) {
-        @return map.get($fuentes, $fuente);
-    } @else {
-        @return map.get($fuentes, $fuente_alternativa);
-    }
-}
 
 
+/*Mixin que ahorra todas la lineas de codigo de flexbox, en general es mas util cuando se aplica a 
+lugares en los que se deben escribir de 4 a 5 lineas, para aquellos elementos que solo necesiten 2 lineas
+no es tan útil ya que puede alterar el diseño*/
 
-
-//Mixin para flexbox para no tener que repetir siempre el mismo codigo
 @mixin flexible( $dis , $direction , $corte , $just , $align ){ 
     display         : $dis;
     flex-flow       : $direction $corte;
@@ -86,7 +86,9 @@ $alturas: (
     align-items     : $align;
 }
 
-//Mixins para diferentes puntos de ruptura
+/*Mixins para diferentes puntos de ruptura, que se aplican desde el ancho de corrección hasta el máximo siguiente
++1 pixel para cambiar el estandar de un dispositivo a otro*/
+
 
 @mixin movil(){
     @media (min-width: 360px) and (max-width: 480px)  {
@@ -118,6 +120,9 @@ $alturas: (
     }
 }
 
+/*Un mixin que engloba todos, aunque no es del todo últi porque con los propios selectores 
+se puede aplicar contenido general
+*/
 @mixin responsivo_todos(){
     @include movil{
         @content;
@@ -136,6 +141,8 @@ $alturas: (
     }
 }
 
+/*Funcion que comprueba si un elemento/selector tiene una fuente desesada, si no la tiene se la cambia
+y si la tiene no hace mas cambios, aquí se coloca un operador logico ==*/
 @function comprobar_y_cambiar_fuente($selector, $fuente_deseada) {
     @if map.get($fuentes, $fuente_deseada) == $selector {
         @return $selector;
@@ -144,6 +151,8 @@ $alturas: (
     }
 }
 
+/*la funcion como tal no se puede aplicar sola, se necesita de un mixin de apoyo, por lo que se añade el paso final
+para aplicar el contenido css en font-family*/
 @mixin aplicar_fuente($selector, $fuente_deseada) {
     font-family: comprobar_y_cambiar_fuente($selector, $fuente_deseada);
 }

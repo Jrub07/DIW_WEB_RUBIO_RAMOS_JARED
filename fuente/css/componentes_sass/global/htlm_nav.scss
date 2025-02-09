@@ -1,12 +1,15 @@
 @use 'mixins_funciones_mapa' as *;
 @use 'sass:map';
 
+/*Creacion del html y el body en conjunto para que se comparta en todos los archivos, se quitan los margenes
+para que se incluya todo el contenido*/
 html, body{
     box-sizing: border-box;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    //Overflow-x para que no haya errores con el movil
     overflow-x: hidden;    
 }
 
@@ -16,6 +19,7 @@ header {
     overflow: hidden;
     background-color: map.get($colores, "principal"); 
     @include flexible(flex, row, nowrap, space-around, center);
+    //Un ejemplo de uso de la funcion, aunque no es necesario ya que se aplica un estandar general
     @include responsivo_todos();
     
     @include altura("896"){
@@ -35,6 +39,7 @@ header button {
     font-weight: bold;
     margin: 0 10px;
 
+    //Para movil se necesitan 2 alturas distintas, por lo que se añaden 2 alturas con sus cambios respectivos
     @include movil() {
         width: 40%;
         @include altura("896") {
@@ -62,6 +67,7 @@ header button {
         }
     }
 
+    //Lo mismo para pantallas estandar, se requieren 3 alturas que son necesarias de cambiar
     @include pantalla_estandar() {
 
         @include altura("800") {
@@ -72,13 +78,14 @@ header button {
             height: 50%;
             font-size: 22px;
         }
-    }
-
-    @include pantalla_grande() {
         @include altura("1080") {
             height: 50%;
             font-size: 25px;
         }
+    }
+
+    @include pantalla_grande() {
+        
         @include altura("1440") {
             height: 50%;
             font-size: 35px;
@@ -86,10 +93,12 @@ header button {
     }
 }
 
+//Boton para el CTA con la función correspondiente
 #pedir_cita {
     @include aplicar_fuente('button', 'MilkAndHoney');
 }
 
+//Colocación del logo con diferentes alturas para cada dispositivo
 header img {    
     object-fit: cover;
     

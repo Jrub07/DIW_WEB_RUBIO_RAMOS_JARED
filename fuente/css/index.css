@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Archivo sass para crear funcionalidad mediante mixins, fuentes de letra importada, mapas y una funcion*/
 @font-face {
   font-family: "MilkAndHoney";
   src: url("/fuente/fuente_letra/MilkAndHoney.woff") format("woff");
@@ -22,6 +24,22 @@
   font-family: "LTMuseum-light";
   src: url("/fuente/fuente_letra/LTMuseum-Light.woff") format("woff");
 }
+/*Este mixin recoge la altura del dispositivo con una interpolacion para ser aplicado en un futuro
+mixin de punto de ruputra*/
+/*Mixin que ahorra todas la lineas de codigo de flexbox, en general es mas util cuando se aplica a 
+lugares en los que se deben escribir de 4 a 5 lineas, para aquellos elementos que solo necesiten 2 lineas
+no es tan útil ya que puede alterar el diseño*/
+/*Mixins para diferentes puntos de ruptura, que se aplican desde el ancho de corrección hasta el máximo siguiente
++1 pixel para cambiar el estandar de un dispositivo a otro*/
+/*Un mixin que engloba todos, aunque no es del todo últi porque con los propios selectores 
+se puede aplicar contenido general
+*/
+/*Funcion que comprueba si un elemento/selector tiene una fuente desesada, si no la tiene se la cambia
+y si la tiene no hace mas cambios, aquí se coloca un operador logico ==*/
+/*la funcion como tal no se puede aplicar sola, se necesita de un mixin de apoyo, por lo que se añade el paso final
+para aplicar el contenido css en font-family*/
+/*Creacion del html y el body en conjunto para que se comparta en todos los archivos, se quitan los margenes
+para que se incluya todo el contenido*/
 html, body {
   box-sizing: border-box;
   height: 100%;
@@ -110,7 +128,7 @@ header button {
     font-size: 22px;
   }
 }
-@media (min-width: 1921px) and (max-width: 2560px) and (min-height: 1080px) {
+@media (min-width: 1201px) and (max-width: 1920px) and (min-height: 1080px) {
   header button {
     height: 50%;
     font-size: 25px;
@@ -160,32 +178,29 @@ header img {
   }
 }
 
+/*Archivo para mostrar los valores de la empresa*/
+/*Contenedor en el que se aplica la imagen, en este caso jpeg para
+que sea soportada por todos los navegadores, al que se le quita luminosidad para que destaque
+la letra, y que es compartida por todos los dispositivos*/
+#presentacion {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 5%;
+  color: white;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   #presentacion {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
-    background-size: cover;
-    background-position: center;
     height: 80%;
-    padding-top: 5%;
-    color: white;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presentacion {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
-    background-size: cover;
-    background-position: center;
     height: 50%;
-    padding-top: 5%;
-    color: white;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -194,13 +209,8 @@ header img {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-end;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../imagenes/hero_img_3792x2524.avif);
-    background-size: cover;
-    background-position: center;
     height: 50%;
-    padding-top: 5%;
     padding-right: 8%;
-    color: white;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -209,13 +219,8 @@ header img {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-end;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
-    background-size: cover;
-    background-position: center;
     height: 80%;
-    padding-top: 5%;
     padding-right: 8%;
-    color: white;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
@@ -224,25 +229,22 @@ header img {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-end;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imagenes/hero_img_3792x2524.avif");
-    background-size: cover;
-    background-position: center;
     height: 80%;
-    padding-top: 5%;
     padding-right: 8%;
-    color: white;
   }
 }
 
+#presentacion h3:first-of-type {
+  text-align: center;
+  background-color: #684825;
+  color: white;
+  font-family: "Fashion";
+}
 @media (min-width: 360px) and (max-width: 480px) {
   #presentacion h3:first-of-type {
     height: 7%;
     font-size: 1em;
-    text-align: center;
     width: 90%;
-    background-color: #684825;
-    color: white;
-    font-family: "Fashion";
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -251,37 +253,25 @@ header img {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presentacion h3:first-of-type {
-    text-align: center;
     width: 90%;
-    background-color: #684825;
-    color: white;
-    font-family: "Fashion";
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #presentacion h3:first-of-type {
-    text-align: center;
     width: 80%;
     height: 7%;
     display: flex;
     font-size: 25px;
-    background-color: #684825;
-    color: white;
-    font-family: "Fashion";
     justify-content: center;
     align-items: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #presentacion h3:first-of-type {
-    text-align: center;
     width: 50%;
     height: 10%;
     display: flex;
     font-size: 25px;
-    background-color: #684825;
-    color: white;
-    font-family: "Fashion";
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -289,14 +279,10 @@ header img {
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   #presentacion h3:first-of-type {
-    text-align: center;
     width: 50%;
     height: 12%;
     display: flex;
     font-size: 35px;
-    background-color: #684825;
-    color: white;
-    font-family: "Fashion";
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -308,12 +294,17 @@ header img {
   }
 }
 
+/*Se repite el flexible para comprobar que se puede ajustar
+aun repitiendo, aunque se puede poner simplemente el valor 
+como se ha hecho en otros*/
+.valores {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   .valores {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     height: 90%;
     width: 90%;
   }
@@ -330,7 +321,6 @@ header img {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .valores {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
@@ -370,18 +360,21 @@ header img {
     margin-top: 0.5%;
   }
 }
+.valores article {
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  background-color: #684825;
+  color: white;
+  font-family: "Classica-Bold";
+}
 @media (min-width: 360px) and (max-width: 480px) {
   .valores article {
     margin-top: 2%;
     padding-top: 2%;
-    box-sizing: border-box;
     height: 40%;
     width: 100%;
     font-size: 20px;
-    text-align: center;
-    overflow: hidden;
-    background-color: #684825;
-    color: white;
     margin-bottom: 10px;
   }
   .valores article h4 {
@@ -396,15 +389,9 @@ header img {
     margin-right: 2%;
     margin-top: 2%;
     padding-top: 2%;
-    box-sizing: border-box;
     font-size: 20px;
     height: 30%;
     width: 45%;
-    text-align: center;
-    overflow: hidden;
-    background-color: #684825;
-    color: white;
-    font-family: "Classica-Bold";
   }
   .valores article h4 {
     font-family: "Classica-Bold";
@@ -414,15 +401,9 @@ header img {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .valores article {
-    box-sizing: border-box;
     height: 47%;
     width: 45%;
-    text-align: center;
     margin-right: 2%;
-    overflow: hidden;
-    background-color: #684825;
-    color: white;
-    font-family: "Classica-Bold";
   }
   .valores article h4 {
     font-family: "Classica-Bold";
@@ -432,15 +413,9 @@ header img {
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   .valores article {
-    box-sizing: border-box;
     height: 30%;
     width: 40%;
-    text-align: center;
     margin-right: 2%;
-    overflow: hidden;
-    background-color: #684825;
-    color: white;
-    font-family: "Classica-Bold";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -469,15 +444,9 @@ header img {
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   .valores article {
-    box-sizing: border-box;
     height: 30%;
     width: 40%;
-    text-align: center;
     margin-right: 2%;
-    overflow: hidden;
-    background-color: #684825;
-    color: white;
-    font-family: "Classica-Bold";
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) and (min-height: 1440px) {
@@ -499,6 +468,9 @@ header img {
   }
 }
 
+.valores article p {
+  font-family: "LTMuseum-Light";
+}
 @media (min-width: 360px) and (max-width: 480px) {
   .valores article p {
     display: flex;
@@ -506,7 +478,6 @@ header img {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
-    font-family: "LTMuseum-Light";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,14 +486,12 @@ header img {
 @media (min-width: 481px) and (max-width: 768px) {
   .valores article p {
     margin: 0;
-    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   .valores article p {
     margin: 0;
     font-size: 25px;
-    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -530,7 +499,6 @@ header img {
     margin: 0;
     padding-top: 2%;
     font-size: 16px;
-    font-family: "LTMuseum-Light";
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -548,19 +516,20 @@ header img {
     margin: 0;
     padding-top: 5%;
     font-size: 33px;
-    font-family: "LTMuseum-Light";
   }
 }
 
+#modalidades {
+  overflow: hidden;
+  background-color: #9D774C;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   #modalidades {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
     height: 60%;
-    background-color: #9D774C;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -571,9 +540,7 @@ header img {
     align-items: flex-start;
     padding-top: 1%;
     text-align: center;
-    overflow: hidden;
     height: 25%;
-    background-color: #9D774C;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -582,9 +549,7 @@ header img {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     height: 30%;
-    background-color: #9D774C;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -598,9 +563,7 @@ header img {
     align-items: flex-start;
     padding-top: 1%;
     text-align: center;
-    overflow: hidden;
     height: 40%;
-    background-color: #9D774C;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -616,122 +579,75 @@ header img {
     align-items: flex-start;
     padding-top: 1%;
     text-align: center;
-    overflow: hidden;
     height: 40%;
-    background-color: #9D774C;
   }
 }
 
+#presencial, #online {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
 @media (min-width: 360px) and (max-width: 480px) {
   #presencial, #online {
-    margin-top: 2%;
-    margin-bottom: 2%;
     width: 90%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presencial, #online {
-    margin-top: 2%;
-    margin-bottom: 2%;
     width: 40%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #presencial, #online {
-    margin-top: 2%;
-    margin-bottom: 2%;
     width: 60%;
     height: 90%;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #presencial, #online {
-    margin-top: 2%;
-    margin-bottom: 2%;
     width: 40%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
   #presencial, #online {
-    margin-top: 2%;
-    margin-bottom: 2%;
     width: 40%;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
   }
 }
-@media (min-width: 1921px) and (max-width: 2560px) {
+#presencial p, #online p {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Classica-Bold";
+}
+@media (min-width: 360px) and (max-width: 480px) {
   #presencial p, #online p {
     height: 10%;
-    width: 65%;
-    font-size: 35px;
-    background-color: white;
-    text-align: center;
-    font-family: "Classica-Bold";
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #presencial p, #online p {
     height: 15%;
     width: 80%;
-    background-color: white;
-    text-align: center;
-    font-family: "Classica-Bold";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (min-width: 360px) and (max-width: 480px) {
-  #presencial p, #online p {
-    height: 10%;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-    font-family: "Classica-Bold";
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #presencial p, #online p {
     height: 10%;
     width: 60%;
-    background-color: white;
-    text-align: center;
-    font-family: "Classica-Bold";
     font-size: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -739,12 +655,6 @@ header img {
     height: 10%;
     width: 60%;
     font-size: 20px;
-    background-color: white;
-    text-align: center;
-    font-family: "Classica-Bold";
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) and (min-height: 864px) {
@@ -753,51 +663,57 @@ header img {
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
-  #presencial img, #online img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  #presencial p, #online p {
+    height: 10%;
+    width: 65%;
+    font-size: 35px;
+    font-family: "Classica-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  #presencial img, #online img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-  }
+#presencial img, #online img {
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 @media (min-width: 360px) and (max-width: 480px) {
   #presencial img, #online img {
     width: 100%;
     height: 100%;
     object-fit: fill;
-    display: block;
-    margin: 0 auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #presencial img, #online img {
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #presencial img, #online img {
     max-width: 90%;
     max-height: 90%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #presencial img, #online img {
     max-width: 80%;
     max-height: 80%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+  #presencial img, #online img {
+    max-width: 80%;
+    max-height: 80%;
   }
 }
 
+/*Archivo que sirve para mostrar la cartera de trastornos y población que se trata, lo que destaca es el uso
+de flex-wrap con margen para controlar el espacio para cada resolucion*/
+/*Estilos compartido en su mayoria, solo es necesario editar futuramente los margenes para seprar más o menos
+en función de las necesidades del dispostivo*/
 #especialidades {
   box-sizing: border-box;
   display: flex;
@@ -812,18 +728,20 @@ header img {
   padding-top: 0;
   background-color: white;
   align-self: center;
-  margin-top: 10%;
+  text-align: center;
   font-family: "Classica-Bold";
 }
 #especialidades article {
   margin-left: 0.8%;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
   height: 100%;
   width: 100%;
   padding: 0;
+  align-content: center;
 }
 #especialidades article p {
   text-align: center;
@@ -834,239 +752,73 @@ header img {
   margin: 2%;
   padding: 0;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: center center;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 360px) and (max-width: 480px) {
-  #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #684825;
-    overflow: hidden;
-  }
   #especialidades h3 {
-    padding-top: 0;
-    background-color: white;
-    align-self: center;
     margin-top: 10%;
-    text-align: center;
-    font-family: "Classica-Bold";
-  }
-  #especialidades article {
-    margin-left: 0.8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-  }
-  #especialidades article p {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: white;
-    height: 10%;
-    width: 45%;
-    margin: 2%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #684825;
-    overflow: hidden;
-  }
   #especialidades h3 {
-    padding-top: 0;
-    background-color: white;
-    align-self: center;
     font-size: 20px;
     width: 90%;
     margin-top: 2%;
-    text-align: center;
-    font-family: "Classica-Bold";
-  }
-  #especialidades article {
-    margin-left: 0.8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    padding: 0;
   }
   #especialidades article p {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: white;
-    height: 10%;
     font-size: 20px;
-    width: 45%;
     margin: 1%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
-  #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #684825;
-    overflow: hidden;
-  }
   #especialidades h3 {
-    padding-top: 0;
-    background-color: white;
-    align-self: center;
-    margin-top: 2%;
-    width: 90%;
     font-size: 30px;
-    text-align: center;
-    font-family: "Classica-Bold";
-  }
-  #especialidades article {
-    margin-left: 0.8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    padding: 0;
+    width: 90%;
+    margin-top: 2%;
   }
   #especialidades article p {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: white;
-    height: 10%;
-    width: 45%;
-    margin: 1%;
     font-size: 30px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 1%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
-  #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #684825;
-    overflow: hidden;
-  }
   #especialidades h3 {
-    padding-top: 0;
-    background-color: white;
-    align-self: center;
     font-size: 28px;
-    margin-top: 1%;
     width: 70%;
-    text-align: center;
-    font-family: "Classica-Bold";
+    margin-top: 1%;
   }
   #especialidades article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
     height: 80%;
     width: 90%;
-    padding: 0;
-    align-content: center;
   }
   #especialidades article p {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: white;
-    height: 10%;
     width: 20%;
     margin: 3.5%;
-    padding: 0%;
-    display: flex;
-    align-items: center;
     font-size: 25px;
-    justify-content: center;
   }
 }
 @media (min-width: 1921px) and (max-width: 2560px) {
-  #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #684825;
-    overflow: hidden;
-  }
   #especialidades h3 {
-    padding-top: 0;
-    background-color: white;
-    align-self: center;
-    width: 70%;
     font-size: 40px;
-    margin-top: 1%;
-    text-align: center;
-    font-family: "Classica-Bold";
   }
   #especialidades article {
-    margin-left: 0.8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
     height: 80%;
     width: 80%;
-    padding: 0;
-    align-content: center;
   }
   #especialidades article p {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: white;
-    height: 10%;
     width: 25%;
     margin: 3%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 40px;
   }
 }
 
+/*Clase general para aplicar los contenidos al pie de página, está en el directorio global
+ya que es posible que para la página entera se haga algun cambio
+
+En esta clase se usan los elementos como anidación, en otras clase se hará al revés, para ver que se puede 
+hacer de un lado a otro*/
 footer {
   display: flex;
   box-sizing: border-box;
@@ -1078,10 +830,11 @@ footer #contacto {
   overflow: hidden;
 }
 footer #contacto #redes_sociales, footer #contacto #como_llegar {
+  /*Apliación del mixin de flexible, tiene 4 argumentos y se aplica nowrap por defecto*/
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-flow: column nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
   background-color: white;
@@ -1091,7 +844,7 @@ footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
   font-family: averia-serif;
   text-align: center;
   display: flex;
-  align-content: center;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
