@@ -11,7 +11,7 @@ html, body{
 }
 
 //Creacion del header
-header{
+header {
     width: 100%;
     overflow: hidden;
     background-color: map.get($colores, "principal"); 
@@ -63,6 +63,7 @@ header button {
     }
 
     @include pantalla_estandar() {
+
         @include altura("800") {
             height: 50%;
             font-size: 20px;
@@ -89,9 +90,9 @@ header button {
     @include aplicar_fuente('button', 'MilkAndHoney');
 }
 
-header img {
-    max-width: 10%;
+header img {    
     object-fit: cover;
+    
 
     @include movil() {
         max-width: 20%;
@@ -108,7 +109,7 @@ header img {
     }
 
     @include pantalla_estandar() {
-      max-width: 90%;
+      max-width:90%;
       max-height: 90%;
     }
 

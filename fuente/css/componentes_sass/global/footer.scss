@@ -2,8 +2,8 @@
 @use 'sass:map';
 
 footer {
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   background-color: map.get($colores, "principal");
   overflow: hidden;
 

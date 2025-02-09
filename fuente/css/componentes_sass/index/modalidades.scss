@@ -19,7 +19,7 @@
   }
 
   @include pantalla_pequeña() {
-    display: flex;
+    @include flexible(flex, row, nowrap, center, center);
     overflow: hidden;
     height: 30%;
     background-color: map.get($colores, "secundario_dos");

@@ -128,7 +128,6 @@ header button {
 }
 
 header img {
-  max-width: 10%;
   object-fit: cover;
 }
 @media (min-width: 360px) and (max-width: 480px) {
@@ -580,6 +579,9 @@ header img {
 @media (min-width: 769px) and (max-width: 1200px) {
   #modalidades {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     height: 30%;
     background-color: #9D774C;
@@ -1066,8 +1068,8 @@ header img {
 }
 
 footer {
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   background-color: #372715;
   overflow: hidden;
 }
