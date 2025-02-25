@@ -1,0 +1,210 @@
+/* Archivo para mostrar los valores de la empresa */
+@use '../global/_mixins_funciones_mapa.scss' as *;
+@use 'sass:map';
+
+/* Contenedor de presentación con la imagen */
+#presentacion {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "movil")});
+  background-size: cover;
+  background-position: center;
+  padding-top: 1%;
+  min-height: 45%;
+  color: white;
+  overflow: hidden;
+
+  @include tableta() { 
+    min-height: 40%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "tableta")});
+
+  }
+
+  @include pantalla_pequeña() {    
+    align-items: flex-end;
+    height: 50%;
+    padding-right: 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_pequeña")});
+
+  }
+
+  @include pantalla_estandar() {
+    align-items: flex-end;
+    height: 80%;
+    padding-right: 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_estandar")});
+
+  }
+
+  @include pantalla_grande() {
+    align-items: flex-end;
+    height: 80%;
+    padding-top: 1%;
+    padding-right: 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_grande")});
+   
+  }
+}
+
+/* Estilo para el nombre del cliente */
+#nombre_cliente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  
+  @include aplicar_fuente('h3', 'Fashion');
+  width: 50%; 
+
+  @include movil() {
+    width: 90%;
+  }
+
+  @include pantalla_pequeña() {
+    width: 70%;    
+  }
+
+  @include tableta() {
+    width: 90%;
+    margin: 0;
+  }
+
+  h3 {
+    background-color: map.get($colores, "secundario_uno");
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10%;
+
+    @include tableta() {
+      padding: 0;
+    }
+
+    @include pantalla_pequeña() {
+      height: 21%;
+      margin-top: 5%;
+      font-size: 2vh;
+      
+    }
+
+    @include pantalla_estandar() {
+      font-size: 3.5vh;
+    }
+
+    @include pantalla_grande() {
+      font-size: 3vh;
+    }
+  }
+
+  .valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5%;
+  }
+
+  .valores article {
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    background-color: map.get($colores, "secundario_uno");
+    color: white;
+    @include aplicar_fuente('article', 'Classica-Bold');
+    width: 45%;  
+    padding: 20px;
+    margin: 10px;
+    height: 200px; 
+    border-radius: 12%;
+
+    @include movil() {
+      padding: 0;
+      display: flex;
+      width: 100%;
+      margin-top: 0.5%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: auto; 
+    }
+
+    @include tableta() {
+      height: 45%; 
+      width: 40%;
+      padding: 0; 
+    }
+
+    @include pantalla_pequeña() {
+      width: 40%; 
+      height: 43%;
+      padding: 0; 
+    }
+
+    @include pantalla_estandar() {
+      height: 43%; 
+    }
+
+    @include pantalla_grande() {
+      height: 48%; 
+    }
+  }
+
+  h4 {
+    margin: 10px 0;
+    @include aplicar_fuente('h4', 'Classica-Bold');
+    
+    @include movil() {
+      margin-top: 1%;
+      margin-bottom: 1%;        
+    }
+
+    @include tableta() {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 2vh;        
+    }
+
+    @include pantalla_pequeña() {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 2vh;
+    }
+
+    @include pantalla_estandar() {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 4vh;        
+    }
+
+    @include pantalla_grande() {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 3vh;        
+    }
+  }
+
+  p {
+    @include aplicar_fuente('p', 'LTMuseum-Light');
+    margin-top: 1%;
+
+    @include tableta() {
+      font-size: 2vh;
+    }
+
+    @include pantalla_pequeña() {
+      font-size: 2vh;
+    }
+
+    @include pantalla_estandar() {
+      font-size: 3vh;
+    }
+
+    @include pantalla_grande() {
+      font-size: 3vh;
+    }
+  }
+}

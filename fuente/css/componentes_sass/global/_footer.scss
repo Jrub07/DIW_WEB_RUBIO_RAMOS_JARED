@@ -1,0 +1,306 @@
+/*Clase general para aplicar los contenidos al pie de página, está en el directorio global
+ya que es posible que para la página entera se haga algún cambio
+
+En esta clase se usan los elementos como anidación, en otras clase se hará al revés, para ver que se puede 
+hacer de un lado a otro*/
+
+// Importación de los mixins y funciones necesarios y la funcionalidad del mapa
+@use 'mixins_funciones_mapa' as *;
+@use 'sass:map';
+
+footer {
+  display: flex;
+  min-height: 25%;
+  // Para que los elementos no se salgan del contenedor ya que tiene en cuenta el margen y el padding
+  box-sizing: border-box;
+  background-color: map.get($colores, "principal");
+  overflow: hidden;
+
+  @include movil {
+    flex-direction: column;
+  }
+
+  @include tableta {
+    flex-direction: column; 
+    align-items: center;
+    min-height: 25%;
+  }
+
+  #contacto {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    @include movil {      
+      padding-left: 1%;
+      padding-right: 1%;
+      width: 100%;
+      order: 2;
+      margin-top: 1%;
+    }
+
+    @include tableta {   
+      width: 100%; 
+      order: 2; 
+      margin-top: 3%; 
+    }
+
+    #redes_sociales, #como_llegar {      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40%;
+      @include movil {
+        margin-right: 3%;
+      }
+
+      h3 {
+        background-color: white;
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        font-family: averia-serif;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 10%;
+        background-color: #e9d5c5;
+
+        // Resoluciones de móvil
+        @include movil {
+          height: 30%;
+          font-size: 70%;
+        }
+
+        // Resoluciones de tableta
+        @include tableta {
+          height: 30%; 
+          font-size: 70%; 
+        }
+
+        // Resoluciones de pantalla pequeña
+        @include pantalla_pequeña {
+          height: 14%;
+          margin-top: 10%;
+          font-size: 2vh;
+          text-align: center;
+        }
+
+        // Resoluciones de pantalla estándar 
+        @include pantalla_estandar {
+          height: 21%;
+          margin-top: 5%;
+          font-size: 2.5vh;
+          text-align: center;
+        }
+
+        // Resoluciones de pantalla grande
+        @include pantalla_grande {
+          height: 21%; 
+          margin-top: 5%; 
+          font-size: 3vh; 
+          text-align: center; 
+        }
+      }
+
+      p {
+        align-items: center;
+        color: white;
+        margin: 0;
+        white-space: nowrap;
+        // Ejemplo de aplicación del mixin de la fuente
+        @include aplicar_fuente('p', 'LTMuseum-Light');
+
+        img {
+          margin-right: 10px;          
+          //alternativa a flex en p
+          vertical-align: middle;
+        }
+
+        // Resoluciones de móvil
+        @include movil {
+          margin-bottom: 10px;
+          img {
+            max-width: 15%;
+          }
+        }
+
+        // Resoluciones de tableta
+        @include tableta {
+          margin-bottom: 10px; 
+          img {
+            max-width: 15%; 
+          }
+          font-size: 2vh;
+          padding: 2%;         
+        }
+
+        // Resoluciones de pantalla pequeña
+        @include pantalla_pequeña {
+          font-size: 2vh;
+          padding: 2%;
+        }
+
+        // Resoluciones de pantalla estándar 
+        @include pantalla_estandar {
+          font-size: 2vh;
+          padding: 2%;
+        }
+
+        // Resoluciones de pantalla grande
+        @include pantalla_grande {
+          font-size: 3vh; 
+          padding: 2%;   
+        }
+      }
+    }
+
+
+    // Resoluciones de tableta
+    @include tableta {
+      margin-top: 1%;
+      justify-content: space-between;
+      order: 2;
+      width: 90%;
+    }
+
+    // Resoluciones de pantalla pequeña
+    @include pantalla_pequeña {
+      justify-content: space-evenly;
+      width: 100%;
+      min-height: 20%;
+
+      iframe {
+        width: 300px;
+        height: 150px;
+      }
+
+      #redes_sociales, #como_llegar {
+        width: 40%;
+      }
+
+      h3 {
+        height: 21%;
+        margin-top: 10%;
+        font-size: 2vh;
+        text-align: center;
+        
+      }
+
+      p {
+        font-size: 2vh;
+        padding: 2%;
+
+        img {
+          max-width: 40px;
+        }
+      }
+    }
+
+    // Resoluciones de pantalla estándar 
+    @include pantalla_estandar {
+      justify-content: space-evenly;
+      width: 100%;
+      min-height: 20%;
+
+      iframe {
+        width: 300px;
+        height: 100%;
+      }
+
+      #redes_sociales, #como_llegar {
+        width: 40%;
+      }
+
+      h3 {
+        height: 21%;
+        margin-top: 10%;
+        font-size: 2vh;
+        text-align: center;
+      }
+
+      p {
+        font-size: 2vh;
+        padding: 2%;
+
+        img {
+          max-width: 40px;
+        }
+      }
+    }
+
+    // Resoluciones de pantalla grande
+    @include pantalla_grande {
+      justify-content: space-evenly; 
+      width: 100%;                  
+      min-height: 20%;             
+
+      iframe {
+        width: 300px; 
+        height: 100%; 
+      }
+
+      #redes_sociales, #como_llegar {
+        width: 40%; 
+      }
+
+      h3 {
+        height: 21%;     
+        margin-top: 10%; 
+        font-size: 2vh;  
+        text-align: center; 
+      }
+
+      p {
+        font-size: 2vh; 
+        padding: 2%;   
+
+        img {
+          max-width: 40px; 
+        }
+      }
+    }
+  }
+
+  iframe {
+    display: flex;
+
+    // Resoluciones de móvil
+    @include movil {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      height: 90%;
+      width: 100%;
+      order: 1; 
+    }
+
+    // Resoluciones de tableta
+    @include tableta {
+      margin-top: 1%; 
+      margin-bottom: 1%; 
+      height: 90%; 
+      width: 100%; 
+      order: 1; 
+      align-items: center;
+      margin-top: 2%;
+      height: 200px;
+      width: 400px;
+    }
+
+    // Resoluciones de pantalla pequeña
+    @include pantalla_pequeña {
+      width: 300px;
+      height: 100%;
+    }
+
+    // Resoluciones de pantalla estándar (1280x800)
+    @include pantalla_estandar {
+      width: 300px;
+      height: 100%;
+    }
+
+    // Resoluciones de pantalla grande
+    @include pantalla_grande {
+      width: 650px; 
+      height: 100%; 
+    }
+  }
+}
