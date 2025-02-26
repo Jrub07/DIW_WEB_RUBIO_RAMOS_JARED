@@ -25,43 +25,44 @@
   flex-direction: column;
   margin-bottom: 3%;
 
-  // Se aplican los mismos estilos para tableta, pantalla_pequeña, pantalla_estandar y pantalla_grande
+  // Sin min-height para móviles
   @include tableta {
+    min-height: 400px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_pequeña {
+    min-height: 500px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_estandar {
+    min-height: 600px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_grande {
+    min-height: 600px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 
+  // Imagen principal: ocupa casi la mitad del contenedor
   img {
-    max-width: 100%;
-    height: auto;
-
+    width: 100%;
     @include tableta {
-      max-width: 50%;
+      width: 190%;
     }
+
     @include pantalla_pequeña {
-      max-width: 50%;
+      width: 338%;
     }
+
     @include pantalla_estandar {
-      max-width: 50%;
+      width: 180%;
     }
     @include pantalla_grande {
-      max-width: 50%;
+      width: 180%;
     }
   }
 
@@ -108,10 +109,14 @@
       @include pantalla_estandar {
         width: 70%;
         margin: 3% auto;
+        font-size: 2vh;
+        height: 3vh;
       }
       @include pantalla_grande {
         width: 70%;
         margin: 3% auto;
+        font-size: 2vh;
+        height: 3vh;
       }
     }
 
@@ -129,7 +134,7 @@
       @include pantalla_pequeña {
         font-family: "LTMuseum-Light";
         text-align: justify;
-        font-size: 2.8vh;
+        font-size: 2.4vh;
       }
       @include pantalla_estandar {
         font-family: "LTMuseum-Light";
@@ -163,10 +168,9 @@
       flex-direction: row;
     }
 
+    // Los iconos: width del 5% sin otros valores
     img {
-      max-width: 10%;
-      margin: 1%;
-      height: auto;
+      width: 5%;
     }
   }
 
@@ -177,6 +181,19 @@
     align-items: center;
     justify-content: center;
     margin: 3%;
+
+    @include tableta {
+      height: 80%;
+    }
+    @include pantalla_pequeña {
+      height: 85%;
+    }
+    @include pantalla_estandar {
+      height: 46%;
+    }
+    @include pantalla_grande {
+      height: 46%;
+    }
   }
 }
 
@@ -187,42 +204,44 @@
   flex-direction: column;
   margin-bottom: 3%;
 
+  // Sin min-height para móviles
   @include tableta {
+    min-height: 450px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_pequeña {
+    min-height: 550px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_estandar {
+    min-height: 650px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
   @include pantalla_grande {
+    min-height: 650px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 
+  // Imagen principal: ocupa casi la mitad del contenedor
   img {
-    max-width: 100%;
-    height: auto;
-
+    width: 100%;
     @include tableta {
-      max-width: 50%;
+      width: 45%;
     }
+
     @include pantalla_pequeña {
-      max-width: 50%;
+      width: 44%;
     }
+
     @include pantalla_estandar {
-      max-width: 50%;
+      width: 44%;
     }
     @include pantalla_grande {
-      max-width: 50%;
+      width: 44%;
     }
   }
 
@@ -271,10 +290,14 @@
       @include pantalla_estandar {
         width: 70%;
         margin: 3% auto;
+        font-size: 2vh;
+        height: 3vh;
       }
       @include pantalla_grande {
         width: 70%;
         margin: 3% auto;
+        font-size: 2vh;
+        height: 3vh;
       }
     }
 
@@ -292,7 +315,7 @@
       @include pantalla_pequeña {
         font-family: "LTMuseum-Light";
         text-align: justify;
-        font-size: 2.8vh;
+        font-size: 2.4vh;
       }
       @include pantalla_estandar {
         font-family: "LTMuseum-Light";
@@ -326,19 +349,31 @@
       flex-direction: row;
     }
 
+    // Los iconos: width del 5% sin otros valores
     img {
-      max-width: 10%;
-      margin: 1%;
-      height: auto;
+      width: 5%;
     }
   }
 
   .texto {
-    height: 60%;
+    height: 46%;
     display: flex;
     background: white;
     align-items: center;
     justify-content: center;
     margin: 3%;
+
+    @include tableta {
+      height: 85%;
+    }
+    @include pantalla_pequeña {
+      height: 85%;
+    }
+    @include pantalla_estandar {
+      height: 46%;
+    }
+    @include pantalla_grande {
+      height: 46%;
+    }
   }
 }

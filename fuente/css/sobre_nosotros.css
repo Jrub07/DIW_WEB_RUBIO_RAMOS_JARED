@@ -82,7 +82,7 @@ header button {
 @media (min-width: 769px) and (max-width: 1200px) {
   header button {
     font-size: 1.5vh;
-    height: 3.8vh;
+    height: 4vh;
     width: 18%;
   }
 }
@@ -163,54 +163,53 @@ header img {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1 {
+    min-height: 400px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico1 {
+    min-height: 500px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 {
+    min-height: 600px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 1921px) {
   #psico1 {
+    min-height: 600px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 #psico1 img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1 img {
-    max-width: 50%;
+    width: 190%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico1 img {
-    max-width: 50%;
+    width: 338%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 img {
-    max-width: 50%;
+    width: 180%;
   }
 }
 @media (min-width: 1921px) {
   #psico1 img {
-    max-width: 50%;
+    width: 180%;
   }
 }
 #psico1 article {
@@ -268,12 +267,16 @@ header img {
   #psico1 article h3 {
     width: 70%;
     margin: 3% auto;
+    font-size: 2vh;
+    height: 3vh;
   }
 }
 @media (min-width: 1921px) {
   #psico1 article h3 {
     width: 70%;
     margin: 3% auto;
+    font-size: 2vh;
+    height: 3vh;
   }
 }
 #psico1 article p {
@@ -293,7 +296,7 @@ header img {
   #psico1 article p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 2.8vh;
+    font-size: 2.4vh;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -337,9 +340,7 @@ header img {
   }
 }
 #psico1 .redes img {
-  max-width: 10%;
-  margin: 1%;
-  height: auto;
+  width: 5%;
 }
 #psico1 .texto {
   height: 40%;
@@ -348,6 +349,26 @@ header img {
   align-items: center;
   justify-content: center;
   margin: 3%;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #psico1 .texto {
+    height: 80%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #psico1 .texto {
+    height: 85%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #psico1 .texto {
+    height: 46%;
+  }
+}
+@media (min-width: 1921px) {
+  #psico1 .texto {
+    height: 46%;
+  }
 }
 
 #psico2 {
@@ -359,54 +380,53 @@ header img {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico2 {
+    min-height: 450px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico2 {
+    min-height: 550px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico2 {
+    min-height: 650px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 @media (min-width: 1921px) {
   #psico2 {
+    min-height: 650px;
     flex-direction: row;
-    margin-bottom: 3%;
     align-items: normal;
   }
 }
 #psico2 img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico2 img {
-    max-width: 50%;
+    width: 45%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico2 img {
-    max-width: 50%;
+    width: 44%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico2 img {
-    max-width: 50%;
+    width: 44%;
   }
 }
 @media (min-width: 1921px) {
   #psico2 img {
-    max-width: 50%;
+    width: 44%;
   }
 }
 #psico2 article {
@@ -465,12 +485,16 @@ header img {
   #psico2 article h3 {
     width: 70%;
     margin: 3% auto;
+    font-size: 2vh;
+    height: 3vh;
   }
 }
 @media (min-width: 1921px) {
   #psico2 article h3 {
     width: 70%;
     margin: 3% auto;
+    font-size: 2vh;
+    height: 3vh;
   }
 }
 #psico2 article p {
@@ -490,7 +514,7 @@ header img {
   #psico2 article p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 2.8vh;
+    font-size: 2.4vh;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -534,17 +558,35 @@ header img {
   }
 }
 #psico2 .redes img {
-  max-width: 10%;
-  margin: 1%;
-  height: auto;
+  width: 5%;
 }
 #psico2 .texto {
-  height: 60%;
+  height: 46%;
   display: flex;
   background: white;
   align-items: center;
   justify-content: center;
   margin: 3%;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #psico2 .texto {
+    height: 85%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #psico2 .texto {
+    height: 85%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #psico2 .texto {
+    height: 46%;
+  }
+}
+@media (min-width: 1921px) {
+  #psico2 .texto {
+    height: 46%;
+  }
 }
 
 /*Clase general para aplicar los contenidos al pie de página, está en el directorio global
