@@ -3,30 +3,61 @@
 
 #ofertas {
   min-height: 30%;
-  background-color: brown;
+  background-color: map.get($colores, "secundario_uno");
   display: flex;
   justify-content: space-around;
 
   article {
     text-align: center;
     width: 30%;
+
+    h3 {
+      @include aplicar_fuente('h3', 'Classica-Book');
+      background-color: white
+    }
+
+    p {
+      @include aplicar_fuente('p', 'LTMuseum-Light');
+      font-size: 8vh;
+      color: white;
+    }
   }
 }
 
 #pack {
   min-height: 30%;
-  background-color: rgb(78, 18, 18);
+  background-color: map.get($colores, "secundario_dos");
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h3 {
+    @include aplicar_fuente('h3', 'Classica-Book');
+    background-color: white;
+  }
+
+  h4 {
+    @include aplicar_fuente('h4', 'Classica-Book');
+    background-color: white;
+  }
+
+  p {
+    @include aplicar_fuente('p', 'LTMuseum-Light');
+    font-size: 8vh;
+    color: white;
+  }
 }
 
 #seguro_escolar {
   min-height: 40%;
-  background-color: rgb(187, 111, 111);
+  background-color: map.get($colores, "secundario_uno");
   display: flex;
   flex-direction: column;
   align-items: center;
+  h3 {
+    @include aplicar_fuente('h3', 'Classica-Book');
+    background-color: white
+  }
 
   article {
     text-align: center;
@@ -35,6 +66,12 @@
     margin-bottom: 3%;
     flex-direction: column;
     align-items: center;
+
+    
+
+    p {
+      @include aplicar_fuente('p', 'LTMuseum-Light');
+    }
   }
 
   .caja_texto {
@@ -45,6 +82,7 @@
     p {
       margin: 1%;
       padding: 2%;
+      @include aplicar_fuente('p', 'LTMuseum-Light');
     }
 
     img {
@@ -55,10 +93,14 @@
 
 #becas {
   min-height: 30%;
-  background-color: rgb(97, 59, 59);
+  background-color: map.get($colores, "secundario_dos");
   display: flex;
   flex-direction: column;
   align-items: center;
+  h3 {
+    @include aplicar_fuente('h3', 'Classica-Book');
+    background-color: white;
+  }
 
   article {
     text-align: center;
@@ -67,6 +109,12 @@
     margin-bottom: 3%;
     flex-direction: column;
     align-items: center;
+
+    
+
+    p {
+      @include aplicar_fuente('p', 'LTMuseum-Light');
+    }
   }
 
   .caja_texto {
@@ -78,10 +126,10 @@
       margin: 1%;
       padding: 2%;
       height: 100%; 
-      
       display: flex;
       align-items: center;
       justify-content: center;
+      @include aplicar_fuente('p', 'LTMuseum-Light');
     }
 
     img {

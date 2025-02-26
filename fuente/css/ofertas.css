@@ -82,7 +82,7 @@ header button {
 @media (min-width: 769px) and (max-width: 1200px) {
   header button {
     font-size: 1.5vh;
-    height: 3.8vh;
+    height: 4vh;
     width: 18%;
   }
 }
@@ -139,7 +139,7 @@ header img {
 
 #ofertas {
   min-height: 30%;
-  background-color: brown;
+  background-color: #684825;
   display: flex;
   justify-content: space-around;
 }
@@ -147,21 +147,47 @@ header img {
   text-align: center;
   width: 30%;
 }
+#ofertas article h3 {
+  font-family: "Classica-Book";
+  background-color: white;
+}
+#ofertas article p {
+  font-family: "LTMuseum-Light";
+  font-size: 8vh;
+  color: white;
+}
 
 #pack {
   min-height: 30%;
-  background-color: rgb(78, 18, 18);
+  background-color: #9D774C;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#pack h3 {
+  font-family: "Classica-Book";
+  background-color: white;
+}
+#pack h4 {
+  font-family: "Classica-Book";
+  background-color: white;
+}
+#pack p {
+  font-family: "LTMuseum-Light";
+  font-size: 8vh;
+  color: white;
+}
 
 #seguro_escolar {
   min-height: 40%;
-  background-color: rgb(187, 111, 111);
+  background-color: #684825;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#seguro_escolar h3 {
+  font-family: "Classica-Book";
+  background-color: white;
 }
 #seguro_escolar article {
   text-align: center;
@@ -171,6 +197,9 @@ header img {
   flex-direction: column;
   align-items: center;
 }
+#seguro_escolar article p {
+  font-family: "LTMuseum-Light";
+}
 #seguro_escolar .caja_texto {
   text-align: justify;
   width: 90%;
@@ -179,6 +208,7 @@ header img {
 #seguro_escolar .caja_texto p {
   margin: 1%;
   padding: 2%;
+  font-family: "LTMuseum-Light";
 }
 #seguro_escolar .caja_texto img {
   width: 40%;
@@ -186,10 +216,14 @@ header img {
 
 #becas {
   min-height: 30%;
-  background-color: rgb(97, 59, 59);
+  background-color: #9D774C;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#becas h3 {
+  font-family: "Classica-Book";
+  background-color: white;
 }
 #becas article {
   text-align: center;
@@ -198,6 +232,9 @@ header img {
   margin-bottom: 3%;
   flex-direction: column;
   align-items: center;
+}
+#becas article p {
+  font-family: "LTMuseum-Light";
 }
 #becas .caja_texto {
   text-align: justify;
@@ -211,6 +248,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "LTMuseum-Light";
 }
 #becas .caja_texto img {
   width: 40%;
