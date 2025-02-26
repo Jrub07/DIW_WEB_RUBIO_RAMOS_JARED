@@ -24,6 +24,7 @@ Para que no haya errores con las fuentes de imagen y el mapa se ha usado la tecn
 V3
 - Añadido bordes redondeados
 - Arreglado para Firefox
-- Arregladas todas las img en funcion del contenedor picture
+- Arregladas todas las img en funcion del contenedor picture, hay resolución de más porque se ha tenido en cuenta a máxima resolución por dispositivo
+- La imagen para pantallas 4k tiene mucha resolución ya que parte desde 1921px
 
 
