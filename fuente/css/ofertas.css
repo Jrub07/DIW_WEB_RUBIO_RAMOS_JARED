@@ -197,6 +197,34 @@ header img {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  #seguro_escolar article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #seguro_escolar article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #seguro_escolar article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  #seguro_escolar article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 #seguro_escolar article p {
   font-family: "LTMuseum-Light";
 }
@@ -204,6 +232,26 @@ header img {
   text-align: justify;
   width: 90%;
   background-color: white;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #seguro_escolar .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #seguro_escolar .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #seguro_escolar .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 1921px) {
+  #seguro_escolar .caja_texto {
+    width: 45%;
+  }
 }
 #seguro_escolar .caja_texto p {
   margin: 1%;
@@ -233,6 +281,34 @@ header img {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  #becas article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #becas article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #becas article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  #becas article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 #becas article p {
   font-family: "LTMuseum-Light";
 }
@@ -240,6 +316,26 @@ header img {
   text-align: justify;
   width: 90%;
   background-color: white;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #becas .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #becas .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #becas .caja_texto {
+    width: 45%;
+  }
+}
+@media (min-width: 1921px) {
+  #becas .caja_texto {
+    width: 45%;
+  }
 }
 #becas .caja_texto p {
   margin: 1%;
