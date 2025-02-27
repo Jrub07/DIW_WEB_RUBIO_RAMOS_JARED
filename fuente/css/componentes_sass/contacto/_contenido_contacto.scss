@@ -1,0 +1,52 @@
+@use "../global/mixins_funciones_mapa" as *;
+@use "sass:map";
+
+#caja_formulario {
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+
+  h3 {
+    @include aplicar_fuente('h3', 'Classica-Book');
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      @include aplicar_fuente('label', 'LTMuseum-Light');
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      @include aplicar_fuente('input', 'LTMuseum-Light');
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      @include aplicar_fuente('button', 'Classica-Book');
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #555;
+    }
+  }
+}
+
