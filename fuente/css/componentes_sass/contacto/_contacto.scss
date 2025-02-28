@@ -1,4 +1,4 @@
-@use "../global/mixins_funciones_mapa" as *;
-@use "../global/htlm_nav" as *;
-@use "_contenido_contacto" as *;
-@use "../global/footer" as *;
+@use "../global/mixins_funciones_mapa.scss";
+@use "../global/htlm_nav.scss";
+@use "../contacto/contenido_contacto";
+@use "../global/footer.scss"; 

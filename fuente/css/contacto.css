@@ -138,13 +138,11 @@ header img {
 }
 
 #caja_formulario {
-  background-color: brown;
+  background-color: #9D774C;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  padding: 20px;
-  margin: 0 auto;
+  width: 100%;
 }
 #caja_formulario h3 {
   font-family: "Classica-Book";
@@ -153,11 +151,39 @@ header img {
 #caja_formulario form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #caja_formulario form {
+    align-items: center;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #caja_formulario form {
+    align-items: center;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #caja_formulario form {
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  #caja_formulario form {
+    align-items: center;
+  }
+  #caja_formulario form input, #caja_formulario form select {
+    font-size: 1.2em;
+  }
+  #caja_formulario form input[type=submit], #caja_formulario form input[type=reset] {
+    font-size: 1.2em;
+  }
 }
 #caja_formulario form label {
   font-family: "LTMuseum-Light";
   margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
 #caja_formulario form input, #caja_formulario form select {
   font-family: "LTMuseum-Light";
@@ -179,7 +205,21 @@ header img {
 #caja_formulario form input[type=submit]:hover, #caja_formulario form input[type=reset]:hover {
   background-color: #555;
 }
+@media (min-width: 1921px) {
+  #caja_formulario form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #caja_formulario form input[type=submit], #caja_formulario form input[type=reset] {
+    width: 45%;
+  }
+}
 
+@media (min-width: 360px) and (max-width: 480px) {
+  .enviar_borrar {
+    align-self: center;
+  }
+}
 /*Clase general para aplicar los contenidos al pie de página, está en el directorio global
 ya que es posible que para la página entera se haga algún cambio
 

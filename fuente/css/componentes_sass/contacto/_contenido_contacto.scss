@@ -2,13 +2,12 @@
 @use "sass:map";
 
 #caja_formulario {
-  background-color: brown;
+  background-color: map.get($colores, "secundario_dos");
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  padding: 20px;
-  margin: 0 auto;
+  width: 100%;  
+ 
 
   h3 {
     @include aplicar_fuente('h3', 'Classica-Book');
@@ -18,11 +17,32 @@
   form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    
+    @include tableta {
+      align-items: center;
+    }
+    @include pantalla_pequeña {
+      align-items: center;
+    }
+    @include pantalla_estandar {
+      align-items: center;
+    }
+    @include pantalla_grande {
+      align-items: center;
+      input, select {
+        font-size: 1.2em;
+      }
+      input[type="submit"], input[type="reset"] {
+        font-size: 1.2em;
+      }
+    }
 
     label {
       @include aplicar_fuente('label', 'LTMuseum-Light');
       margin-bottom: 10px;
+      text-align: center; 
+      width: 100%; 
     }
 
     input, select {
@@ -47,6 +67,21 @@
     input[type="submit"]:hover, input[type="reset"]:hover {
       background-color: #555;
     }
+
+    @include pantalla_grande {
+      flex-direction: row;
+      justify-content: space-between;
+
+      input[type="submit"], input[type="reset"] {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@include movil{
+  .enviar_borrar{
+    align-self: center;
   }
 }
 
