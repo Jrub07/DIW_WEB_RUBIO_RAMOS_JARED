@@ -1,6 +1,18 @@
 @use "../global/mixins_funciones_mapa" as *;
 @use "sass:map";
 
+h3 {
+  background-color: #e5c49e; 
+}
+
+h4 {
+  background-color: #e5c49e; 
+}
+
+p {
+  color: #f7ddbf; 
+}
+
 #ofertas {
   min-height: 30%;
   background-color: map.get($colores, "secundario_uno");
@@ -13,13 +25,18 @@
 
     h3 {
       @include aplicar_fuente('h3', 'Classica-Book');
-      background-color: white
+      border-radius: 5px; 
+      width: 100%;
+      text-align: center;
+
+      @include pantalla_grande {
+        font-size: 3vh; 
+      }
     }
 
     p {
       @include aplicar_fuente('p', 'LTMuseum-Light');
       font-size: 8vh;
-      color: white;
     }
   }
 }
@@ -33,18 +50,29 @@
 
   h3 {
     @include aplicar_fuente('h3', 'Classica-Book');
-    background-color: white;
+    border-radius: 5px; 
+    width: 30%;
+    text-align: center;
+
+    @include pantalla_grande {
+      font-size: 3vh; 
+    }
   }
 
   h4 {
     @include aplicar_fuente('h4', 'Classica-Book');
-    background-color: white;
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+
+    @include pantalla_grande {
+      font-size: 3vh; 
+    }
   }
 
   p {
     @include aplicar_fuente('p', 'LTMuseum-Light');
     font-size: 8vh;
-    color: white;
   }
 }
 
@@ -54,9 +82,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   h3 {
     @include aplicar_fuente('h3', 'Classica-Book');
-    background-color: white
+    border-radius: 5px; 
+    width: 30%;
+    text-align: center;
+
+    @include pantalla_grande {
+      font-size: 3vh; 
+    }
+  }
+
+  h4 {
+    @include aplicar_fuente('h4', 'Classica-Book');
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+
+    @include pantalla_grande {
+      font-size: 3vh; 
+    }
+  }
+
+  @include tableta {
+    min-height: 30%;
   }
 
   article {
@@ -71,24 +121,64 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
     }
 
     @include pantalla_pequeña {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 90%;
+      }
+
+      p {
+        font-size: 2vh;
+      }
     }
 
     @include pantalla_estandar {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      p {
+        font-size: 3vh;
+      }
     }
 
     @include pantalla_grande {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      p {
+        font-size: 3vh;
+      }
     }
 
     p {
@@ -100,6 +190,9 @@
     text-align: justify;
     width: 90%;
     background-color: white;
+    border-radius: 5px;
+    background-color: #e5c49e;
+
     @include tableta {
       width: 45%;
     }
@@ -119,7 +212,9 @@
     p {
       margin: 1%;
       padding: 2%;
+      font-size: 3vh;
       @include aplicar_fuente('p', 'LTMuseum-Light');
+      color: black; 
     }
 
     img {
@@ -134,9 +229,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   h3 {
     @include aplicar_fuente('h3', 'Classica-Book');
-    background-color: white;
+    border-radius: 5px; 
+    width: 30%;
+    text-align: center;
+
+    @include pantalla_grande {
+      font-size: 3vh; 
+    }
   }
 
   article {
@@ -151,28 +253,68 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
     }
 
     @include pantalla_pequeña {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 90%;
+      }
+
+      p {
+        font-size: 2vh;
+      }
     }
 
     @include pantalla_estandar {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      p {
+        font-size: 3vh;
+      }
     }
 
     @include pantalla_grande {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
+      picture {
+        width: 50%;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      p {
+        font-size: 3vh;
+      }
     }
 
     p {
       @include aplicar_fuente('p', 'LTMuseum-Light');
+      color: black;
     }
   }
 
@@ -180,6 +322,9 @@
     text-align: justify;
     width: 90%;
     background-color: white;
+    border-radius: 5px;
+    background-color: #e5c49e;
+
     @include tableta {
       width: 45%;
     }
@@ -199,10 +344,7 @@
     p {
       margin: 1%;
       padding: 2%;
-      height: 100%; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 3vh;
       @include aplicar_fuente('p', 'LTMuseum-Light');
     }
 
