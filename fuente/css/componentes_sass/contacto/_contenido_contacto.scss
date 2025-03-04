@@ -68,9 +68,7 @@
       background-color: #555;
     }
 
-    @include pantalla_grande {
-      flex-direction: row;
-      justify-content: space-between;
+    @include pantalla_grande {      
 
       input[type="submit"], input[type="reset"] {
         width: 45%;

@@ -206,10 +206,6 @@ header img {
   background-color: #555;
 }
 @media (min-width: 1921px) {
-  #caja_formulario form {
-    flex-direction: row;
-    justify-content: space-between;
-  }
   #caja_formulario form input[type=submit], #caja_formulario form input[type=reset] {
     width: 45%;
   }
