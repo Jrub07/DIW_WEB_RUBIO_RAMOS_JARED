@@ -1,7 +1,19 @@
-//Archivo indice en el que se hacen los import generales de los estilos de la página
+// Archivo índice en el que se hacen los import generales de los estilos de la página
+
+// Importa los mixins y funciones globales
 @use '../global/_mixins_funciones_mapa.scss';
+
+// Importa los estilos del header y la navegación
 @use '../global/_htlm_nav.scss';
+
+// Importa los estilos específicos para la sección hero
 @use './_hero';
+
+// Importa los estilos específicos para la sección de modalidades
 @use './_modalidades';
+
+// Importa los estilos específicos para la sección de especialidades
 @use './_especialidades';
+
+// Importa los estilos del footer
 @use '../global/_footer.scss';

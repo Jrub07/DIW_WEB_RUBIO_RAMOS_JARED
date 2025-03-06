@@ -27,10 +27,11 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
+// Estilo para los botones dentro del header
 header button {   
     border-radius: 20%;
     background-color: white;
@@ -43,29 +44,34 @@ header button {
     font-size: 2vh;
     height: 4vh; 
 
+    // Estilos específicos para dispositivos móviles
     @include movil() {
         font-size: 1.5vh; 
         margin: 0 10px;
     }
 
+    // Estilos específicos para tabletas
     @include tableta() {
         font-size: 1.4vh;
         height: 4.5vh;
         width: 18%;
     }
 
+    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
         font-size: 1.5vh;
         height: 4vh;
         width: 18%;
     }
 
+    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
         font-size: 2vh; 
         width: 10%;
         height: 5vh; 
     }
 
+    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
         font-size: 2vh; 
         width: 10%; 
@@ -82,24 +88,29 @@ header button {
 header img {    
     object-fit: cover;
 
+    // Estilos específicos para dispositivos móviles
     @include movil() {
         max-width: 20%;
     }
 
+    // Estilos específicos para tabletas
     @include tableta() {        
         max-width: 15%;
     }
 
+    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
         max-width: 15%;
         max-height: 10%;
     }
 
+    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
         max-width: 15%;
         max-height: 10%;
     }
 
+    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
         max-width: 15%; 
         max-height: 10%; 

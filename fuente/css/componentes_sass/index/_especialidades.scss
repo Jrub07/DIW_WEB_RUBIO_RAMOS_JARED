@@ -14,6 +14,7 @@
     background-color: map.get($colores, "secundario_uno");
     overflow: hidden;
 
+    // Estilos específicos para tabletas
     @include tableta() {
         min-height: 50%;
         justify-content: flex-start;
@@ -27,29 +28,34 @@
         border-radius: 5%;
         @include aplicar_fuente('h3', 'Classica-Bold');
 
+        // Estilos específicos para dispositivos móviles
         @include movil() {
             font-size: 2.5vh;
             margin-top: 10%;
         }
 
+        // Estilos específicos para tabletas
         @include tableta() {
             font-size: 1.1em;
             width: 95%;
             margin-top: 2%;
         }
 
+        // Estilos específicos para pantallas pequeñas
         @include pantalla_pequeña() {
             font-size: 2vh;
             width: 95%;
             margin-top: 2%;
         }
 
+        // Estilos específicos para pantallas estándar
         @include pantalla_estandar() {
             font-size: 2.5vh;
             width: 95%;
             margin-top: 2%;
         }
 
+        // Estilos específicos para pantallas grandes
         @include pantalla_grande() {
             font-size: 2.6vh;
             width: 95%;
@@ -69,6 +75,7 @@
         padding: 0;
         align-content: center;
 
+        // Estilos específicos para pantallas estándar
         @include pantalla_estandar() {
             height: 80%;
             width: 90%;
@@ -76,6 +83,7 @@
             justify-content: center;
         }
 
+        // Estilos específicos para pantallas grandes
         @include pantalla_grande() {
             height: 80%;
             width: 80%;
@@ -83,19 +91,11 @@
             justify-content: center;
         }
 
+        // Estilos específicos para tabletas
         @include tableta() {
             flex-direction: row;
             justify-content: center;
         }
-
-        @include pantalla_pequeña() {
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
             margin: 0;
             width: 100%;
             display: flex;

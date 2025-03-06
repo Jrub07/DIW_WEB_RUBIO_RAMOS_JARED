@@ -1,20 +1,19 @@
-/*Archivo para mostar las modalidades de terapia del cliente*/
+/* Archivo para mostrar las modalidades de terapia del cliente */
 @use '../global/mixins_funciones_mapa.scss' as *;
 @use "sass:map";
 
-
-
-/*Estilos generales, en este caso destacan aquellos que son en columna dividido a 2, menos para los telefonos inteligentes*/
+/* Estilos generales para la sección de modalidades */
 #modalidades {
   overflow: hidden;
   background-color: map.get($colores, "secundario_dos");
   min-height: 45%;
   display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;  
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;  
 
+  // Estilos específicos para tabletas
   @include tableta() {    
     flex-direction: row;    
     justify-content: space-around;
@@ -24,6 +23,7 @@
     min-height: 25%;
   }
 
+  // Estilos específicos para pantallas pequeñas
   @include pantalla_pequeña() {
     flex-direction: row;    
     justify-content: space-around;
@@ -33,6 +33,7 @@
     min-height: 25%;
   }
 
+  // Estilos específicos para pantallas estándar
   @include pantalla_estandar() {
     flex-direction: row;    
     justify-content: space-around;
@@ -46,6 +47,7 @@
     }
   }
 
+  // Estilos específicos para pantallas grandes
   @include pantalla_grande() {
     flex-direction: row;    
     justify-content: space-around;
@@ -60,7 +62,7 @@
   }
 }
 
-//Compartido para ambos para que sean repetidos
+// Estilos compartidos para las modalidades presencial y online
 #presencial, #online {
   margin-top: 2%;
   margin-bottom: 2%;
@@ -69,28 +71,33 @@
   align-items: center;
   overflow: hidden;
 
+  // Estilos específicos para dispositivos móviles
   @include movil() {
     width: 90%;
     height: 80%;
   }
 
+  // Estilos específicos para tabletas
   @include tableta() {
     width: 50%;
     height: 80%;
   }
 
+  // Estilos específicos para pantallas pequeñas
   @include pantalla_pequeña() {
     width: 50%;
     height: 80%;
     min-height: 25%;
   }
 
+  // Estilos específicos para pantallas estándar
   @include pantalla_estandar() {
     width: 50%;
     height: 80%;
     min-height: 25%;
   }
 
+  // Estilos específicos para pantallas grandes
   @include pantalla_grande() {
     width: 50%;
     height: 80%;
@@ -104,49 +111,51 @@
     background-color: #e9d5c5;
     @include aplicar_fuente('p', 'Classica-Bold');
 
+    // Estilos específicos para dispositivos móviles
     @include movil() {
       height: 10%;
       width: 100%;
       text-transform: uppercase;
     }
 
+    // Estilos específicos para tabletas
     @include tableta() {
       height: 15%;
       width: 80%;
     }
 
+    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
       height: 15%;
       width: 80%;
       font-size: 2vh;
     }
 
+    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
       height: 15%;
       width: 80%;
       font-size: 3vh;
-      
     }
 
+    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
       height: 15%; 
       width: 80%; 
       font-size: 4vh;
       @include aplicar_fuente('p', 'Classica-Bold');
-       
     }
   }
 
-  
   img {        
     margin: 0 auto;
     max-width: 90%; 
     max-height: 90%;
 
+    // Estilos específicos para dispositivos móviles
     @include movil() {
       max-width: 100%;
       max-height: 100%;      
     }
-    
-}
+  }
 }
