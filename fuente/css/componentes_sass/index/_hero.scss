@@ -1,125 +1,8 @@
 /* Archivo para mostrar los valores de la empresa */
 @use '../global/_mixins_funciones_mapa.scss' as *;
 @use 'sass:map';
-@use '_mixins_funciones_mapa' as *;
 
-/* Clase base para html y body para poder heredar en tarea 12 */
-%html_body {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    // Overflow-x para que no haya errores con el móvil
-    overflow-x: hidden;
-}
-
-/* Creación del html y el body en conjunto para que se comparta en todos los archivos, se quitan los márgenes
-para que se incluya todo el contenido */
-html, body {
-    @extend %html_body;
-}
-
-// Creación del header
-header {
-    width: 100%;
-    min-height: 10%;
-    overflow: hidden;
-    background-color: map.get($colores, "principal"); 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-// Estilo para los botones dentro del header
-header button {   
-    border-radius: 20%;
-    background-color: white;
-    color: black;
-    font-family: averia-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: #e9d5c5;    
-    width: 40%;    
-    font-size: 2vh;
-    height: 4vh; 
-
-    // Estilos específicos para dispositivos móviles
-    @include movil() {
-        font-size: 1.5vh; 
-        margin: 0 10px;
-    }
-
-    // Estilos específicos para tabletas
-    @include tableta() {
-        font-size: 1.4vh;
-        height: 4.5vh;
-        width: 18%;
-    }
-
-    // Estilos específicos para pantallas pequeñas
-    @include pantalla_pequeña() {
-        font-size: 1.5vh;
-        height: 4vh;
-        width: 18%;
-    }
-
-    // Estilos específicos para pantallas estándar
-    @include pantalla_estandar() {
-        font-size: 2vh; 
-        width: 10%;
-        height: 5vh; 
-    }
-
-    // Estilos específicos para pantallas grandes
-    @include pantalla_grande() {
-        font-size: 2vh; 
-        width: 10%; 
-        height: 5vh; 
-    }
-}
-
-// Botón para el CTA con la función correspondiente
-#pedir_cita {
-    @include aplicar_fuente('button', 'MilkAndHoney');
-}
-
-// Colocación del logo con diferentes alturas para cada dispositivo
-header img {    
-    object-fit: cover;
-
-    // Estilos específicos para dispositivos móviles
-    @include movil() {
-        max-width: 20%;
-    }
-
-    // Estilos específicos para tabletas
-    @include tableta() {        
-        max-width: 15%;
-    }
-
-    // Estilos específicos para pantallas pequeñas
-    @include pantalla_pequeña() {
-        max-width: 15%;
-        max-height: 10%;
-    }
-
-    // Estilos específicos para pantallas estándar
-    @include pantalla_estandar() {
-        max-width: 15%;
-        max-height: 10%;
-    }
-
-    // Estilos específicos para pantallas grandes
-    @include pantalla_grande() {
-        max-width: 15%; 
-        max-height: 10%; 
-    }
-}
-
-/* Contenedor de presentación con la imagen INTERPOLACION en cada linea-gardient */
+/* Contenedor de presentación con la imagen */
 #presentacion {
   display: flex;
   flex-direction: column;
@@ -173,17 +56,14 @@ header img {
   @include aplicar_fuente('h3', 'Fashion');
   width: 50%; 
 
-  // Estilos específicos para dispositivos móviles
   @include movil() {
     width: 90%;
   }
 
-  // Estilos específicos para pantallas pequeñas
   @include pantalla_pequeña() {
     width: 70%;    
   }
 
-  // Estilos específicos para tabletas
   @include tableta() {
     width: 90%;
     margin: 0;
@@ -196,30 +76,26 @@ header img {
     padding: 10px 0;
     border-radius: 10%;
 
-    // Estilos específicos para tabletas
     @include tableta() {
       padding: 0;
     }
 
-    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
       height: 21%;
       margin-top: 5%;
       font-size: 2vh;
+      
     }
 
-    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
       font-size: 3.5vh;
     }
 
-    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
       font-size: 3vh;
     }
   }
 
-  /* Contenedor para los valores de la empresa */
   .valores {
     display: flex;
     flex-wrap: wrap;
@@ -228,7 +104,6 @@ header img {
     margin-top: 0.5%;
   }
 
-  /* Estilos para cada artículo dentro de los valores */
   .valores article {
     box-sizing: border-box;
     text-align: center;
@@ -241,7 +116,6 @@ header img {
     margin: 10px;
     border-radius: 12%;
 
-    // Estilos específicos para dispositivos móviles
     @include movil() {
       padding: 0;
       display: flex;
@@ -251,24 +125,20 @@ header img {
       flex: 1 1 100%; 
     }
 
-    // Estilos específicos para tabletas
     @include tableta() {
       flex: 1 1 40%; 
       padding: 0; 
     }
 
-    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
       flex: 1 1 40%; 
       padding: 0; 
     }
 
-    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
       flex: 1 1 43%; 
     }
 
-    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
       flex: 1 1 48%; 
     }
@@ -278,34 +148,29 @@ header img {
     margin: 10px 0;
     @include aplicar_fuente('h4', 'Classica-Bold');
     
-    // Estilos específicos para dispositivos móviles
     @include movil() {
       margin-top: 1%;
       margin-bottom: 1%;        
     }
 
-    // Estilos específicos para tabletas
     @include tableta() {
       margin-top: 1%;
       margin-bottom: 1%;
       font-size: 2vh;        
     }
 
-    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
       margin-top: 1%;
       margin-bottom: 1%;
       font-size: 2vh;
     }
 
-    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
       margin-top: 1%;
       margin-bottom: 1%;
       font-size: 4vh;        
     }
 
-    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
       margin-top: 1%;
       margin-bottom: 1%;
@@ -317,22 +182,18 @@ header img {
     @include aplicar_fuente('p', 'LTMuseum-Light');
     margin-top: 1%;
 
-    // Estilos específicos para tabletas
     @include tableta() {
       font-size: 2vh;
     }
 
-    // Estilos específicos para pantallas pequeñas
     @include pantalla_pequeña() {
       font-size: 2vh;
     }
 
-    // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
       font-size: 3vh;
     }
 
-    // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
       font-size: 3vh;
     }

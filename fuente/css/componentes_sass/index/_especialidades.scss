@@ -96,6 +96,16 @@
             flex-direction: row;
             justify-content: center;
         }
+
+        // Estilos específicos para pantallas pequeñas
+        @include pantalla_pequeña() {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
             margin: 0;
             width: 100%;
             display: flex;
@@ -153,4 +163,5 @@
         }
     }
 }
+
 

@@ -354,8 +354,8 @@ header img {
   }
 }
 
-/*Archivo para mostar las modalidades de terapia del cliente*/
-/*Estilos generales, en este caso destacan aquellos que son en columna dividido a 2, menos para los telefonos inteligentes*/
+/* Archivo para mostrar las modalidades de terapia del cliente */
+/* Estilos generales para la sección de modalidades */
 #modalidades {
   overflow: hidden;
   background-color: #9D774C;
@@ -754,7 +754,7 @@ footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
-    height: 14%;
+    height: 18%;
     margin-top: 10%;
     font-size: 2vh;
     text-align: center;
