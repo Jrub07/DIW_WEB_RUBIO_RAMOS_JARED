@@ -22,8 +22,13 @@ Para que no haya errores con las fuentes de imagen y el mapa se ha usado la tecn
 - Es posible que se haya quedado alguna cosa repetida en SCSS y que no funcione a pesar de ser revisado, le pediría un poco de flexibilidad si lo ve y si hay algun cambio importante, que me deje implementarlo en la tarea 12.
 
 V3
--Añadido bordes redondeados
--Arreglado para Firefox
--Arregladas todas las img en funcion del contenedor picture
+- Añadido bordes redondeados
+- Arreglado para Firefox
+- Arregladas todas las img en funcion del contenedor picture
+
+v4:
+- Añadido flex grow en hero img para los cuadros
+
+
 
 
