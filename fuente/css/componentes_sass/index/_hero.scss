@@ -20,7 +20,6 @@
   @include tableta() { 
     min-height: 40%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "tableta")});
-
   }
 
   @include pantalla_pequeña() {    
@@ -28,7 +27,6 @@
     height: 50%;
     padding-right: 8%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_pequeña")});
-
   }
 
   @include pantalla_estandar() {
@@ -36,7 +34,6 @@
     height: 80%;
     padding-right: 8%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_estandar")});
-
   }
 
   @include pantalla_grande() {
@@ -45,7 +42,6 @@
     padding-top: 1%;
     padding-right: 8%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image-set(#{map.get($imagenes, "pantalla_grande")});
-   
   }
 }
 
@@ -115,41 +111,36 @@
     background-color: map.get($colores, "secundario_uno");
     color: white;
     @include aplicar_fuente('article', 'Classica-Bold');
-    width: 45%;  
+    flex: 1 1 45%;  
     padding: 20px;
     margin: 10px;
-    height: 200px; 
     border-radius: 12%;
 
     @include movil() {
       padding: 0;
       display: flex;
-      width: 100%;
-      margin-top: 0.5%;
       flex-direction: column;
       flex-wrap: nowrap;
       align-items: center;
-      height: auto; 
+      flex: 1 1 100%; 
     }
 
     @include tableta() {
-      height: 45%; 
-      width: 40%;
+      flex: 1 1 40%; 
       padding: 0; 
     }
 
     @include pantalla_pequeña() {
-      width: 40%; 
-      height: 43%;
+      flex: 1 1 40%; 
       padding: 0; 
     }
 
     @include pantalla_estandar() {
-      height: 43%; 
+      flex: 1 1 43%; 
     }
 
     @include pantalla_grande() {
-      height: 48%; 
+      flex: 1 1 48%; 
     }
   }
 

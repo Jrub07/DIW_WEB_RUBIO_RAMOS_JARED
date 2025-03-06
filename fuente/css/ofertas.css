@@ -185,7 +185,7 @@ p {
 #pack h3 {
   font-family: "Classica-Book";
   border-radius: 5px;
-  width: 30%;
+  width: 70%;
   text-align: center;
 }
 @media (min-width: 1921px) {
@@ -195,7 +195,7 @@ p {
 }
 #pack h4 {
   font-family: "Classica-Book";
-  width: 20%;
+  width: 40%;
   text-align: center;
   border-radius: 5px;
 }
@@ -219,7 +219,7 @@ p {
 #seguro_escolar h3 {
   font-family: "Classica-Book";
   border-radius: 5px;
-  width: 30%;
+  width: 70%;
   text-align: center;
 }
 @media (min-width: 1921px) {
@@ -360,7 +360,7 @@ p {
 #becas h3 {
   font-family: "Classica-Book";
   border-radius: 5px;
-  width: 30%;
+  width: 70%;
   text-align: center;
 }
 @media (min-width: 1921px) {

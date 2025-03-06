@@ -254,46 +254,41 @@ header img {
   background-color: #684825;
   color: white;
   font-family: "Classica-Bold";
-  width: 45%;
+  flex: 1 1 45%;
   padding: 20px;
   margin: 10px;
-  height: 200px;
   border-radius: 12%;
 }
 @media (min-width: 360px) and (max-width: 480px) {
   #nombre_cliente .valores article {
     padding: 0;
     display: flex;
-    width: 100%;
-    margin-top: 0.5%;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    height: auto;
+    flex: 1 1 100%;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #nombre_cliente .valores article {
-    height: 45%;
-    width: 40%;
+    flex: 1 1 40%;
     padding: 0;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #nombre_cliente .valores article {
-    width: 40%;
-    height: 43%;
+    flex: 1 1 40%;
     padding: 0;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #nombre_cliente .valores article {
-    height: 43%;
+    flex: 1 1 43%;
   }
 }
 @media (min-width: 1921px) {
   #nombre_cliente .valores article {
-    height: 48%;
+    flex: 1 1 48%;
   }
 }
 #nombre_cliente h4 {
