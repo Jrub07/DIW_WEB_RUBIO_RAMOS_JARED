@@ -8,8 +8,21 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
+
+  picture {
+    width: 100%;
+    
+    display: block; 
+
+    img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: fill; 
+      
+    }
+  }
 }
+
 
 #terapeutas h3 {
   @include aplicar_fuente('h3', 'Classica-Book');
@@ -144,17 +157,17 @@
         @include pantalla_pequeña {
           width: 70%;
           margin: 3% auto;
-          font-size: 2.9vh;
+          font-size: 3vh;
         }
         @include pantalla_estandar {
           width: 70%;
           margin: 3% auto;
-          font-size: 2.9vh;
+          font-size: 3vh;
         }
         @include pantalla_grande {
           width: 70%;
           margin: 3% auto;
-          font-size: 2.9vh;
+          font-size: 3vh;
         }
       }
 
@@ -162,7 +175,7 @@
         @include aplicar_fuente('p', 'LTMuseum-Light');
         text-align: justify;
         margin: 3%;
-        font-size: 0.9em;  
+        font-size: 0.86em;  
 
         @include tableta {
           font-family: "LTMuseum-Light";

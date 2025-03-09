@@ -9,11 +9,20 @@
     <title>Sobre nosotros</title>
 </head>
 <body>
-    <header>
+    <header>      
         <img onclick="location.href='../index.html'" src="../imagenes/logo_balance_psico_150x150.jpg" alt="logo_Balance_Psicología" />
-        <button onclick="location.href='../html/sobre_nosotros.html'">Sobre nosotros</button>
-        <button onclick="location.href='../html/ofertas.html'">Ofertas</button>
-        <button onclick="location.href='../html/contacto.html'" id="pedir_cita">Pedir cita</button>
+  
+        <ul>
+          <li>
+            <p><a href="./sobre_nosotros.html">Sobre nosotros</a></p>
+          </li>
+          <li>
+            <p><a href="./ofertas.html">Ofertas</a></p>
+          </li>
+          <li>
+            <p><a href="./contacto.html" id="pedir_cita">Pedir cita</a></p>
+          </li>
+        </ul>
     </header>
 
     <section id="terapeutas">
@@ -22,29 +31,34 @@
         <article id="psico1">
             <article>
                 <article class="caja_img">
-                    <img
-                        src="../imagenes/estandar_natalia_550x651.avif"
-                        srcset="
-                            ../imagenes/movil_peque_natalia_480x600.avif ,
-                            ../imagenes/tablet_natalia_360x450.avif ,
-                            ../imagenes/estandar_natalia_550x668.avif ,
-                            ../imagenes/nuevo_grande_natalia_1013x1266.avif ,
-                            ../imagenes/movil_peque_natalia_480x600.webp ,
-                            ../imagenes/tablet_natalia_360x450.webp ,
-                            ../imagenes/estandar_natalia_550x668.webp,
-                            ../imagenes/nuevo_grande_natalia_1013x1266.webp,
-                            ../imagenes/movil_peque_natalia_480x600.jpg,
-                            ../imagenes/tablet_natalia_360x450.jpg ,
-                            ../imagenes/estandar_natalia_550x668.jpg,
-                            ../imagenes/nuevo_grande_natalia_1013x1266.jpg 
-                        "
-                        sizes="(max-width: 480px) 480px,  
-                               (max-width: 768px) 360px,  
-                               (max-width: 1200px) 480px,  
-                               (max-width: 1920px) 550px,  
-                               (min-width: 1921px) 1013px"
-                        alt="psico1"
-                    />
+                    <picture>
+                        <!-- Movil -->
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.avif" media="(max-width: 480px)">
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.webp" media="(max-width: 480px)">
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.jpg" media="(max-width: 480px)">
+                        
+                        <!-- Tablet -->
+                        <source srcset="../imagenes/tablet_natalia_360x450.avif" media="(max-width: 768px)">
+                        <source srcset="../imagenes/tablet_natalia_360x450.webp" media="(max-width: 768px)">
+                        <source srcset="../imagenes/tablet_natalia_360x450.jpg" media="(max-width: 768px)">
+                        
+                        <!-- Pequeño -->
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.avif" media="(max-width: 1200px)">
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.webp" media="(max-width: 1200px)">
+                        <source srcset="../imagenes/movil_peque_natalia_480x600.jpg" media="(max-width: 1200px)">
+                        
+                        <!-- Estandar -->
+                        <source srcset="../imagenes/estandar_natalia_550x668.avif" media="(max-width: 1920px)">
+                        <source srcset="../imagenes/estandar_natalia_550x668.webp" media="(max-width: 1920px)">
+                        <source srcset="../imagenes/estandar_natalia_550x668.jpg" media="(max-width: 1920px)">
+                        
+                        <!-- Grande -->
+                        <source srcset="../imagenes/nuevo_grande_natalia_1013x1266.avif" media="(min-width: 1921px)">
+                        <source srcset="../imagenes/nuevo_grande_natalia_1013x1266.webp" media="(min-width: 1921px)">
+                        <source srcset="../imagenes/nuevo_grande_natalia_1013x1266.jpg" media="(min-width: 1921px)">
+                        
+                        <img src="../imagenes/estandar_natalia_550x668.jpg" alt="psico1">
+                    </picture>
                 </article>
                 <article class="cont_psico1">
                     <h3>NATALIA</h3>
@@ -76,7 +90,6 @@
                             </li>
                         </ul>
                     </article>
-                    
                 </article>
             </article>
         </article>
@@ -84,29 +97,34 @@
         <article id="psico2">
             <article>
                 <article class="caja_img">
-                    <img
-                        src="../imagenes/estandar_sofia600x710.avif"
-                        srcset="
-                            ../imagenes/movil_peque_sofia_480x568.avif,
-                            ../imagenes/tablet_sofia_360x426.avif,
-                            ../imagenes/estandar_sofia600x710.avif,
-                            ../imagenes/nuevo_grande_sofia_1013x1266.avif,
-                            ../imagenes/movil_peque_sofia_480x568.webp,
-                            ../imagenes/tablet_sofia_360x426.webp,
-                            ../imagenes/estandar_sofia600x710.webp,
-                            ../imagenes/nuevo_grande_sofia_1013x1266.webp,
-                            ../imagenes/movil_peque_sofia_480x568.jpg,
-                            ../imagenes/tablet_sofia_360x426.jpg,
-                            ../imagenes/estandar_sofia600x710.jpg,
-                            ../imagenes/nuevo_grande_sofia_1013x1266.jpg
-                        "
-                        sizes="(max-width: 480px) 480px,  
-                               (max-width: 768px) 360px,  
-                               (max-width: 1200px) 480px,  
-                               (max-width: 1920px) 550px,  
-                               (min-width: 1921px) 1013px"
-                        alt="psico2"
-                    />
+                    <picture>
+                        <!-- Movil -->
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.avif" media="(max-width: 480px)">
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.webp" media="(max-width: 480px)">
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.jpg" media="(max-width: 480px)">
+                        
+                        <!-- Tablet -->
+                        <source srcset="../imagenes/tablet_sofia_360x426.avif" media="(max-width: 768px)">
+                        <source srcset="../imagenes/tablet_sofia_360x426.webp" media="(max-width: 768px)">
+                        <source srcset="../imagenes/tablet_sofia_360x426.jpg" media="(max-width: 768px)">
+                        
+                        <!-- Pequeño -->
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.avif" media="(max-width: 1200px)">
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.webp" media="(max-width: 1200px)">
+                        <source srcset="../imagenes/movil_peque_sofia_480x568.jpg" media="(max-width: 1200px)">
+                        
+                        <!-- Estandar -->
+                        <source srcset="../imagenes/estandar_sofia600x710.avif" media="(max-width: 1920px)">
+                        <source srcset="../imagenes/estandar_sofia600x710.webp" media="(max-width: 1920px)">
+                        <source srcset="../imagenes/estandar_sofia600x710.jpg" media="(max-width: 1920px)">
+                        
+                        <!-- Grande -->
+                        <source srcset="../imagenes/nuevo_grande_sofia_1013x1266.avif" media="(min-width: 1921px)">
+                        <source srcset="../imagenes/nuevo_grande_sofia_1013x1266.webp" media="(min-width: 1921px)">
+                        <source srcset="../imagenes/nuevo_grande_sofia_1013x1266.jpg" media="(min-width: 1921px)">
+                        
+                        <img src="../imagenes/estandar_sofia600x710.jpg" alt="psico2">
+                    </picture>
                 </article>
                 <article class="cont_psico2">
                     <h3>SOFIA</h3>
@@ -163,7 +181,7 @@
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.591586430228!2d-3.559550052964558!3d37.133069988539376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb3a191ddcf7%3A0x8e872a7a9aeca2fb!2sBalance%20Psicologia!5e0!3m2!1ses!2ses!4v1737832746593!5m2!1ses!2ses"
             ></iframe>
-          </article>
+        </article>
     </footer>
 </body>
 </html>

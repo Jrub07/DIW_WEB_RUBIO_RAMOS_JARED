@@ -125,6 +125,9 @@ p {
       picture {
         width: 50%;
       }
+      imag{
+        width: 100%;
+      };
     }
 
     @include pantalla_pequeña {

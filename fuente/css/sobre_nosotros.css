@@ -191,6 +191,15 @@ header img {
   justify-content: flex-start;
   align-items: center;
 }
+#terapeutas picture {
+  width: 100%;
+  display: block;
+}
+#terapeutas picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
 
 #terapeutas h3 {
   font-family: "Classica-Book";
@@ -353,28 +362,28 @@ header img {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 2.9vh;
+    font-size: 3vh;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 2.9vh;
+    font-size: 3vh;
   }
 }
 @media (min-width: 1921px) {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 2.9vh;
+    font-size: 3vh;
   }
 }
 #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
   font-family: "LTMuseum-Light";
   text-align: justify;
   margin: 3%;
-  font-size: 0.9em;
+  font-size: 0.86em;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
