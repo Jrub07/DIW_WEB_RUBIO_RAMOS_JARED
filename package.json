@@ -4,12 +4,18 @@
   "description": "Para que no haya errores con las fuentes de imagen y el mapa se ha usado la tecnologica de Github.io. Para poder ver la página completa accede a este enlace:  https://jrub07.github.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "vite": "^6.2.1"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.85.1",
+    "vite-plugin-html": "^3.2.2"
   }
 }

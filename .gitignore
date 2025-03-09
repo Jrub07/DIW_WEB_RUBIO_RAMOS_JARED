@@ -1,2 +1,3 @@
-index.sass
-puntos_ruptura.txt
+node_modules/
+**/node_modules/
+package-lock.json
