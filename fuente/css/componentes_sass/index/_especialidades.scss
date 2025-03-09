@@ -4,12 +4,7 @@
 
 /* Estilos compartidos, se pueden modificar los márgenes según la necesidad del dispositivo */
 #especialidades {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;    
     min-height: 45%;
     background-color: map.get($colores, "secundario_uno");
     overflow: hidden;
@@ -17,7 +12,23 @@
     // Estilos específicos para tabletas
     @include tableta() {
         min-height: 50%;
-        justify-content: flex-start;
+       
+    }
+
+    @include pantalla_estandar() {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include pantalla_grande() {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     h3 {
@@ -38,14 +49,14 @@
         @include tableta() {
             font-size: 1.1em;
             width: 95%;
-            margin-top: 2%;
+            margin: 2% auto;
         }
 
         // Estilos específicos para pantallas pequeñas
         @include pantalla_pequeña() {
             font-size: 2vh;
             width: 95%;
-            margin-top: 2%;
+            margin: 2% auto;
         }
 
         // Estilos específicos para pantallas estándar
@@ -64,12 +75,7 @@
     }
 
     article {
-        margin-left: 0.8%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        flex-wrap: wrap;
+        margin-left: 0.8%;        
         height: 100%;
         width: 100%;
         padding: 0;
@@ -79,28 +85,24 @@
         @include pantalla_estandar() {
             height: 80%;
             width: 90%;
-            flex-direction: row;
-            justify-content: center;
+            
         }
 
         // Estilos específicos para pantallas grandes
         @include pantalla_grande() {
             height: 80%;
             width: 80%;
-            flex-direction: row;
-            justify-content: center;
+            
         }
 
         // Estilos específicos para tabletas
         @include tableta() {
-            flex-direction: row;
-            justify-content: center;
+            
         }
 
         // Estilos específicos para pantallas pequeñas
         @include pantalla_pequeña() {
-            flex-direction: row;
-            justify-content: center;
+            
         }
 
         ul {
@@ -163,5 +165,3 @@
         }
     }
 }
-
-

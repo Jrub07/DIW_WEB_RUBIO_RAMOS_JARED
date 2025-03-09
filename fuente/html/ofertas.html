@@ -7,12 +7,20 @@
   <title>Ofertas</title>
 </head>
 <body>
-  <header>
-    <!-- Logo de la empresa en jpg para que sea reconocido por todos los navegadores -->
-    <img onclick="location.href='../html/index.html'" src="../imagenes/logo_balance_psico_150x150.jpg" alt="logo_Balance_Psicología" />
-    <button onclick="location.href='../html/sobre_nosotros.html'">Sobre nosotros</button>
-    <button onclick="location.href='../html/ofertas.html'">Ofertas</button>
-    <button onclick="location.href='../html/contacto.html'" id="pedir_cita">Pedir cita</button>
+  <header>      
+    <img onclick="location.href='../index.html'" src="../imagenes/logo_balance_psico_150x150.jpg" alt="logo_Balance_Psicología" />
+
+    <ul>
+      <li>
+        <p><a href="./sobre_nosotros.html">Sobre nosotros</a></p>
+      </li>
+      <li>
+        <p><a href="./ofertas.html">Ofertas</a></p>
+      </li>
+      <li>
+        <p><a href="./contacto.html" id="pedir_cita">Pedir cita</a></p>
+      </li>
+    </ul>
   </header>
 
   <section id="ofertas">
@@ -98,19 +106,28 @@
   </section>
 
   <footer>
-    <section id="contacto">
+    <section id="contacto">        
       <article id="redes_sociales">
         <h3>Nuestras redes sociales</h3>
         <p>
-          <img src="../imagenes/instagram-50x50.png" alt="logo instagram" />
+          <img
+            src="../imagenes/instagram-50x50.png"
+            alt="logo instagram"
+          />
           @balance_psico
         </p>
         <p>
-          <img src="../imagenes/whatsapp_50x50.png" alt="logo whatsapp" />
+          <img
+            src="../imagenes/whatsapp_50x50.png"
+            alt="logo whatsapp"
+          />
           621256879
         </p>
         <p>
-          <img src="../imagenes/gmail-50x50.png" alt="logo gmail" />
+          <img
+            src="../imagenes/gmail-50x50.png"
+            alt="logo gmail"
+          />
           bpsico@gmail.com
         </p>
       </article>
@@ -118,15 +135,24 @@
       <article id="como_llegar">
         <h3>Dónde encontrarnos</h3>
         <p>
-          <img src="../imagenes/ubicacion_50x50.png" alt="ubicacion" />
+          <img 
+            src="../imagenes/ubicacion_50x50.png" 
+            alt="ubicacion" 
+          />
           Calle psico nº2
         </p>
         <p>
-          <img src="../imagenes/metro_50x50.png" alt="metro" />
+          <img 
+            src="../imagenes/metro_50x50.png" 
+            alt="metro" 
+          />
           Línea 4
         </p>
         <p>
-          <img src="../imagenes/bus_50x50.png" alt="bus" />
+          <img 
+            src="../imagenes/bus_50x50.png"
+            alt="bus" 
+          />
           Números 8 y 9
         </p>
       </article>
@@ -134,7 +160,9 @@
 
     <!-- Mapa de Google Maps con la ubicación de la empresa -->
     <article class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.591586430228!2d-3.559550052964558!3d37.133069988539376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb3a191ddcf7%3A0x8e872a7a9aeca2fb!2sBalance%20Psicologia!5e0!3m2!1ses!2ses!4v1737832746593!5m2!1ses!2ses"></iframe>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.591586430228!2d-3.559550052964558!3d37.133069988539376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fb3a191ddcf7%3A0x8e872a7a9aeca2fb!2sBalance%20Psicologia!5e0!3m2!1ses!2ses!4v1737832746593!5m2!1ses!2ses"
+      ></iframe>
     </article>
   </footer>
 </body>

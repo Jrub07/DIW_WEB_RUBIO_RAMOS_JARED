@@ -54,7 +54,50 @@ header {
   align-items: center;
 }
 
-header button {
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60px;
+  box-sizing: border-box;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header li {
+    width: 20%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  header li {
+    width: 28%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  header li {
+    width: 18%;
+  }
+}
+@media (min-width: 1921px) {
+  header li {
+    width: 18%;
+  }
+}
+
+header p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 20%;
   background-color: white;
   color: black;
@@ -62,43 +105,46 @@ header button {
   text-transform: uppercase;
   font-weight: bold;
   background-color: #e9d5c5;
-  width: 40%;
-  font-size: 2vh;
+  width: 90%;
+  font-size: 0.7em;
   height: 4vh;
+  text-align: center;
+  line-height: 2.3vh;
+  text-decoration: none;
 }
 @media (min-width: 360px) and (max-width: 480px) {
-  header button {
-    font-size: 1.5vh;
-    margin: 0 10px;
+  header p {
+    font-size: 1.3vh;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  header button {
+  header p {
     font-size: 1.4vh;
     height: 4.5vh;
-    width: 18%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
-  header button {
+  header p {
     font-size: 1.5vh;
     height: 4vh;
-    width: 18%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
-  header button {
+  header p {
     font-size: 2vh;
-    width: 10%;
     height: 5vh;
   }
 }
 @media (min-width: 1921px) {
-  header button {
+  header p {
     font-size: 2vh;
-    width: 10%;
     height: 5vh;
   }
+}
+header p a {
+  all: unset;
+  text-align: center;
+  line-height: 2.3vh;
 }
 
 #pedir_cita {
@@ -144,7 +190,6 @@ header img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 5px;
 }
 
 #terapeutas h3 {

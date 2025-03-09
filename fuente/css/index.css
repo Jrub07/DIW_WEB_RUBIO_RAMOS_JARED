@@ -54,6 +54,160 @@ header {
   align-items: center;
 }
 
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60px;
+  box-sizing: border-box;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header li {
+    width: 20%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  header li {
+    width: 28%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  header li {
+    width: 18%;
+  }
+}
+@media (min-width: 1921px) {
+  header li {
+    width: 18%;
+  }
+}
+
+header p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  background-color: white;
+  color: black;
+  font-family: averia-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #e9d5c5;
+  width: 90%;
+  font-size: 0.7em;
+  height: 4vh;
+  text-align: center;
+  line-height: 2.3vh;
+  text-decoration: none;
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  header p {
+    font-size: 1.3vh;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  header p {
+    font-size: 1.4vh;
+    height: 4.5vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header p {
+    font-size: 1.5vh;
+    height: 4vh;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  header p {
+    font-size: 2vh;
+    height: 5vh;
+  }
+}
+@media (min-width: 1921px) {
+  header p {
+    font-size: 2vh;
+    height: 5vh;
+  }
+}
+header p a {
+  all: unset;
+  text-align: center;
+  line-height: 2.3vh;
+}
+
+#pedir_cita {
+  font-family: "MilkAndHoney";
+}
+
+header img {
+  object-fit: cover;
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  header img {
+    max-width: 20%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  header img {
+    max-width: 15%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header img {
+    max-width: 15%;
+    max-height: 10%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  header img {
+    max-width: 15%;
+    max-height: 10%;
+  }
+}
+@media (min-width: 1921px) {
+  header img {
+    max-width: 15%;
+    max-height: 10%;
+  }
+}
+
+/* Archivo para mostrar los valores de la empresa */
+/* Clase base para html y body para poder heredar en tarea 12 */
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Creación del html y el body en conjunto para que se comparta en todos los archivos, se quitan los márgenes
+para que se incluya todo el contenido */
+header {
+  width: 100%;
+  min-height: 10%;
+  overflow: hidden;
+  background-color: #372715;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 header button {
   border-radius: 20%;
   background-color: white;
@@ -137,8 +291,7 @@ header img {
   }
 }
 
-/* Archivo para mostrar los valores de la empresa */
-/* Contenedor de presentación con la imagen */
+/* Contenedor de presentación con la imagen INTERPOLACION en cada linea-gardient */
 #presentacion {
   display: flex;
   flex-direction: column;
@@ -193,7 +346,9 @@ header img {
   text-align: center;
   color: white;
   font-family: "Fashion";
-  width: 50%;
+  width: 75%;
+  /* Contenedor para los valores de la empresa */
+  /* Estilos para cada artículo dentro de los valores */
 }
 @media (min-width: 360px) and (max-width: 480px) {
   #nombre_cliente {
@@ -396,8 +551,7 @@ header img {
     min-height: 15%;
   }
   #modalidades img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
   }
 }
 @media (min-width: 1921px) {
@@ -410,8 +564,7 @@ header img {
     min-height: 25%;
   }
   #modalidades img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
   }
 }
 
@@ -500,8 +653,7 @@ header img {
 }
 #presencial img, #online img {
   margin: 0 auto;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
 }
 @media (min-width: 360px) and (max-width: 480px) {
   #presencial img, #online img {
@@ -514,11 +666,6 @@ header img {
 /* Estilos compartidos, se pueden modificar los márgenes según la necesidad del dispositivo */
 #especialidades {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
   min-height: 45%;
   background-color: #684825;
   overflow: hidden;
@@ -526,7 +673,24 @@ header img {
 @media (min-width: 481px) and (max-width: 768px) {
   #especialidades {
     min-height: 50%;
-    justify-content: flex-start;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #especialidades {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  #especialidades {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 #especialidades h3 {
@@ -547,14 +711,14 @@ header img {
   #especialidades h3 {
     font-size: 1.1em;
     width: 95%;
-    margin-top: 2%;
+    margin: 2% auto;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #especialidades h3 {
     font-size: 2vh;
     width: 95%;
-    margin-top: 2%;
+    margin: 2% auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -573,11 +737,6 @@ header img {
 }
 #especialidades article {
   margin-left: 0.8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -587,28 +746,12 @@ header img {
   #especialidades article {
     height: 80%;
     width: 90%;
-    flex-direction: row;
-    justify-content: center;
   }
 }
 @media (min-width: 1921px) {
   #especialidades article {
     height: 80%;
     width: 80%;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #especialidades article {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 769px) and (max-width: 1200px) {
-  #especialidades article {
-    flex-direction: row;
-    justify-content: center;
   }
 }
 #especialidades article ul {
