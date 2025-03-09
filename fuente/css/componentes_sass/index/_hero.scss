@@ -1,7 +1,7 @@
 /* Archivo para mostrar los valores de la empresa */
 @use '../global/_mixins_funciones_mapa.scss' as *;
 @use 'sass:map';
-@use '_mixins_funciones_mapa' as *;
+
 
 /* Clase base para html y body para poder heredar en tarea 12 */
 %html_body {
@@ -168,10 +168,9 @@ header img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: white;
-  
+  color: white;  
   @include aplicar_fuente('h3', 'Fashion');
-  width: 50%; 
+  width: 75%; 
 
   // Estilos específicos para dispositivos móviles
   @include movil() {
