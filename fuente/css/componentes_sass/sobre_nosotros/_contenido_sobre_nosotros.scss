@@ -27,6 +27,7 @@
   flex-direction: column;
   margin-bottom: 3%;
   border-radius: 5px;
+  min-height: 450px;
 
   @include tableta {
     min-height: 450px;
@@ -93,7 +94,33 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       border-radius: 5px;
+
+      @include movil {
+        height: 400px; 
+      }
+
+      @include tableta {
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        flex-basis: 0;
+      }
+      @include pantalla_pequeña {
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        flex-basis: 0;
+      }
+      @include pantalla_estandar {
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        flex-basis: 0;
+      }
+      @include pantalla_grande {
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        flex-basis: 0;
+      }
 
       h3 {
         @include aplicar_fuente('h3', 'Classica-Book');
@@ -111,17 +138,17 @@
         @include pantalla_pequeña {
           width: 70%;
           margin: 3% auto;
-          font-size: 3vh;
+          font-size: 2.9vh;
         }
         @include pantalla_estandar {
           width: 70%;
           margin: 3% auto;
-          font-size: 3vh;
+          font-size: 2.9vh;
         }
         @include pantalla_grande {
           width: 70%;
           margin: 3% auto;
-          font-size: 3vh;
+          font-size: 2.9vh;
         }
       }
 
@@ -129,27 +156,27 @@
         @include aplicar_fuente('p', 'LTMuseum-Light');
         text-align: justify;
         margin: 3%;
-        font-size: 2.6vh;
+        font-size: 0.9em;  
 
         @include tableta {
           font-family: "LTMuseum-Light";
           text-align: justify;
-          font-size: 3vh;
+          font-size: 1em; 
         }
         @include pantalla_pequeña {
           font-family: "LTMuseum-Light";
           text-align: justify;
-          font-size: 3vh;
+          font-size: 1.3em; 
         }
         @include pantalla_estandar {
           font-family: "LTMuseum-Light";
           text-align: justify;
-          font-size: 3vh;
+          font-size: 1.4em;  
         }
         @include pantalla_grande {
           font-family: "LTMuseum-Light";
           text-align: justify;
-          font-size: 3vh;
+          font-size: 1.8em; 
         }
       }
     }
@@ -189,18 +216,45 @@
     justify-content: center;
     margin: 3%;
     border-radius: 5px;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: 0;
+    width: 100%;
+    overflow: hidden; 
+
+    font-size: 1.5em; // Ajustar el tamaño de la letra usando em
+
+    @include movil {
+      width: 90%; // Ajustar el ancho para móviles
+    }
 
     @include tableta {
-      height: 85%;
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        height: 85%;
+        width: 90%;
+        font-size: 1.25em; // Ajustar el tamaño de la letra para tabletas usando em
     }
     @include pantalla_pequeña {
-      height: 85%;
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        height: 85%;
+        width: 90%;
+        font-size: 1.25em; // Ajustar el tamaño de la letra para pantallas pequeñas usando em
     }
     @include pantalla_estandar {
-      height: 40%;
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        height: 40%;
+        width: 90%;
+        font-size: 1.5em; // Ajustar el tamaño de la letra para pantallas estándar usando em
     }
     @include pantalla_grande {
-      height: 46%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 46%;
+        width: 90%;
+        font-size: 1.5em; // Ajustar el tamaño de la letra para pantallas grandes usando em
     }
   }
 }

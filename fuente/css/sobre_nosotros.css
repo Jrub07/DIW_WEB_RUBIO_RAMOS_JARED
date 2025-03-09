@@ -50,7 +50,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -163,6 +163,7 @@ header img {
   flex-direction: column;
   margin-bottom: 3%;
   border-radius: 5px;
+  min-height: 450px;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1, #psico2 {
@@ -248,7 +249,41 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   border-radius: 5px;
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  #psico1 article .cont_psico1, #psico1 article .cont_psico2, #psico2 article .cont_psico1, #psico2 article .cont_psico2 {
+    height: 400px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  #psico1 article .cont_psico1, #psico1 article .cont_psico2, #psico2 article .cont_psico1, #psico2 article .cont_psico2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  #psico1 article .cont_psico1, #psico1 article .cont_psico2, #psico2 article .cont_psico1, #psico2 article .cont_psico2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #psico1 article .cont_psico1, #psico1 article .cont_psico2, #psico2 article .cont_psico1, #psico2 article .cont_psico2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+}
+@media (min-width: 1921px) {
+  #psico1 article .cont_psico1, #psico1 article .cont_psico2, #psico2 article .cont_psico1, #psico2 article .cont_psico2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
 }
 #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
   font-family: "Classica-Book";
@@ -269,55 +304,55 @@ header img {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 3vh;
+    font-size: 2.9vh;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 3vh;
+    font-size: 2.9vh;
   }
 }
 @media (min-width: 1921px) {
   #psico1 article .cont_psico1 h3, #psico1 article .cont_psico2 h3, #psico2 article .cont_psico1 h3, #psico2 article .cont_psico2 h3 {
     width: 70%;
     margin: 3% auto;
-    font-size: 3vh;
+    font-size: 2.9vh;
   }
 }
 #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
   font-family: "LTMuseum-Light";
   text-align: justify;
   margin: 3%;
-  font-size: 2.6vh;
+  font-size: 0.9em;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 3vh;
+    font-size: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 3vh;
+    font-size: 1.3em;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 3vh;
+    font-size: 1.4em;
   }
 }
 @media (min-width: 1921px) {
   #psico1 article .cont_psico1 p, #psico1 article .cont_psico2 p, #psico2 article .cont_psico1 p, #psico2 article .cont_psico2 p {
     font-family: "LTMuseum-Light";
     text-align: justify;
-    font-size: 3vh;
+    font-size: 1.8em;
   }
 }
 #psico1 .redes, #psico2 .redes {
@@ -359,25 +394,52 @@ header img {
   justify-content: center;
   margin: 3%;
   border-radius: 5px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.5em;
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  #psico1 .texto, #psico2 .texto {
+    width: 90%;
+  }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #psico1 .texto, #psico2 .texto {
+    flex-grow: 1;
+    flex-shrink: 1;
     height: 85%;
+    width: 90%;
+    font-size: 1.25em;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #psico1 .texto, #psico2 .texto {
+    flex-grow: 1;
+    flex-shrink: 1;
     height: 85%;
+    width: 90%;
+    font-size: 1.25em;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   #psico1 .texto, #psico2 .texto {
+    flex-grow: 1;
+    flex-shrink: 1;
     height: 40%;
+    width: 90%;
+    font-size: 1.5em;
   }
 }
 @media (min-width: 1921px) {
   #psico1 .texto, #psico2 .texto {
+    flex-grow: 1;
+    flex-shrink: 1;
     height: 46%;
+    width: 90%;
+    font-size: 1.5em;
   }
 }
 
@@ -462,7 +524,7 @@ footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
-    height: 14%;
+    height: 18%;
     margin-top: 10%;
     font-size: 2vh;
     text-align: center;
