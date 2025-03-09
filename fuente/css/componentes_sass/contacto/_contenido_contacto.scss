@@ -6,8 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;  
- 
+  width: 100%;
+  min-height: 30%; 
 
   h3 {
     @include aplicar_fuente('h3', 'Classica-Book');
@@ -18,7 +18,8 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    
+    flex: 1;  
+
     @include tableta {
       align-items: center;
     }
@@ -43,6 +44,7 @@
       margin-bottom: 10px;
       text-align: center; 
       width: 100%; 
+      padding-top: 15px;
     }
 
     input, select {
@@ -51,6 +53,7 @@
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      
     }
 
     input[type="submit"], input[type="reset"] {

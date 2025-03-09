@@ -50,7 +50,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -143,6 +143,7 @@ header img {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 30%;
 }
 #caja_formulario h3 {
   font-family: "Classica-Book";
@@ -152,6 +153,7 @@ header img {
   display: flex;
   flex-direction: column;
   width: 90%;
+  flex: 1;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   #caja_formulario form {
@@ -184,6 +186,7 @@ header img {
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
+  padding-top: 15px;
 }
 #caja_formulario form input, #caja_formulario form select {
   font-family: "LTMuseum-Light";
@@ -297,7 +300,7 @@ footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
-    height: 14%;
+    height: 18%;
     margin-top: 10%;
     font-size: 2vh;
     text-align: center;
