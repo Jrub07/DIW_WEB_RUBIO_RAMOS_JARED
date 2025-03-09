@@ -56,17 +56,17 @@ header li {
     }
 
     @include tableta() {
-        width: 25%;
+        width: 28%;
     }
 
     // Estilos específicos para pantallas estándar
     @include pantalla_estandar() {
-        width: 15%;
+        width: 18%;
     }
 
     // Estilos específicos para pantallas grandes
     @include pantalla_grande() {
-        width: 15%;
+        width: 18%;
     }
 }
 

@@ -79,17 +79,17 @@ header li {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   header li {
-    width: 25%;
+    width: 28%;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
   header li {
-    width: 15%;
+    width: 18%;
   }
 }
 @media (min-width: 1921px) {
   header li {
-    width: 15%;
+    width: 18%;
   }
 }
 
@@ -666,11 +666,6 @@ header img {
 /* Estilos compartidos, se pueden modificar los márgenes según la necesidad del dispositivo */
 #especialidades {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
   min-height: 45%;
   background-color: #684825;
   overflow: hidden;
@@ -679,6 +674,24 @@ header img {
   #especialidades {
     min-height: 50%;
     justify-content: flex-start;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #especialidades {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1921px) {
+  #especialidades {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 #especialidades h3 {
@@ -699,14 +712,14 @@ header img {
   #especialidades h3 {
     font-size: 1.1em;
     width: 95%;
-    margin-top: 2%;
+    margin: 2% auto;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   #especialidades h3 {
     font-size: 2vh;
     width: 95%;
-    margin-top: 2%;
+    margin: 2% auto;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
@@ -725,15 +738,26 @@ header img {
 }
 #especialidades article {
   margin-left: 0.8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
   height: 100%;
   width: 100%;
   padding: 0;
   align-content: center;
+}
+@media (min-width: 1201px) and (max-width: 1920px) {
+  #especialidades article {
+    height: 80%;
+    width: 90%;
+  }
+}
+@media (min-width: 1921px) {
+  #especialidades article {
+    height: 80%;
+    width: 80%;
+  }
+}
+#especialidades article ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
   width: 100%;
   display: flex;
@@ -742,29 +766,7 @@ header img {
   align-items: center;
   gap: 2%;
 }
-@media (min-width: 1201px) and (max-width: 1920px) {
-  #especialidades article {
-    height: 80%;
-    width: 90%;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 1921px) {
-  #especialidades article {
-    height: 80%;
-    width: 80%;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #especialidades article {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-#especialidades li {
+#especialidades article li {
   text-align: center;
   text-transform: uppercase;
   display: flex;
@@ -779,38 +781,38 @@ header img {
   font-family: "LTMuseum-Light";
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  #especialidades li {
+  #especialidades article li {
     margin: 2%;
     width: 45%;
   }
 }
 @media (min-width: 360px) and (max-width: 480px) {
-  #especialidades li {
+  #especialidades article li {
     width: 90%;
   }
 }
 @media (min-width: 769px) and (max-width: 1200px) {
-  #especialidades li {
+  #especialidades article li {
     width: 18%;
     margin: 2.7%;
     height: 7vh;
   }
 }
 @media (min-width: 1201px) and (max-width: 1920px) {
-  #especialidades li {
+  #especialidades article li {
     width: 15%;
     margin: 3.5%;
     height: 7vh;
   }
 }
 @media (min-width: 1921px) {
-  #especialidades li {
+  #especialidades article li {
     width: 15%;
     margin: 3.5%;
     height: 7vh;
   }
 }
-#especialidades li p {
+#especialidades article li p {
   text-align: center;
   font-size: inherit;
 }
@@ -896,7 +898,7 @@ footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
 }
 @media (min-width: 769px) and (max-width: 1200px) {
   footer #contacto #redes_sociales h3, footer #contacto #como_llegar h3 {
-    height: 14%;
+    height: 18%;
     margin-top: 10%;
     font-size: 2vh;
     text-align: center;
