@@ -1,0 +1,15 @@
+{
+  "name": "diw_web_rubio_ramos_jared",
+  "version": "1.0.0",
+  "description": "Para que no haya errores con las fuentes de imagen y el mapa se ha usado la tecnologica de Github.io. Para poder ver la página completa accede a este enlace:  https://jrub07.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sobre_nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>Sobre nosotros</title>
 </head>
 <body>
@@ -19,23 +21,33 @@
 
         <article id="psico1">
             <article>
-                <img
-                    src="../imagenes/estandar_natalia_550x651.jpg"
-                    srcset="
-                        ../imagenes/movil_natalia_360x450.jpg,
-                        ../imagenes/peque_natalia_480x600.jpg,
-                        ../imagenes/estandar_natalia_550x668.jpg,
-                        ../imagenes/grande_natalia_600x750.jpg
-                    "
-                    sizes="(max-width: 480px) 360px,  
-                           (max-width: 768px) 480px,  
-                           (max-width: 1024px) 550px,  
-                           (min-width: 1200px) 600px"
-                           
-                    alt="psico1"
-                />
+                <article class="caja_img">
+                    <img
+                        src="../imagenes/estandar_natalia_550x651.avif"
+                        srcset="
+                            ../imagenes/movil_peque_natalia_480x600.avif ,
+                            ../imagenes/tablet_natalia_360x450.avif ,
+                            ../imagenes/estandar_natalia_550x668.avif ,
+                            ../imagenes/nuevo_grande_natalia_1013x1266.avif ,
+                            ../imagenes/movil_peque_natalia_480x600.webp ,
+                            ../imagenes/tablet_natalia_360x450.webp ,
+                            ../imagenes/estandar_natalia_550x668.webp,
+                            ../imagenes/nuevo_grande_natalia_1013x1266.webp,
+                            ../imagenes/movil_peque_natalia_480x600.jpg,
+                            ../imagenes/tablet_natalia_360x450.jpg ,
+                            ../imagenes/estandar_natalia_550x668.jpg,
+                            ../imagenes/nuevo_grande_natalia_1013x1266.jpg 
+                        "
+                        sizes="(max-width: 480px) 480px,  
+                               (max-width: 768px) 360px,  
+                               (max-width: 1200px) 480px,  
+                               (max-width: 1920px) 550px,  
+                               (min-width: 1921px) 1013px"
+                        alt="psico1"
+                    />
+                </article>
                 <article class="cont_psico1">
-                    <h3>NATALIA </h3>
+                    <h3>NATALIA</h3>
                     <article class="texto">
                         <p>
                             Soy Natalia Rivera, psicóloga conductista. Me enfoco en ayudarte a
@@ -46,43 +58,86 @@
                         </p>
                     </article>
                     <article class="redes">
-                        <img src="../imagenes/instagram-50x50.png" alt="logo_instagram" />
-                        <img src="../imagenes/whatsapp_50x50.png" alt="logo_whatsapp" />
-                        <img src="../imagenes/gmail-50x50.png" alt="logo_gmail" />
+                        <ul>
+                            <li>
+                                <a href="https://instagram.com" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/621256879" target="_blank" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:bpsico@gmail.com" target="_blank" title="Gmail">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </article>
+                    
                 </article>
             </article>
         </article>
 
         <article id="psico2">
             <article>
-                <img
-                    src="../imagenes/estandar_550x651.png"
-                    srcset="
-                        ../imagenes/movil_sofia_360x426.png ,
-                        ../imagenes/peque_sofia_480x568.png ,
-                        ../imagenes/estandar_550x651.png ,
-                        ../imagenes/grande_sofia600x710.png 
-                    "
-                    sizes="(max-width: 480px) 360px,  
-                           (max-width: 768px) 480px,  
-                           (max-width: 1024px) 550px,  
-                           (min-width: 1200px) 600px"
-
-                    alt="psico2"
-                />
+                <article class="caja_img">
+                    <img
+                        src="../imagenes/estandar_sofia600x710.avif"
+                        srcset="
+                            ../imagenes/movil_peque_sofia_480x568.avif,
+                            ../imagenes/tablet_sofia_360x426.avif,
+                            ../imagenes/estandar_sofia600x710.avif,
+                            ../imagenes/nuevo_grande_sofia_1013x1266.avif,
+                            ../imagenes/movil_peque_sofia_480x568.webp,
+                            ../imagenes/tablet_sofia_360x426.webp,
+                            ../imagenes/estandar_sofia600x710.webp,
+                            ../imagenes/nuevo_grande_sofia_1013x1266.webp,
+                            ../imagenes/movil_peque_sofia_480x568.jpg,
+                            ../imagenes/tablet_sofia_360x426.jpg,
+                            ../imagenes/estandar_sofia600x710.jpg,
+                            ../imagenes/nuevo_grande_sofia_1013x1266.jpg
+                        "
+                        sizes="(max-width: 480px) 480px,  
+                               (max-width: 768px) 360px,  
+                               (max-width: 1200px) 480px,  
+                               (max-width: 1920px) 550px,  
+                               (min-width: 1921px) 1013px"
+                        alt="psico2"
+                    />
+                </article>
                 <article class="cont_psico2">
                     <h3>SOFIA</h3>
                     <article class="texto">
                         <p>
                             Soy Sofía Pérez, psicóloga cognitivo-conductual. Mi enfoque
-                            combina el análisis de pensamientos y comportamientos.
+                            combina el análisis de pensamientos y comportamientos para
+                            ayudarte a superar desafíos emocionales y desarrollar
+                            herramientas prácticas que impulsen tu bienestar. Trabajo
+                            contigo para identificar patrones negativos, replantearlos y
+                            lograr cambios reales y sostenibles.
                         </p>
                     </article>
                     <article class="redes">
-                        <img src="../imagenes/instagram-50x50.png" alt="logo_instagram" />
-                        <img src="../imagenes/whatsapp_50x50.png" alt="logo_whatsapp" />
-                        <img src="../imagenes/gmail-50x50.png" alt="logo_gmail" />
+                        <ul>
+                            <li>
+                                <a href="https://instagram.com" target="_blank" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/621256879" target="_blank" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:bpsico@gmail.com" target="_blank" title="Gmail">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </article>
                 </article>
             </article>

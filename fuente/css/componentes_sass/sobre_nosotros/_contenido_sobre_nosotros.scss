@@ -50,9 +50,10 @@
     align-items: normal;
   }
 
-  img {
+  .caja_img {
     width: 100%;
     border-radius: 5px;
+
     @include tableta {
       width: 45%;
     }
@@ -66,6 +67,11 @@
     }
     @include pantalla_grande {
       width: 44%;
+    }
+
+    img {
+      width: 100%; 
+      border-radius: 5px;
     }
   }
 
@@ -185,26 +191,40 @@
   .redes {
     background-color: map.get($colores, "secundario_dos");
     display: flex;
-    justify-content: space-around;
+    justify-content: center;  
+    align-items: center;     
     width: 100%;
     border-radius: 5px;
-
-    @include tableta {
-      flex-direction: row;
-    }
-    @include pantalla_pequeña {
-      flex-direction: row;
-    }
-    @include pantalla_estandar {
-      flex-direction: row;
-    }
-    @include pantalla_grande {
-      flex-direction: row;
+    height: 50px;
+    
+    ul {
+      display: flex;
+      justify-content: space-around; 
+      width: 100%;
+      padding: 0;
+      list-style-type: none; 
     }
 
-    img {
-      width: 5%;
-      border-radius: 5px;
+    li {
+      margin: 0 10px; 
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: whitesmoke;
+      font-size: 2rem;
+      min-width: 50px;
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+
+      i {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -222,10 +242,10 @@
     width: 100%;
     overflow: hidden; 
 
-    font-size: 1.5em; // Ajustar el tamaño de la letra usando em
+    font-size: 1.5em; 
 
     @include movil {
-      width: 90%; // Ajustar el ancho para móviles
+      width: 90%; 
     }
 
     @include tableta {
@@ -233,28 +253,28 @@
         flex-shrink: 1; 
         height: 85%;
         width: 90%;
-        font-size: 1.25em; // Ajustar el tamaño de la letra para tabletas usando em
+        font-size: 1.25em; 
     }
     @include pantalla_pequeña {
         flex-grow: 1; 
         flex-shrink: 1; 
         height: 85%;
         width: 90%;
-        font-size: 1.25em; // Ajustar el tamaño de la letra para pantallas pequeñas usando em
+        font-size: 1.25em; 
     }
     @include pantalla_estandar {
         flex-grow: 1; 
         flex-shrink: 1; 
         height: 40%;
         width: 90%;
-        font-size: 1.5em; // Ajustar el tamaño de la letra para pantallas estándar usando em
+        font-size: 1.5em; 
     }
     @include pantalla_grande {
         flex-grow: 1;
         flex-shrink: 1;
         height: 46%;
         width: 90%;
-        font-size: 1.5em; // Ajustar el tamaño de la letra para pantallas grandes usando em
+        font-size: 1.5em; 
     }
   }
 }
